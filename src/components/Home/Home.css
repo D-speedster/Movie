@@ -1,0 +1,36 @@
+.body {
+    background-color: #000 !important;
+}
+
+.Search_Handler {
+    height: 60px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.Search_Handler input {
+    background-color: #fff;
+    width: 80%;
+    height: 40px;
+    border: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+*:focus {
+    outline: none;
+}
+.Search_Handler button {
+    background-color: rgb(216, 13, 13);
+    border: 0;
+    width: 20%;
+    height: 42px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    font-size: 13px;
+}

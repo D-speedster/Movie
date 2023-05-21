@@ -1,0 +1,83 @@
+.Movie {}
+
+.Movie_Head {
+    height: max-content;
+    /* background: url('/public/img/Bg.jpg'); */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-clip: border-box !important;
+    backface-visibility: visible !important;
+    background-origin: padding-box !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+    /* filter: brightness(50%); */
+    z-index: 0;
+}
+
+
+.Movie_Head .Poster {
+    position: relative;
+    margin-top: -10px;
+}
+
+.Movie_Head .img-mobile {
+
+    width: 400px;
+    height: 505px;
+    z-index: 2;
+
+
+}
+
+.Movie_Head .img-poster {
+
+    width: 234px;
+    height: 383px;
+    top: 71px;
+    right: 94px;
+    z-index: 0;
+    position: absolute;
+
+}
+
+
+
+
+.Movie_Head .trailer {
+    position: relative;
+}
+
+.Movie_Head .img-tablet {
+    width: 700px;
+    height: 500px;
+    z-index: 2;
+}
+
+.Movie_Head .img-video {
+    position: absolute;
+    width: 584px;
+    height: 415px;
+    top: 17.7px;
+    left: 119px;
+    z-index: 0;
+
+
+}
+@media only screen and (max-width: 600px) {
+    .Movie_Head .img-video {
+        position: absolute;
+        height: 230px;
+        top: 28.7px;
+        left: 52px;
+        z-index: 0;
+        width: 382px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Movie_Head .img-tablet {
+        width: 100%;
+        height: 300px;
+        z-index: 2;
+    }
+}

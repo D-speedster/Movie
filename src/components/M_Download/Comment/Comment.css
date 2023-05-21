@@ -1,0 +1,60 @@
+.section_Comment{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding-top: 15px;
+    border-radius: 15px;
+    background-color: rgb(24, 24, 22);
+    height: max-content;
+    padding-bottom: 35px;
+}
+.Info_Comment{
+    height : max-content;
+    background : #312f2f96;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    box-shadow: rgba(5, 5, 5, 0.477) 0px 3px 8px;
+    padding-top: 15px;
+   
+}
+.Info_Comment img{
+    border-radius: 50%;
+    width: 75%;
+    padding-top: 5px;
+}
+
+.Info_Comment textarea {
+    max-height: 180px;
+}
+.Comments{
+    height : max-content;
+    background : #2f312f96;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    box-shadow: rgba(5, 5, 5, 0.477) 0px 3px 8px;
+   
+}
+.Comments .card{
+    color: #ffff;
+    margin-top: 15px;
+    border: 0;
+
+}
+.Comments .card-header{
+    /* background : #000000b5; */
+    border: none;
+    background-color: #7d7d7d;
+    padding-bottom : 7px;
+}
+.Comments .card-header img{
+
+    width: 50px;
+    height: 50px;
+    
+
+}
+
+.Comments .card-body{
+    background-color: #fdfafa;
+    color: #000;
+}

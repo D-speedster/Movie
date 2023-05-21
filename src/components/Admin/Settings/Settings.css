@@ -1,0 +1,23 @@
+.Settings-Nav {
+    background-color: #000;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 45px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+.nav-item a {
+    text-decoration: none !important;
+    color: #FFF;
+    font-weight: bold;
+}
+label{
+    color: #fefe;
+    font-weight: 500;
+    font-size: 16px;
+}
+small{
+    color: #000 !important;
+}
