@@ -1,6 +1,7 @@
 {
   "name": "movieclub",
   "version": "0.1.0",
+  "homepage": "https://github.com/D-speedster/Movie",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -32,7 +33,7 @@
   },
   "scripts": {
     "start": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build" ,
+    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -61,7 +62,6 @@
     ]
   },
   "devDependencies": {
-    
     "gh-pages": "^5.0.0",
     "jest": "^29.5.0"
   },
