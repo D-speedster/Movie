@@ -1,0 +1,117 @@
+.Slider_Movie {
+    background-color: #000;
+    border-radius: 14px;
+    padding-bottom: 20px;
+
+}
+
+
+
+
+.figure:hover .Story {
+    opacity: 1;
+}
+
+.figure {
+    overflow: hidden;
+}
+
+.Slider_Movie .Story {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: #FFF !important;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 1s all;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+    /* جلوگیری از نمایش متن اضافی */
+    text-overflow: ellipsis;
+    /* جایگزینی متن اضافی با سه نقطه */
+    /* اندازه دیو Story برابر با اندازه عکس */
+    /* text-shadow: 1px 2px #1f2832; */
+}
+
+
+
+.figure:hover img {
+    filter: blur(3.5px);
+    /* transform: scale(1.1); */
+}
+
+
+.Slider_Movie .card-body {
+    border: 0;
+    background-color: #1f2832;
+}
+
+.Slider_Movie .card-body p {
+    color: #FFF !important;
+
+    font-weight: 600;
+}
+
+.figure {
+    background-color: #1f2832;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.Slider_Movie .info_Sliders {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 11px;
+    width: auto !important;
+    padding: 10px 0px 10px 0px;
+    word-break: break-all;
+    overflow-wrap: break-word !important;
+    margin: 0 auto;
+    background-color: rgb(47, 52, 52);
+    color: #FFF !important;
+
+    inline-size: 100% !important;
+}
+
+.swiper-slide .info_Sliders h5 {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 17.5px;
+    font-weight: 500;
+}
+
+.Slider_Movie .Rate_Movie {
+    position: absolute;
+    height: 35px !important;
+    width: 35px !important;
+    border-radius: 50%;
+    background-color: #db3163;
+    border: 0.5px solid #eee;
+    color: #FFF;
+    top: 0px;
+    left: 0px;
+}
+
+.figure {
+    height: max-content !important;
+    background-color: #0000 !important;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.swiper-slide {
+    height: fit-content;
+    padding: 0px !important;
+    background-color: #0000 !important;
+}
+
+.swiper-slide img {
+    padding: 0px;
+    height: 375px !important;
+    border-radius: 15px;
+}
