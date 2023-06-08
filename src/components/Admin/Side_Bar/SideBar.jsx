@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import { AiFillSetting, AiTwotoneHome } from 'react-icons/ai';
+import { AiFillSetting, AiOutlineComment, AiTwotoneHome } from 'react-icons/ai';
 import { BiCameraMovie } from 'react-icons/bi';
 import { BsFillCollectionPlayFill } from 'react-icons/bs';
 import { FaRegNewspaper } from 'react-icons/fa';
@@ -15,17 +15,7 @@ import './SideBar.css';
 export default function SideBar() {
     return (
         <div className='menu-right '>
-            <Container>
-                <Row>
-                    <Col lg={3}>
-                        <img src='../img/welcome.jpg' style={{ borderRadius: '50%', height: '45px', width: '45px' }} />
-                    </Col>
-                    <Col lg={9} className='text-center '>
-                        <h6>Speedster</h6>
-                        <span>مدیر سایت</span>
-                    </Col>
-                </Row>
-            </Container>
+
 
 
             <ul className='menu-right-ul'>
@@ -45,10 +35,11 @@ export default function SideBar() {
                 <Link to='User-Management'><li> <HiUsers></HiUsers>مدیریت کاربران</li></Link>
                 <Link to='Movies-Management'><li><MdLocalMovies></MdLocalMovies>مدیریت فیلم ها  </li></Link>
                 <Link to='Series-Management'><li> <MdOutlineMovieCreation></MdOutlineMovieCreation>مدیریت سریال ها</li></Link>
-                <Link to='BoxOffice'><li><IoLogoDropbox></IoLogoDropbox> باکس آفیس</li></Link>
+                <Link to='Comments-Management'><li><AiOutlineComment></AiOutlineComment> مدیریت کامنت ها</li></Link>
             </ul>
             <ul className='menu-right-ul'>
                 <h6>تنظیمات</h6>
+                <Link to='BoxOffice'><li><IoLogoDropbox></IoLogoDropbox> باکس آفیس</li></Link>
                 <Link to='Plans'><li> <RiVipLine></RiVipLine>اشتراک ها</li></Link>
                 <Link to='setting'><li> <AiFillSetting> </AiFillSetting>تنظیمات کلی قالب</li></Link>
 

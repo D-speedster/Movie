@@ -1,17 +1,32 @@
 .InfoAdmin {}
 
-.info_Admin {
-}
+.info_Admin {}
 
 .info_Admin_box {
-    background-color: rgba(29, 29, 50, 0.911) !important;
+    background-color: #222b45 !important;
     border-radius: 12px;
-    color: #FFF;
+    color: #FFF !important;
     padding: 10px;
-    margin: 25px !important;
+    margin-top: 18px;
     height: max-content;
-    box-shadow: rgb(179 61 61 / 25%) 0px 14px 28px, rgb(185 18 18 / 22%) 0px 10px 10px;
 }
+@media only screen and (max-width : 600px) {
+    .info_Admin{
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width : 100%;
+        background-color: firebrick; */
+        
+    }
+}
+
+.info_Admin_box svg {
+    color: #00d68f;
+    font-size: 38px !important;
+}
+
 .info_Admin_box small {
     color: #FFF !important;
     display: block;

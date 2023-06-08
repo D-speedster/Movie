@@ -50,11 +50,11 @@ export default function Home() {
     <div className='body'>
       <Header />
       <Header_MovieSeries></Header_MovieSeries>
-      {GenreMoviez('Action', 'فیلم های درام')}
+      {GenreMoviez('درام', 'فیلم های درام')}
       <Latest_Trailers />
-      {GenreMoviez('Drama', 'فیلم های تخیلی')}
+      {GenreMoviez('علمی تخیلی', 'فیلم های تخیلی')}
       <Boxoffice {...BoxOffice}></Boxoffice>
-      {GenreMoviez('Action', 'فیلم های کمدی')}
+      {GenreMoviez('اکشن', 'فیلم های کمدی')}
 
       <Footer />
     </div>

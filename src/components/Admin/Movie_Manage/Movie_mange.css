@@ -5,6 +5,7 @@
     border: 0.5px solid #000;
     margin-top: 20px !important;
     border-radius: 15px;
+
 }
 
 .Moviez_setting img {
@@ -20,6 +21,68 @@
     margin-top: 15px;
 
 }
-.Moviez_setting svg{
+
+.Moviez_setting svg {
     cursor: pointer;
+}
+
+.movie_data {
+    position: relative;
+    margin-top: 60px;
+    height: 280px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 2px solid #FFF; */
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .movie_data {
+        width: 48% !important;
+    }
+}
+
+.movie_data .info_onMovie {
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    font-size: 17px;
+    font-weight: 500;
+    color: #f44;
+    text-align: center;
+    background-color: rgba(0, 15, 14, 0.86);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    margin: auto;
+}
+
+.Setting_Footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: #f44;
+    text-align: center;
+    background-color: rgba(0, 15, 14, 0.86);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding-bottom: 9px;
+    text-align: center;
+
+
+}
+.title_admin{
+    color: #F4EEE0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-kerning: auto;
+    font-family: sans-serif !important;
+    border-bottom: 3px solid #f44;
+    padding-bottom: 3px;
+    width: max-content;
+    text-shadow: 2px #000;
 }

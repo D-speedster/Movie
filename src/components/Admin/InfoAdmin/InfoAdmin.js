@@ -32,7 +32,7 @@ export default function InfoAdmin() {
                                 </Col>
 
                             </Row></Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>14,740</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -72,7 +72,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>36</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -112,7 +112,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>145</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -152,7 +152,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>41</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -193,7 +193,7 @@ export default function InfoAdmin() {
                                 </Col>
 
                             </Row></Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>779</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -233,7 +233,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>99</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -273,7 +273,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>74</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -313,7 +313,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title className='me-2'>900</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>41</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -340,7 +340,7 @@ export default function InfoAdmin() {
                 </Col>
             </Row>
             <div className='mx-4 rounded-2' style={{ background: 'rgba(29, 29, 50, 0.911)' }}>
-            <Chart grid title="کاربران جدید" data={xAxisData} dataKey="user" />
+                <Chart grid title="کاربران جدید" data={xAxisData} dataKey="user" />
             </div>
 
         </Container>

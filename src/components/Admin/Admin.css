@@ -1,8 +1,46 @@
-
-
 .Admin-Panel {
     margin: 0 !important;
     padding: 0 !important;
-    
-   
+
+
+}
+
+.sec1 {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    /* عرض دلخواه سایدبار */
+    background-color: #212a44;
+}
+
+@media only screen and (max-width : 600px) {
+    .sec1 {
+        position: absolute;
+        width: 100%;
+        background-color: red;
+        display: none;
+    }
+
+}
+
+
+
+.sec2 {
+    margin-left: 200px;
+    background-color: #171b31;
+    height: 100%;
+}
+
+@media only screen and (max-width : 600px) {
+    .sec2 {
+        margin-left: 0px;
+        background-color: #171b31;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
 }

@@ -8,20 +8,26 @@ import './Admin.css';
 
 
 export default function Admin() {
- 
-    document.body.style.background = '#34495e';
+
+    useEffect(() => {
+        document.body.style.backgroundColor = '#171b31';
+    })
+
+
 
     return (
         <div className='Admin-Panel'>
-            <div className='row justify-content-between'>
-                <Col lg={2} md={2}>
+            <Header_Admin></Header_Admin>
+            <div className='d-lg-flex'>
+                <Col lg={2} sm={12} xs={12} className='sec1'>
                     <SideBar></SideBar>
                 </Col>
-
-                <Col lg={10} md={10} >
-                    <Header_Admin></Header_Admin>
-                    <Outlet />
+                <Col lg={10} className='sec2'>
+                    <Container>
+                        <Outlet />
+                    </Container>
                 </Col>
+
             </div>
         </div>
     )

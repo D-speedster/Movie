@@ -11,7 +11,7 @@ export { MovieContext };
 
 export default function SliderMovie(props) {
     
-
+    console.log(props)
 
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {

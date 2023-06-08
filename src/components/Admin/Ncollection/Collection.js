@@ -6,22 +6,12 @@ import './Collection.css';
 import { RiMovie2Fill } from 'react-icons/ri'
 import { fontSize } from '@mui/system';
 export default function Collection() {
-    // const mystyle = {
-    //     backgroundPosition: '50% 50%',
-    //     backgroundRepeat: 'no-repeat',
-    //     backgroundSize: 'cover',
-    //     objectFit: 'cover',
-    //     borderRadius: '12px',
-    //     color: '#FFFF',
-    //     width: '32 % !important',
-    //     MarginTop: '18px!important',
-    //     cursor: 'pointer',
-    // };
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [Collection, SetCollection] = useState('');
     let [SearchIDMovie, SetIdMovie] = useState('');
+    let [ReLoad_Collectio , SetReCollecton] = useState('');
 
     useEffect(() => {
         console.log(SetIdMovie)
@@ -33,6 +23,17 @@ export default function Collection() {
                 SetCollection(data)
             })
     }, [])
+
+    let RemoverHandler = (name) => {
+        console.log(`Remover Start Movie : ${name} `)
+        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections/${name}.json`,
+            {
+                method: 'DELETE'
+            }
+        ).then(res => res.json())
+            .then(data => console.log(SetCollection(Collection)))
+
+    }
 
 
     function SearchCollection(event) {
@@ -61,6 +62,7 @@ export default function Collection() {
         let input_poster_collection = document.querySelector('.input_poster_collection').value;
 
         let objCollection = {
+
             name: name_collection,
             poster: input_poster_collection,
             movies: SearchIDMovie
@@ -90,40 +92,42 @@ export default function Collection() {
                                 <div class="container overflow-hidden">
                                     <div class="row gx-5 justify-content-between">
 
-                                        {Object.entries(Collection).map(item => {
-                                            return <>
-                                                <div class="col-lg-4 Item-Collection" style={{ backgroundImage: `url(${item['1']['poster']})` }}>
-                                                    <div className='row justify-content-between Item-Collection_Info'>
+                                        {Collection ? (
+                                            Object.entries(Collection).map(item => {
+                                                return <>
+                                                    <div class="col-lg-4 Item-Collection" style={{ backgroundImage: `url(${item['1']['poster']})` }}>
+                                                        <div className='row justify-content-between Item-Collection_Info'>
 
-                                                        <div className='col-12 mt-2 '>
-                                                            <h3>کالکشن {item['1']['name']}</h3>
-
-                                                        </div>
-
-                                                        <div className='d-flex Footer_Collection '>
-                                                            <div className='col-9'>
-                                                                <h5>
-                                                                    <RiMovie2Fill></RiMovie2Fill>
-                                                                    فیلم ها : {item['1']['movies'].length}
-                                                                </h5>
+                                                            <div className='col-12 mt-2 '>
+                                                                <h3>کالکشن {item['1']['name']}</h3>
 
                                                             </div>
-                                                            <div className='col-3'>
-                                                                <span>
-                                                                    <AiTwotoneEdit style={{ color: 'white', fontSize: '22px' }} />
-                                                                </span>
-                                                                <BsTrash style={{ color: 'white', fontSize: '22px' }}></BsTrash>
+
+                                                            <div className='d-flex Footer_Collection '>
+                                                                <div className='col-9'>
+                                                                    <h5>
+                                                                        <RiMovie2Fill></RiMovie2Fill>
+                                                                        {/* فیلم ها : {item['1']['movies'].length} */}
+                                                                    </h5>
+
+                                                                </div>
+                                                                <div className='col-3'>
+                                                                    <span>
+                                                                        <AiTwotoneEdit style={{ color: 'white', fontSize: '22px' }} />
+                                                                    </span>
+                                                                    <BsTrash onClick={() => RemoverHandler(item['0'])} style={{ color: 'white', fontSize: '22px' }}></BsTrash>
+                                                                </div>
                                                             </div>
+
+
                                                         </div>
 
 
                                                     </div>
+                                                </>
 
-
-                                                </div>
-                                            </>
-
-                                        })}
+                                            }
+                                            ) ) : (<h1>فیلمی موجود نیست</h1>)}
 
 
                                     </div>

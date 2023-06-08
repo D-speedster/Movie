@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Row, Container, InputGroup, Col, Form, Button } from 'react-bootstrap';
 import './Register.css';
 // import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaUserPlus } from 'react-icons/fa';
 import { MdOutlinePassword } from 'react-icons/md'
-import { Link } from 'react-router-dom';
+import { Link, json } from 'react-router-dom';
+
 export default function Register() {
+  let [Username, SetUsername] = useState('');
+  let [Email, SetEmail] = useState('');
+  let [Password, SetPassword] = useState('');
   useEffect(() => {
     document.body.classList.add('background-form-2');
     // document.body.style.direction = 'ltr'
@@ -14,6 +18,30 @@ export default function Register() {
       document.body.classList.remove('background-form-2');
     };
   }, []);
+  let submitUser = () => {
+    let obj = {
+      user: Username,
+      email: Email,
+      password: Password
+    }
+    console.log('Register SuccessFully')
+    console.log(obj)
+    fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json/' , {
+      method : 'Post' ,
+      body : JSON.stringify(obj)
+    }).then(res=>res.json())
+    .then(data=>console.log('End Process' , data))
+  }
+  function EmailChanger(event) {
+    SetEmail(event.target.value);
+  }
+  function UserChanger(event) {
+    SetUsername(event.target.value);
+  }
+  function PasswordChanger(event) {
+    SetPassword(event.target.value);
+
+  }
   return (
     <div className='background-form'>
       <div className='Register pe-3 ps-3'>
@@ -41,6 +69,8 @@ export default function Register() {
                     aria-label="Small"
                     aria-describedby="inputGroup-sizing-sm"
                     placeholder='نام کاربری'
+                    value={Username}
+                    onChange={UserChanger}
                   />
                 </InputGroup>
 
@@ -50,6 +80,8 @@ export default function Register() {
                     aria-label="Small"
                     aria-describedby="inputGroup-sizing-sm"
                     placeholder='ایمیل'
+                    value={Email}
+                    onChange={EmailChanger}
                   />
                 </InputGroup>
 
@@ -59,6 +91,8 @@ export default function Register() {
                     aria-label="Small"
                     aria-describedby="inputGroup-sizing-sm"
                     placeholder='پسوورد'
+                    value={Password}
+                    onChange={PasswordChanger}
                   />
 
                 </InputGroup>
@@ -74,7 +108,7 @@ export default function Register() {
                 <h4>Captcha</h4>
 
 
-                <Button className='col-12' variant="primary" type="submit">
+                <Button onClick={submitUser} className='col-12' variant="primary">
                   ثبت نام
                 </Button>
               </Form>

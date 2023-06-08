@@ -1,0 +1,37 @@
+.Search_Handler {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .Search_Input {
+    height: 40px;
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .Search_Button {
+    background-color: #d80d0d;
+    border: none;
+    color: #fff;
+    height: 40px;
+    width: 30%;
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: -10px; /* این خط تغییر داده شده است */
+  }
+  
+  .Search_Button:hover {
+    background-color: #ff1e1e;
+  }
+  
