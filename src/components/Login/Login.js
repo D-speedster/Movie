@@ -9,10 +9,8 @@ import { Link } from 'react-router-dom';
 export default function Register() {
     useEffect(() => {
         document.body.classList.add('background-form-2');
-        document.body.style.direction = 'ltr'
-        return () => {
-            document.body.classList.remove('background-form-2');
-        };
+        // document.body.style.direction = 'ltr'
+       
     }, []);
     return (
         <div className='background-form'>
