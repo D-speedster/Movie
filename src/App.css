@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Vazir';
-  src: url('/public/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  src: url('/webfonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
