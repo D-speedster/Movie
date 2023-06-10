@@ -4,7 +4,7 @@ import Movies from './Movies/Movies';
 import Admin from './Admin/Admin';
 import AddMovie from './Admin/addMovie/AddMovie';
 import { Download } from './M_Download/Download';
-import Users from './Admin/Users'
+import Users from './Admin/Users/Users'
 import Register from './Register/Register';
 import Login from './Login/Login';
 import Movie_mange from './Admin/Movie_Manage/Movie_mange'
@@ -19,6 +19,9 @@ import Box_ofiice from './Admin/Settings/Box_ofiice';
 import Slider from './Admin/Settings/Slider';
 import Home_Setting from './Admin/Settings/Home';
 import AddSeries from './Admin/addSeries/addSeries'
+import Comments from './Admin/Comments/Comments';
+import Movie_Series from './Admin/Series_Manage/Series_Manage';
+
 let routes = [
   { path: '*', element: <h1>Sorry , Page Not Found</h1> },
   { path: '/', element: <Home /> },
@@ -37,10 +40,11 @@ let routes = [
       { path: 'addTrailer', element: <h1 style={{ color: 'red' }}>addTrailer</h1> },
       { path: 'addNews', element: <News></News> },
       { path: 'User-Management', element: <Users /> },
+      { path: 'Series-Management', element: <Movie_Series /> },
       { path: 'Movies-Management', element: <Movie_mange /> },
       { path: 'Movies-Management/:userId', element: <EditMovie></EditMovie> },
       { path: 'newCollection', element: <Collection></Collection> },
-      { path: 'Comments-Management', element: <h1>Mange Comment</h1> },
+      { path: 'Comments-Management', element: <Comments /> },
       { path: 'Plans', element: <Plans_Admin></Plans_Admin> },
       {
         path: 'setting/*', element: <Settings></Settings>, children: [

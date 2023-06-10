@@ -1,4 +1,3 @@
-import { borderRadius } from '@mui/system';
 import React, { useState, useEffect, useRef } from 'react'
 import { Container } from 'react-bootstrap';
 import BoxInfo from '../BoxInfo';
@@ -8,7 +7,6 @@ import './AddMovie.css'
 
 export default function AddMovie() {
     const RefCheck = useRef();
-
     let [box, setBox] = useState('')
     let [Movie, SetMovie] = useState([]);
     let [GenreSelect, SetGenreSelect] = useState('')

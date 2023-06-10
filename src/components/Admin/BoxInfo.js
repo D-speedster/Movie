@@ -6,23 +6,34 @@ export default function BoxInfo(props) {
     let [Movie,] = useState();
     const [Images_Movie, SetImages] = useState([]);
     let [Image_Moviez, SetImageMoviez] = useState([]);
-
     let ImagesMoviez = [];
     let finArray = [];
     console.log(props)
     function SubmitHandler() {
         let finArray = { ...props, Image_Moviez }
         console.log(finArray);
-
+        if (props.type == "TVSeries") {
+            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json', {
+                method: "POST",
+                body: JSON.stringify(finArray)
+            }).then(res => {
+                return res.json()
+            }).then(data => {
+                console.log(data)
+            })
+        }
+        else {
+            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json', {
+                method: "POST",
+                body: JSON.stringify(finArray)
+            }).then(res => {
+                return res.json()
+            }).then(data => {
+                console.log(data)
+            })
+        }
         console.log("START PROCESS POST", Movie)
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json', {
-            method: "POST",
-            body: JSON.stringify(finArray)
-        }).then(res => {
-            return res.json()
-        }).then(data => {
-            console.log(data)
-        })
+
         console.log("END PROCESS POST", Movie)
 
 
@@ -156,9 +167,9 @@ export default function BoxInfo(props) {
                                 <Col lg={10}>
                                     <textarea value={props.story} style={{ resize: 'none' }} className='form-control mt-3' ></textarea>
                                 </Col>
-                                
+
                             </Row>
-                           
+
                             <Row className='mb-3 Bx_Dl mx-0'>
                                 <Col lg={2}>
                                     <h5>لیست دانلود </h5>
@@ -196,7 +207,7 @@ export default function BoxInfo(props) {
                                         </tbody>
                                     </Table>
                                 </Col>
-                               
+
                             </Row>
                             <Row className='mb-3'>
                                 <Form.Group as={Col} lg={2} controlId='formWriters'>

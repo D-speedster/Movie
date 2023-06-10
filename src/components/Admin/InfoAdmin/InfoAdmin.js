@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Row, Container, Card, Button } from 'react-bootstrap'
 import { BsCollection } from 'react-icons/bs';
 import { GiNewspaper } from 'react-icons/gi';
@@ -8,12 +8,45 @@ import './InfoAdmin.css';
 import { AiOutlineComment } from 'react-icons/ai'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import Chart from './Chart';
+import { RiAdminFill } from 'react-icons/ri'
 import { xAxisData } from './datas';
-
-
+import { MdOutlinePreview } from 'react-icons/md';
+import { GrUserAdmin, GrView } from 'react-icons/gr'
 export default function InfoAdmin() {
+    let [Movie_Count, setMovie_Count] = useState('');
+    let [Series_Count, setSeries_Count] = useState('');
+    let [Users_Count, setUsers_Count] = useState('');
+    let [Comments_Count, setComments_Count] = useState('');
+    let [Collections_Count, setCollections_Count] = useState('')
     const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
     let data2 = [{ name: '' }]
+    useEffect(() => {
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            .then(res => res.json())
+            .then(data => {
+                setMovie_Count(Object.keys(data).length)
+            })
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+            .then(res => res.json())
+            .then(data => {
+                setSeries_Count(Object.keys(data).length)
+            })
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json')
+            .then(res => res.json())
+            .then(data => {
+                setUsers_Count(Object.keys(data).length)
+            })
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Comments.json')
+            .then(res => res.json())
+            .then(data => {
+                setComments_Count(Object.keys(data).length)
+            })
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections.json')
+            .then(res => res.json())
+            .then(data => {
+                setCollections_Count(Object.keys(data).length)
+            })
+    })
 
     return (
         <Container>
@@ -32,7 +65,7 @@ export default function InfoAdmin() {
                                 </Col>
 
                             </Row></Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>14,740</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>{Users_Count}</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -72,7 +105,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>36</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>{Series_Count}</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -102,11 +135,11 @@ export default function InfoAdmin() {
                         <Card.Header>
                             <Row className='justify-conent-center'>
                                 <Col>
-                                    <span style={{ fontSize: '21px' }}>خبر ها</span>
+                                    <span style={{ fontSize: '21px' }}>بازدید ها</span>
 
                                 </Col>
                                 <Col className='text-start'>
-                                    <GiNewspaper style={{ fontSize: '30px' }}></GiNewspaper>
+                                    <MdOutlinePreview style={{ fontSize: '30px' }}></MdOutlinePreview>
 
                                 </Col>
 
@@ -142,11 +175,11 @@ export default function InfoAdmin() {
                         <Card.Header>
                             <Row className='justify-conent-center'>
                                 <Col>
-                                    <span style={{ fontSize: '21px' }}>کالکشن ها</span>
+                                    <span style={{ fontSize: '21px' }}>ادمین ها</span>
 
                                 </Col>
                                 <Col className='text-start'>
-                                    <BsCollection style={{ fontSize: '30px' }}></BsCollection>
+                                    <RiAdminFill style={{ fontSize: '30px' }}></RiAdminFill>
 
                                 </Col>
 
@@ -193,7 +226,7 @@ export default function InfoAdmin() {
                                 </Col>
 
                             </Row></Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>779</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>{Movie_Count}</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -233,7 +266,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>99</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>{Series_Count}</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 
@@ -313,7 +346,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>41</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>{Collections_Count}</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 

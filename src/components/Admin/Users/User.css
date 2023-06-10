@@ -1,0 +1,17 @@
+table{
+    
+    border: 1px solid #CCC;
+    text-align: center;
+    /* background-color: #FFF; */
+}
+.title_admin{
+    color: #F4EEE0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-kerning: auto;
+    font-family: sans-serif !important;
+    border-bottom: 3px solid #f44;
+    padding-bottom: 3px;
+    width: max-content;
+    text-shadow: 2px #000;
+}

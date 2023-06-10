@@ -1,39 +1,34 @@
-
 import React, { useEffect, useState } from 'react'
 import { Figure, Col, Modal, Button, Container, Row } from 'react-bootstrap';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BsTrash3 } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import './Movie_mange.css';
 
-
-export default function Movie_mange() {
+export default function Movie_Series() {
     let [result, SetResult] = useState([]);
     const [show, setShow] = useState(false);
-    const [movieToRemove, setMovieToRemove] = useState('');
+    const [SeriesToRemove, setSeriesToRemove] = useState('');
     const [TextSearch, SetSearch] = useState('');
-
-
     const handleClose = () => { setShow(false) }
 
     const Remover = () => {
         setShow(false);
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE/${movieToRemove}.json`, {
+        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series/${SeriesToRemove}.json`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setMovieToRemove('');
+                setSeriesToRemove('');
             })
             .catch(error => {
-                console.error('Error removing movie:', error);
+                console.error('Error removing Serie:', error);
             });
 
     }
     const DeleteMovie = (id) => {
         setShow(true)
-        setMovieToRemove(id)
+        setSeriesToRemove(id)
 
     }
     const EditMovie = (id) => {
@@ -41,7 +36,7 @@ export default function Movie_mange() {
     }
 
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
             .then(res => res.json())
             .then(data => {
                 SetResult(data);
@@ -50,7 +45,7 @@ export default function Movie_mange() {
                 console.error('Error fetching data:', error);
             });
 
-    }, [movieToRemove]);
+    }, [SeriesToRemove]);
 
     const SearchAllMovie = (event) => {
 
@@ -59,7 +54,7 @@ export default function Movie_mange() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
                 .then(res => res.json())
                 .then(data => {
                     let result = Object.entries(data).filter(res => {
@@ -69,7 +64,7 @@ export default function Movie_mange() {
                     SetResult(result);
                 });
         } else {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
                 .then(res => res.json())
                 .then(data => {
                     SetResult(data);
@@ -79,13 +74,11 @@ export default function Movie_mange() {
                 });
         }
     }, [TextSearch]);
-
-
     return (
         <div className='container'>
             <div dir='rtl' className='row justify-content-between '>
                 <Row className='d-flex justify-content-between mt-3'>
-                    <Col lg={6}> <h3 className='title_admin'>مدیریت فیلم ها</h3></Col>
+                    <Col lg={6}> <h3 className='title_admin'>مدیریت سریال ها</h3></Col>
                     <Col lg={6}>
                         <input onChange={SearchAllMovie} className='form-control me-4' placeholder='فیلم مورد نظر ...' />
                     </Col>
@@ -170,6 +163,7 @@ export default function Movie_mange() {
                     : null
 
                 }
+
             </div>
         </div>
     )
