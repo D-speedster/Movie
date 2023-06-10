@@ -1,6 +1,10 @@
-.Box-Collection {}
+.Box-Collection {
+    margin: auto;
+    
+}
 
 .Item-Collection {
+    
     height: 140px;
     background: url('http://localhost:3000/img/8517470721_1b61d32e9e_b.jpg');
     background-position: 50% 50%;

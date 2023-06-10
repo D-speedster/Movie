@@ -1,6 +1,6 @@
 .BoxOffice {
 
-    background: url('/img/batman.jpg');
+    background: url('/public//img/batman.jpg');
     margin: 25px auto;
     height: max-content;
     background-repeat: no-repeat;
