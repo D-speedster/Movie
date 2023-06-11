@@ -10,11 +10,11 @@ export default function Home() {
 
   let [BoxOffice, SetBoxOffice] = useState();
   useEffect(() => {
-    fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/BoxOffice.json/').then(res => {
+    fetch('http://localhost:3000/BoxOffice').then(res => {
       return res.json()
     }).then(data => {
 
-      SetBoxOffice(data['-NP1pjOELijhizcBSZ1q']['items'])
+      SetBoxOffice(data)
     })
       .then(response => response.json())
       .then(result => console.log(result))
@@ -27,7 +27,7 @@ export default function Home() {
       MoviezArray.push(Moviez[Movie])
     }
     let spc = MoviezArray.filter((ols => {
-      return ols['genre'].includes(genre) == true;
+      return ols['genre']
 
     }))
 
@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+    fetch('http://localhost:3000/Moviez')
       .then(res => res.json())
       .then(data => {
         SetMoviez(data);

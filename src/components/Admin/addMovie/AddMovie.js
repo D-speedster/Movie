@@ -99,7 +99,7 @@ export default function AddMovie() {
             alert("لطفا آیدی فیلم مورد نظر را وارد کنید")
         } else {
             console.log("START PROCESS");
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            fetch('http://localhost:3000/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     let isAre = Object.entries(data).filter((i => {

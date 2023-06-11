@@ -1,0 +1,1612 @@
+{
+  "Series": [
+    {
+      "id": "tt0903747",
+      "name": "Breaking Bad",
+      "year": "2008",
+      "genre": "جنایی، درام، ﺩﻟﻬﺮﻩ ﺁﻭﺭ",
+      "rate": "9.5",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6762_AL_.jpg",
+      "time": null,
+      "story": "داستان سریال درباره یک معلم شیمی میانسال است که متوجه می شود که دارای سرطان ریه است و ۲ سال بیشتر وقت برای زندگی ندارد. او که وضع مالی خوبی ندارد و دارای همسر و پسری معلول می باشد، به این فکر می افتد که باید قبل از مردن زندگی خانواده خود را تامین کند. پس با توجه به آشناییش به علم شیمی، همراه با یکی از شاگردان سابقش شروع به ساخت و فروش مواد مخدر می کند...",
+      "awards": "Top rated TV #2 | Won 16 Primetime Emmys, 155 wins & 247 nominations total",
+      "director": "",
+      "stars": "Bryan Cranston, Aaron Paul, Anna Gunn",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt3032476",
+          "title": "Better Call Saul",
+          "image": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt7366338",
+          "title": "Chernobyl",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.7246_AL_.jpg",
+          "imDbRating": "9.4"
+        },
+        {
+          "id": "tt9243946",
+          "title": "El Camino: A Breaking Bad Movie",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjk4MzVlM2UtZGM0ZC00M2M1LThkMWEtZjUyN2U2ZTc0NmM5XkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt1190634",
+          "title": "The Boys",
+          "image": "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt0141842",
+          "title": "The Sopranos",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.7053_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt1520211",
+          "title": "The Walking Dead",
+          "image": "https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt0386676",
+          "title": "The Office",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt2442560",
+          "title": "Peaky Blinders",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt2085059",
+          "title": "Black Mirror",
+          "image": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt2861424",
+          "title": "Rick and Morty",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMzQwODMxOTg5MF5BMl5BanBnXkFtZTgwNjQ2MTU5NTM@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTczNjY0NDQ4MF5BMl5BanBnXkFtZTgwNTQ2MTU5NTM@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTAwNDI2OTczNzFeQTJeQWpwZ15BbWU4MDc0NjE1OTUz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjE1OTMwNTA5NV5BMl5BanBnXkFtZTgwMDkzOTA1NjM@._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt2306299",
+      "name": "Vikings",
+      "year": "2013",
+      "genre": "اکشن، ماجراجویی، درام",
+      "rate": "8.5",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6762_AL_.jpg",
+      "time": null,
+      "story": "داستان سریال درباره فردی است به نام رگنار لاثبروک که با پادشاه آن دوران وایکینگ‌ها به مخالفت برمی‌خیزد و دوست دارد این بار به جای نبرد با شرقی‌های منطقه خود، حمله به سمت غرب را در دستور کار خود قرار بدهند. رگنار با مخالفت با پادشاه، به کارش ادامه می‌دهد تا راه را برای نبرد با غربی‌ها هموار کند و حتی خود را در مقام پادشاهی ببیند.",
+      "awards": "Won 1 Primetime Emmy, 46 wins & 134 nominations total",
+      "director": "",
+      "stars": "Katheryn Winnick, Gustaf Skarsgård, Alexander Ludwig",
+      "countries": "ایرلند، کانادا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt4620502",
+          "title": "Vikings: The Viking Sagas",
+          "image": "https://m.media-amazon.com/images/M/MV5BOWQ5N2Q2MWUtZTlmMC00YjI5LTgyOWQtNTA4NmY5MGQzM2EwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTUwMTIyODg@._V1_Ratio0.7053_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt2442560",
+          "title": "Peaky Blinders",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt11311302",
+          "title": "Vikings: Valhalla",
+          "image": "https://m.media-amazon.com/images/M/MV5BMmZlYTQ3NjQtZmIxNC00MzA4LTg1NDgtMmEzODk0MzA4NjQxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7343_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt0455275",
+          "title": "Prison Break",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg3NTkwNzAxOF5BMl5BanBnXkFtZTcwMjM1NjI5MQ@@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt5180504",
+          "title": "The Witcher",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDEwOWVlY2EtMWI0ZC00OWVmLWJmZGItYTk3YjYzN2Y0YmFkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt4179452",
+          "title": "The Last Kingdom",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjE1MzYzNjk3OF5BMl5BanBnXkFtZTgwMzk0MzYwNzE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.5"
+        },
+        {
+          "id": "tt1520211",
+          "title": "The Walking Dead",
+          "image": "https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt6468322",
+          "title": "Money Heist",
+          "image": "https://m.media-amazon.com/images/M/MV5BODI0ZTljYTMtODQ1NC00NmI0LTk1YWUtN2FlNDM1MDExMDlhXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt0903747",
+          "title": "Breaking Bad",
+          "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.5"
+        },
+        {
+          "id": "tt2707408",
+          "title": "Narcos",
+          "image": "https://m.media-amazon.com/images/M/MV5BNmFjODU3YzgtMGUwNC00ZGI3LWFkZjQtMjkxZDc3NmQ1MzcyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt1442449",
+          "title": "Spartacus",
+          "image": "https://m.media-amazon.com/images/M/MV5BZWQ4MjA2YzEtOTQzYi00NWQ1LWI0ZDEtN2VkZjhmYTc3MzU0XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.5"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BYzUzMzY4ZWUtM2M2ZS00NjdlLThlNzgtNzI2OWZiMjFjYTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMzY5NjAwZDMtOTFiYy00ZGY5LWFhNjItYmVjMjRhZTI4MTQ1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZTk2NjQ2YzktMzlhMS00MzFjLWFmMjctYzVlYzEzYzg2NjFjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZTk2NjQ2YzktMzlhMS00MzFjLWFmMjctYzVlYzEzYzg2NjFjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZmE5NmM3ZjQtNTc0Ni00ZGY3LWEyN2EtM2YyMzI3ZTliNTRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.0000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZTk2NjQ2YzktMzlhMS00MzFjLWFmMjctYzVlYzEzYzg2NjFjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt5753856",
+      "name": "Dark",
+      "year": "2017",
+      "genre": "جنایی، درام، معمایی",
+      "rate": "8.7",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_Ratio0.6762_AL_.jpg",
+      "time": null,
+      "story": "این سریال داستان خانواده ای در شهر کوچکی در آلمان است که با مسائل ماورالطبیعه سر و کار دارند. پس از ناپدید شدن دو کودک، روابط میان چهار خانواده معروف شهر افشا می شود...",
+      "awards": "Top rated TV #84 | Awards, 8 wins & 25 nominations",
+      "director": "",
+      "stars": "Louis Hofmann, Karoline Eichhorn, Lisa Vicari",
+      "countries": "آلمان، ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt7366338",
+          "title": "Chernobyl",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.7246_AL_.jpg",
+          "imDbRating": "9.4"
+        },
+        {
+          "id": "tt10048342",
+          "title": "The Queen's Gambit",
+          "image": "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt9319668",
+          "title": "1899",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTU1N2I5OTgtNDE2MS00ZTdmLWJlODktNDMwMGVmNzY5NmUxXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt2085059",
+          "title": "Black Mirror",
+          "image": "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt1475582",
+          "title": "Sherlock",
+          "image": "https://m.media-amazon.com/images/M/MV5BMWEzNTFlMTQtMzhjOS00MzQ1LWJjNjgtY2RhMjFhYjQwYjIzXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        },
+        {
+          "id": "tt2442560",
+          "title": "Peaky Blinders",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt6468322",
+          "title": "Money Heist",
+          "image": "https://m.media-amazon.com/images/M/MV5BODI0ZTljYTMtODQ1NC00NmI0LTk1YWUtN2FlNDM1MDExMDlhXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt10919420",
+          "title": "Squid Game",
+          "image": "https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.0"
+        },
+        {
+          "id": "tt5290382",
+          "title": "Mindhunter",
+          "image": "https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7343_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt2707408",
+          "title": "Narcos",
+          "image": "https://m.media-amazon.com/images/M/MV5BNmFjODU3YzgtMGUwNC00ZGI3LWFkZjQtMjkxZDc3NmQ1MzcyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMTU0NTEyMDU4MF5BMl5BanBnXkFtZTgwNDc1OTgyNDM@._V1_Ratio1.4800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjMwMjg3OTMxMl5BMl5BanBnXkFtZTgwNTc1OTgyNDM@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTU3Mzc2OTczNl5BMl5BanBnXkFtZTgwNjc1OTgyNDM@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTU3Mzc2OTczNl5BMl5BanBnXkFtZTgwNjc1OTgyNDM@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTAyOTgxNzExNzNeQTJeQWpwZ15BbWU4MDE3NTk4MjQz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTU3Mzc2OTczNl5BMl5BanBnXkFtZTgwNjc1OTgyNDM@._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt4052886",
+      "name": "Lucifer",
+      "year": "2016",
+      "genre": "جنایی، درام، فانتزی",
+      "rate": "8.1",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDJjMzc4NGYtZmFmNS00YWY3LThjMzQtYzJlNGFkZGRiOWI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6762_AL_.jpg",
+      "time": null,
+      "story": "لوسیفر، فرشته ی طرد شده، از حکمرانی بر جهنم خسته شده است و برای زندگی تازه به لس آنجلس می آید تا در آنجا وارد ماجراجویی های جدید و عجیب شود...",
+      "awards": "Nominated for 1 Primetime Emmy, 2 wins & 20 nominations total",
+      "director": "",
+      "stars": "Tom Ellis, Lauren German, Kevin Alejandro",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt2193021",
+          "title": "Arrow",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTI0NTMwMDgtYTMzZC00YmJhLTg4NzMtMTc1NjI4MWY4NmQ4XkEyXkFqcGdeQXVyNTY3MTYzOTA@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt2661044",
+          "title": "The 100",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjRiYTIzZmUtMTFkNS00ZTM0LWE4ODAtMDliMGE4NzM5ZjVlXkEyXkFqcGdeQXVyNDQ0MTYzMDA@._V1_Ratio0.8116_AL_.jpg",
+          "imDbRating": "7.6"
+        },
+        {
+          "id": "tt6468322",
+          "title": "Money Heist",
+          "image": "https://m.media-amazon.com/images/M/MV5BODI0ZTljYTMtODQ1NC00NmI0LTk1YWUtN2FlNDM1MDExMDlhXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt5180504",
+          "title": "The Witcher",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDEwOWVlY2EtMWI0ZC00OWVmLWJmZGItYTk3YjYzN2Y0YmFkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt1405406",
+          "title": "The Vampire Diaries",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDk3YzgxNDQtNTEzOS00NDMyLWFlYmYtYTZlMDk1NDkxNmMyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "7.7"
+        },
+        {
+          "id": "tt7767422",
+          "title": "Sex Education",
+          "image": "https://m.media-amazon.com/images/M/MV5BOTE0MjQ1NDU3OV5BMl5BanBnXkFtZTgwNTI4MTgwNzM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt1632701",
+          "title": "Suits",
+          "image": "https://m.media-amazon.com/images/M/MV5BNmVmMmM5ZmItZDg0OC00NTFiLWIxNzctZjNmYTY5OTU3ZWU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "8.4"
+        },
+        {
+          "id": "tt10919420",
+          "title": "Squid Game",
+          "image": "https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.0"
+        },
+        {
+          "id": "tt0455275",
+          "title": "Prison Break",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg3NTkwNzAxOF5BMl5BanBnXkFtZTcwMjM1NjI5MQ@@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt1567432",
+          "title": "Teen Wolf",
+          "image": "https://m.media-amazon.com/images/M/MV5BMThlNTk3YzMtOTZjMi00M2NiLTg1NTgtYThiYzE2MDFmMDUwXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.7"
+        },
+        {
+          "id": "tt3107288",
+          "title": "The Flash",
+          "image": "https://m.media-amazon.com/images/M/MV5BZDcwMzU4NWYtODIzZi00Yzg4LWJhOTAtOTQ2ZDA4NmFlYmFlXkEyXkFqcGdeQXVyMTY1MTU3NDY5._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt2632424",
+          "title": "The Originals",
+          "image": "https://m.media-amazon.com/images/M/MV5BNDllZjc2NjEtOGMwZS00ZmNkLTg2NDgtZjJkYjg0YjMxM2FmXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.3"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BNzU0MDcxMDEtNjgwOS00NWM5LTgxZTAtMThhNzE3OTVjNDIwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.7800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMDFmOWZiZGUtMzk1OS00YjE1LTljZjEtZTI0ZDg5MjMyODE3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNjZjNzBhM2MtY2EyNC00ZmRiLTk4YzctM2Y0YThmZTM4N2RiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.4600_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZWVmNjQ1MzktYTUzNS00ZTBjLWEwMTEtM2ExZDMwZTg3YjI3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt0141842",
+      "name": "The Sopranos",
+      "year": "1999",
+      "genre": "جنایی، درام",
+      "rate": "9.2",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.7046_AL_.jpg",
+      "time": null,
+      "story": "این سریال داستان یک خانواده ایتالیایی ساکن نیو جرسی است که به فعالیت های مافیایی خلاف مشغول هستند . تونی سوپرانو به عنوان رییس این گروه (خانواده) انتخاب می شود . شخصیت او در خانه پدری عاطفی و مهربان و در بیرون از خانه یک جنایتکار و بیماری روانی است. این سریال تلفیقی از دو جنبه خانوادگی و جنایی است . روابط خانوادگی آنها و پایبندی آنها به اصول و قواعد دینی از یک سو و از سوی دیگر انجام اعمال خلاف زیبایی دو چندانی به این سریال داده است . این سریال از سال ۱۹۹۹ تا ۲۰۰۷ در آمریکا از شبکه HBO پخش شده و یکی از محبوبترین سریالهای خانواده های آمریکایی در طی این سالها بوده و جوایز و نامزدیهای بسیاری از جشنواره های معتبر دنیا داشته ( سوپرانوس ۲۱۱ بار نامزد شده که ۸۲ بار آن به جایزه ختم شده است). از جذابیتهای این سریال ، نکته ها و دیالوگهای جالب روانشناسانه ای است که بین آنتونی و روانشناسش که یه زن جذاب است ردو بدل می شود.",
+      "awards": "Top rated TV #9 | Won 21 Primetime Emmys, 122 wins & 309 nominations total",
+      "director": "",
+      "stars": "James Gandolfini, Lorraine Bracco, Edie Falco",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt0306414",
+          "title": "The Wire",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTllYzFhMjAtZjExNS00MjM4LWE5YmMtOGFiZGRlOTU5YzJiXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.3"
+        },
+        {
+          "id": "tt0903747",
+          "title": "Breaking Bad",
+          "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.5"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7343_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt2356777",
+          "title": "True Detective",
+          "image": "https://m.media-amazon.com/images/M/MV5BMmRlYmE0Y2UtNDk2Yi00NzczLWEwZTEtZmE2OTcyYzcxYmU5XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_Ratio0.7150_AL_.jpg",
+          "imDbRating": "8.9"
+        },
+        {
+          "id": "tt3032476",
+          "title": "Better Call Saul",
+          "image": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.9"
+        },
+        {
+          "id": "tt0386676",
+          "title": "The Office",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt7366338",
+          "title": "Chernobyl",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.7246_AL_.jpg",
+          "imDbRating": "9.4"
+        },
+        {
+          "id": "tt0185906",
+          "title": "Band of Brothers",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.4"
+        },
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt1190634",
+          "title": "The Boys",
+          "image": "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt1586680",
+          "title": "Shameless",
+          "image": "https://m.media-amazon.com/images/M/MV5BZDgxNjQ2MjMtMjk2Yi00M2Q2LWI0ZDktOGM1NWI5YWUzMjk4XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt2442560",
+          "title": "Peaky Blinders",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BZTM1NDFmZjQtODgzZC00NDZiLWIwNTItY2RjMjQwNzBjYTM0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.0000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMzQwN2QzMzItN2NhNy00NzkzLTkwYjUtNDQzMGE1ZGFiMjI4XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.0000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt0108778",
+      "name": "Friends",
+      "year": "1994",
+      "genre": "کمدی، عاشقانه",
+      "rate": "8.9",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.6833_AL_.jpg",
+      "time": null,
+      "story": "سریال دوستان یک مجموعه کمدی در مورد گروهی از شش دوست است که در منطقه منهتن شهر نیویورک زندگی می‌کنند. این مجموعه توسط دیوید کرینو مارتا کافمن از سال ۱۹۹۴ تا سال ۲۰۰۴ ساخته شده‌است. این سریال متمرکز بر زندگی سه مرد و سه زن بیست و چند ساله (که در روند سریال به سی و چند سالگی میرسند) است که ساکن محله گرین ویچ هستند. این سریال یکی از محبوبترین مجموعه‌های کمدی روزمره در تاریخ تلویزیون آمریکا است که دهها میلیون طرفدار در سراسر جهان بدست آورده‌است...",
+      "awards": "Top rated TV #48 | Won 6 Primetime Emmys, 78 wins & 231 nominations total",
+      "director": "",
+      "stars": "Jennifer Aniston, Courteney Cox, Lisa Kudrow",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt0898266",
+          "title": "The Big Bang Theory",
+          "image": "https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt0460649",
+          "title": "How I Met Your Mother",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_Ratio0.7440_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt0386676",
+          "title": "The Office",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt1442437",
+          "title": "Modern Family",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzRhNWIxYTEtYjc2NS00YWFlLWFhOGEtMDZiMWM1M2RkNDkyXkEyXkFqcGdeQXVyNjc0MjkzNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.5"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7343_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt1475582",
+          "title": "Sherlock",
+          "image": "https://m.media-amazon.com/images/M/MV5BMWEzNTFlMTQtMzhjOS00MzQ1LWJjNjgtY2RhMjFhYjQwYjIzXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        },
+        {
+          "id": "tt2861424",
+          "title": "Rick and Morty",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        },
+        {
+          "id": "tt11337862",
+          "title": "Friends: The Reunion",
+          "image": "https://m.media-amazon.com/images/M/MV5BODI0MzdhODAtNDMwNi00NGZlLTg1Y2YtN2M5ZGFmOThkZGM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.0"
+        },
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt0903747",
+          "title": "Breaking Bad",
+          "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.5"
+        },
+        {
+          "id": "tt0098904",
+          "title": "Seinfeld",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjZjMzQ2ZmUtZWEyZC00NWJiLWFjM2UtMzhmYzZmZDcxMzllXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.7053_AL_.jpg",
+          "imDbRating": "8.9"
+        },
+        {
+          "id": "tt10048342",
+          "title": "The Queen's Gambit",
+          "image": "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BZTY1MGQ0NDYtYmI5Ny00OGNlLWFlYmMtMjc5MWE1ZjViNGM5XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_Ratio1.3200_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZGQ0Njc5YjAtYzBkOS00OTVjLTgxNjUtODAwYThiZGNhNjI1XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_Ratio1.3200_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTEzMzkyNjMyMzNeQTJeQWpwZ15BbWU4MDgzODQ5NjYz._V1_Ratio1.5400_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZDI4NjgzNTEtY2I5Ny00NjE4LTk4MGEtYmI2Mjc4NmI4NmRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.0000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt1190634",
+      "name": "The Boys",
+      "year": "2019",
+      "genre": "اکشن، کمدی، جنایی",
+      "rate": "8.7",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.8043_AL_.jpg",
+      "time": null,
+      "story": "گروهی پارتیزانی شامل چند جوان تصمیم می گیرند تا ابرقهرمانان فاسدی را نابود کنند که ابرقدرت های آنان را به تمسخر گرفته اند.",
+      "awards": "Top rated TV #87 | Nominated for 6 Primetime Emmys, 14 wins & 68 nominations total",
+      "director": "",
+      "stars": "Karl Urban, Jack Quaid, Antony Starr",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt6741278",
+          "title": "Invincible",
+          "image": "https://m.media-amazon.com/images/M/MV5BMmE1ODVhMGYtODYyYS00Mjc4LWIzN2EtYWZkZDg1MTUyNDkxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt0903747",
+          "title": "Breaking Bad",
+          "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.5"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt8111088",
+          "title": "The Mandalorian",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2M5YWFjN2YtYzU2YS00NzBlLTgwZWUtYWQzNWFhNDkyYjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt2861424",
+          "title": "Rick and Morty",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        },
+        {
+          "id": "tt0386676",
+          "title": "The Office",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt2085059",
+          "title": "Black Mirror",
+          "image": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt3581920",
+          "title": "The Last of Us",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt3032476",
+          "title": "Better Call Saul",
+          "image": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt2442560",
+          "title": "Peaky Blinders",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt1520211",
+          "title": "The Walking Dead",
+          "image": "https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BYTA3OTkxOTUtYzRlMi00NDZiLWFkOGEtM2I4MzZmOTIxZTRhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMzdiOTk2M2ItZTJhYi00YTUyLThmODUtYzUyMzM4NGZhYzMyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.0000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYjI1NTQ3OTUtNmFjZS00MGMwLWFlNzItYjM0NjMzYTAwODcxXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.0000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTFkMGI2NTEtNDhlMS00NTFiLThmYTQtNmI3YTVlZDE4ZGUwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTFkMGI2NTEtNDhlMS00NTFiLThmYTQtNmI3YTVlZDE4ZGUwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYTFkMGI2NTEtNDhlMS00NTFiLThmYTQtNmI3YTVlZDE4ZGUwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt3032476",
+      "name": "Better Call Saul",
+      "year": "2015",
+      "genre": "جنایی، درام",
+      "rate": "9",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6762_AL_.jpg",
+      "time": null,
+      "story": "سریال «بهتره با ساول تماس بگیری» اسپین‌آف سریال Breaking Bad می‌باشد که داستانش در مورد وکیل والتر وایت، ساول گودمن (باب ادنکرک) و دفتر وکالت او در آلبوکرکی نیومکزیکو و نحوه آشنایی او با اعضای گروه درست قبل از رخ دادن اتفاقات آن سریال است.",
+      "awards": "Top rated TV #32 | Nominated for 46 Primetime Emmys, 60 wins & 283 nominations total",
+      "director": "",
+      "stars": "Bob Odenkirk, Rhea Seehorn, Jonathan Banks",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt0903747",
+          "title": "Breaking Bad",
+          "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.5"
+        },
+        {
+          "id": "tt9243946",
+          "title": "El Camino: A Breaking Bad Movie",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjk4MzVlM2UtZGM0ZC00M2M1LThkMWEtZjUyN2U2ZTc0NmM5XkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt0141842",
+          "title": "The Sopranos",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.7053_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt0944947",
+          "title": "Game of Thrones",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.2"
+        },
+        {
+          "id": "tt1190634",
+          "title": "The Boys",
+          "image": "https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt4574334",
+          "title": "Stranger Things",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt0386676",
+          "title": "The Office",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt2861424",
+          "title": "Rick and Morty",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.1"
+        },
+        {
+          "id": "tt1520211",
+          "title": "The Walking Dead",
+          "image": "https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt7366338",
+          "title": "Chernobyl",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.7246_AL_.jpg",
+          "imDbRating": "9.4"
+        },
+        {
+          "id": "tt2085059",
+          "title": "Black Mirror",
+          "image": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt8111088",
+          "title": "The Mandalorian",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2M5YWFjN2YtYzU2YS00NzBlLTgwZWUtYWQzNWFhNDkyYjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.7"
+        }
+      ],
+      "type": "TVSeries",
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BZDg0MjE2NGYtOWZkMi00ZmIxLWIwZGQtMTM4MTRkZmNlNGEwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZTlhOTk0ODYtNWNiNS00Yzk5LTg4MmQtNjNiMGQwNDg2MjIyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5200_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZDRiMzJjMWUtZTNkNC00ZDlhLWI3MzQtYTlkYzdlYmQwYjM1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYjQyNmIyZWMtZDVkMi00OWQ2LTk3NTktYzdjMTc1Zjk3NDg5XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZDRiMzJjMWUtZTNkNC00ZDlhLWI3MzQtYTlkYzdlYmQwYjM1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio1.5000_AL_.jpg"
+      ]
+    }
+  ],
+  "Moviez": [
+    {
+      "id": 1
+    },
+    {
+      "id": "tt4154796",
+      "name": "Avengers: Endgame",
+      "year": "2019",
+      "genre": "اکشن، ماجراجویی، درام",
+      "rate": "8.4",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_Ratio0.6762_AL_.jpg",
+      "time": "181",
+      "story": "پس از اینکه تانوس نصف سیاره را از بین برده است، گروه انتقامجویان باید کاری برای جلوگیری او انجام دهند.",
+      "awards": "Top rated movie #78 | Nominated for 1 Oscar, 70 wins & 133 nominations total",
+      "director": "Anthony Russo, Joe Russo",
+      "stars": "Robert Downey Jr., Chris Evans, Mark Ruffalo",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "Christopher Markus, Stephen McFeely, Stan Lee",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt4154756",
+          "title": "Avengers: Infinity War",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        },
+        {
+          "id": "tt0848228",
+          "title": "The Avengers",
+          "image": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.0"
+        },
+        {
+          "id": "tt10872600",
+          "title": "Spider-Man: No Way Home",
+          "image": "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt2395427",
+          "title": "Avengers: Age of Ultron",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt3498820",
+          "title": "Captain America: Civil War",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.8"
+        },
+        {
+          "id": "tt3501632",
+          "title": "Thor: Ragnarok",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.9"
+        },
+        {
+          "id": "tt7286456",
+          "title": "Joker",
+          "image": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        },
+        {
+          "id": "tt1211837",
+          "title": "Doctor Strange",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt1843866",
+          "title": "Captain America: The Winter Soldier",
+          "image": "https://m.media-amazon.com/images/M/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "7.8"
+        },
+        {
+          "id": "tt1345836",
+          "title": "The Dark Knight Rises",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        },
+        {
+          "id": "tt0468569",
+          "title": "The Dark Knight",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt2250912",
+          "title": "Spider-Man: Homecoming",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTk4ODQ1MzgzNl5BMl5BanBnXkFtZTgwMTMyMzM4MTI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        }
+      ],
+      "Image_Moviez": []
+    },
+    {
+      "id": "tt0903624",
+      "name": "The Hobbit: An Unexpected Journey",
+      "year": "2012",
+      "genre": "ماجراجویی، فانتزی",
+      "rate": "7.8",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_Ratio0.6762_AL_.jpg",
+      "time": "169",
+      "story": "یک هابیت به نام بیلبو بگینز از روی بی میلی، با گروه دلاوری از دورف ها برای بازپس گیری خانه کوهستانی شان، و طلای درونش از اسماگ، راهی \"کوهستان تنها\" می شود.",
+      "awards": "Nominated for 3 Oscars, 11 wins & 75 nominations total",
+      "director": "Peter Jackson",
+      "stars": "Martin Freeman, Ian McKellen, Richard Armitage",
+      "countries": "نیوزلند، ایالات متحده آمریکا",
+      "writers": "Fran Walsh, Philippa Boyens, Peter Jackson",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt1170358",
+          "title": "The Hobbit: The Desolation of Smaug",
+          "image": "https://m.media-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.8"
+        },
+        {
+          "id": "tt2310332",
+          "title": "The Hobbit: The Battle of the Five Armies",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTYzNDE3OTQ3MF5BMl5BanBnXkFtZTgwODczMTg4MjE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt0167261",
+          "title": "The Lord of the Rings: The Two Towers",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt0120737",
+          "title": "The Lord of the Rings: The Fellowship of the Ring",
+          "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt4561226",
+          "title": "The Hobbit: The Battle of Five Armies - New Zealand: Home of Middle-Earth - Part 3",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjhmM2IxNjgtZGZlMS00MDQ2LTllZTYtNmUwYzVkNWRiNTMxXkEyXkFqcGdeQXVyNDczNTc1NjQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt0167260",
+          "title": "The Lord of the Rings: The Return of the King",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.0"
+        },
+        {
+          "id": "tt0383574",
+          "title": "Pirates of the Caribbean: Dead Man's Chest",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt0449088",
+          "title": "Pirates of the Caribbean: At World's End",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjIyNjkxNzEyMl5BMl5BanBnXkFtZTYwMjc3MDE3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.1"
+        },
+        {
+          "id": "tt1298650",
+          "title": "Pirates of the Caribbean: On Stranger Tides",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjE5MjkwODI3Nl5BMl5BanBnXkFtZTcwNjcwMDk4NA@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.6"
+        },
+        {
+          "id": "tt0325980",
+          "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "image": "https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.1"
+        },
+        {
+          "id": "tt1790809",
+          "title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt21832076",
+          "title": "The Hobbit: The Battle of the Five Armies - Extended Edition Scenes",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGI4ZjA4MTEtY2ExYy00ZTg5LWFhMTctODI3OTY2OWU2ZWRjXkEyXkFqcGdeQXVyMTEwNDU1MzEy._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMjAzNzY0NzE1Ml5BMl5BanBnXkFtZTcwNTM1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTY0MzAxNTA5Nl5BMl5BanBnXkFtZTcwNjM1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOTAzNjgxNTY0MV5BMl5BanBnXkFtZTcwODM1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BOTAzNjgxNTY0MV5BMl5BanBnXkFtZTcwODM1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTczODE5NTYyM15BMl5BanBnXkFtZTcwMTM1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjMxMzIzODk0Ml5BMl5BanBnXkFtZTcwNjc1Mzg3OA@@._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt0114369",
+      "name": "Se7en",
+      "year": "1995",
+      "genre": "جنایی، درام، معمایی",
+      "rate": "8.6",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6762_AL_.jpg",
+      "time": "127",
+      "story": "دو کاراگاه، یکی تازه کار و دیگری کارکشته به دنبال دستگیری یک قاتل زنجیره‌ای هستند که با الهام از هفت گناه کبیره(شکم پرستی، تنبلی، خشم، طمع، حسادت، تکبر و شهوت) قربانی های خود را انتخاب می‌کند",
+      "awards": "Top rated movie #20 | Nominated for 1 Oscar, 29 wins & 43 nominations total",
+      "director": "David Fincher",
+      "stars": "Morgan Freeman, Brad Pitt, Kevin Spacey",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "Andrew Kevin Walker",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt0137523",
+          "title": "Fight Club",
+          "image": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt0102926",
+          "title": "The Silence of the Lambs",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt1375666",
+          "title": "Inception",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt0109830",
+          "title": "Forrest Gump",
+          "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6957_AL_.jpg",
+          "imDbRating": "8.8"
+        },
+        {
+          "id": "tt0110912",
+          "title": "Pulp Fiction",
+          "image": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "8.9"
+        },
+        {
+          "id": "tt1130884",
+          "title": "Shutter Island",
+          "image": "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt0120689",
+          "title": "The Green Mile",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt0111161",
+          "title": "The Shawshank Redemption",
+          "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "9.3"
+        },
+        {
+          "id": "tt0133093",
+          "title": "The Matrix",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.7"
+        },
+        {
+          "id": "tt0120815",
+          "title": "Saving Private Ryan",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "8.6"
+        },
+        {
+          "id": "tt0482571",
+          "title": "The Prestige",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.5"
+        },
+        {
+          "id": "tt1853728",
+          "title": "Django Unchained",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMTMwNjcyOTIzOV5BMl5BanBnXkFtZTcwNzQzNTIwNA@@._V1_Ratio1.0000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTI5MTUxNDI2NV5BMl5BanBnXkFtZTcwOTQzNTIwNA@@._V1_Ratio1.4600_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTYzNDc3NzYzOF5BMl5BanBnXkFtZTcwNjQzNTIwNA@@._V1_Ratio1.4800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjI3MTU0ODQ2MF5BMl5BanBnXkFtZTcwNTQzNTIwNA@@._V1_Ratio1.4600_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt6718170",
+      "name": "The Super Mario Bros. Movie",
+      "year": "2023",
+      "genre": "انیمیشن، ماجراجویی، کمدی",
+      "rate": "7.2",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_Ratio0.6762_AL_.jpg",
+      "time": "92",
+      "story": "داستان برادران سوپر ماریو در سفرشان در قلمرو قارچ.",
+      "awards": "",
+      "director": "Aaron Horvath, Michael Jelenic, Pierre Leduc",
+      "stars": "Chris Pratt, Anya Taylor-Joy, Charlie Day",
+      "countries": "ایالات متحده آمریکا، ژاپن",
+      "writers": "Matthew Fogel",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt3915174",
+          "title": "Puss in Boots: The Last Wish",
+          "image": "https://m.media-amazon.com/images/M/MV5BNjMyMDBjMGUtNDUzZi00N2MwLTg1MjItZTk2MDE1OTZmNTYxXkEyXkFqcGdeQXVyMTQ5NjA0NDM0._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.9"
+        },
+        {
+          "id": "tt3794354",
+          "title": "Sonic the Hedgehog",
+          "image": "https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt5884052",
+          "title": "Pokémon: Detective Pikachu",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDkxNzRmNDYtMDY0OS00N2JhLTkzZWUtMWE3MzZkNDk1MmJiXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt1490017",
+          "title": "The Lego Movie",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.7"
+        },
+        {
+          "id": "tt0108255",
+          "title": "Super Mario Bros.",
+          "image": "https://m.media-amazon.com/images/M/MV5BZGVmZTUyZDAtYjg0MC00NmE5LWE2OTAtM2FjNGI1NWUyMzE0XkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "4.1"
+        },
+        {
+          "id": "tt12412888",
+          "title": "Sonic the Hedgehog 2",
+          "image": "https://m.media-amazon.com/images/M/MV5BODRlNTY5ZjktZjE0Ni00YjZhLTk3NTItYzk0ZjYxN2QxMWEzXkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt4116284",
+          "title": "The Lego Batman Movie",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt4633694",
+          "title": "Spider-Man: Into the Spider-Verse",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.4"
+        },
+        {
+          "id": "tt1772341",
+          "title": "Wreck-It Ralph",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzMxNTExOTkyMF5BMl5BanBnXkFtZTcwMzEyNDc0OA@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.7"
+        },
+        {
+          "id": "tt0126029",
+          "title": "Shrek",
+          "image": "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.9"
+        },
+        {
+          "id": "tt0097757",
+          "title": "The Little Mermaid",
+          "image": "https://m.media-amazon.com/images/M/MV5BOWUyNDA0ZmItMzg2My00YjJhLTk1N2QtYTAxYTc0NzMzNDI0XkEyXkFqcGdeQXVyMTI5NzUyMTIz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.6"
+        },
+        {
+          "id": "tt0114709",
+          "title": "Toy Story",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.3"
+        }
+      ],
+      "Image_Moviez": []
+    },
+    {
+      "id": "tt16419074",
+      "name": "Air",
+      "year": "2023",
+      "genre": "درام، ورزشی",
+      "rate": "7.5",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmNlOTNlYjUtM2U3Yy00M2ZjLTkxZDQtN2NiNGZiZDI0ZjE3XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6762_AL_.jpg",
+      "time": "111",
+      "story": "تاریخچه فروشنده کفش سانی واکارو و نحوه رهبری نایک در تعقیب بزرگترین ورزشکار تاریخ ورزش: مایکل جردن.",
+      "awards": "Awards, 1 win",
+      "director": "Ben Affleck",
+      "stars": "Matt Damon, Jason Bateman, Ben Affleck",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "Alex Convery",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt4873118",
+          "title": "The Covenant",
+          "image": "https://m.media-amazon.com/images/M/MV5BNmQzOWZhOTMtZTcxNC00MTdkLWEwYmUtOWVmOTFhNTdkNjRkXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt12758060",
+          "title": "Tetris",
+          "image": "https://m.media-amazon.com/images/M/MV5BZmZmNTdiYjMtZDdmNi00ZGU4LThkYmQtZTFhZWNlYmUxYWZkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt2906216",
+          "title": "Dungeons & Dragons: Honor Among Thieves",
+          "image": "https://m.media-amazon.com/images/M/MV5BNmFkN2M2NzItOTY5YS00MmE2LTk3ZjctNTk2YzQ5ZmRiYzJjXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt6791350",
+          "title": "Guardians of the Galaxy Vol. 3",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt7405458",
+          "title": "A Man Called Otto",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzg3OTEzMTgtYWU0OC00YTI0LWIxOTAtNmRkNTc0Nzg2YWU1XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_Ratio0.8019_AL_.jpg",
+          "imDbRating": "7.5"
+        },
+        {
+          "id": "tt6968614",
+          "title": "The Mother",
+          "image": "https://m.media-amazon.com/images/M/MV5BODlmZThjZGItOGRmMC00ODVjLWIzYWMtODBhYzQyZjE4NWE5XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "5.6"
+        },
+        {
+          "id": "tt10366206",
+          "title": "John Wick: Chapter 4",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.0"
+        },
+        {
+          "id": "tt1745960",
+          "title": "Top Gun: Maverick",
+          "image": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt14846026",
+          "title": "Sisu",
+          "image": "https://m.media-amazon.com/images/M/MV5BMWYwMzNkOWEtNjA3YS00YjE5LTlkMjYtMmRjMjExNjA1NDM0XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.0"
+        },
+        {
+          "id": "tt19853258",
+          "title": "Still: A Michael J. Fox Movie",
+          "image": "https://m.media-amazon.com/images/M/MV5BNGFmYmUyMDUtNjk1MS00ZDMzLWEyMmUtM2I4YzhhZjRiYjk2XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt10954600",
+          "title": "Ant-Man and the Wasp: Quantumania",
+          "image": "https://m.media-amazon.com/images/M/MV5BODZhNzlmOGItMWUyYS00Y2Q5LWFlNzMtM2I2NDFkM2ZkYmE1XkEyXkFqcGdeQXVyMTU5OTA4NTIz._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.2"
+        },
+        {
+          "id": "tt1630029",
+          "title": "Avatar: The Way of Water",
+          "image": "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_Ratio0.7053_AL_.jpg",
+          "imDbRating": "7.7"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMWQ2NjUxMWItMTJhOC00NDU0LWI5OTgtODgxNzNkYzdhZjAzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.8600_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMDY1MTQ2ZTMtZmUyYi00NzUyLTllNjgtY2I3NGU3ZTFlOWJmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio2.2000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNWE4MzdlZjMtODQzYi00YzE2LWJhYzItMDMwMGRlMDJiNTNjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZDczMTU0NjYtNzAwZS00YTNmLWIwYjgtODE4MTgyNjhiMDczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.8600_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BZmZjZGM1ZmItMzQyMC00ZDgxLWJiMmYtZDkzNWExN2MwNGRmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio1.5000_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt5433140",
+      "name": "Fast X",
+      "year": "2023",
+      "genre": "اکشن، ماجراجویی، جنایی",
+      "rate": "6.2",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6762_AL_.jpg",
+      "time": "141",
+      "story": "هنوز خلاصه ای درباره ی داستان منتشر نشده است. ادامه ی ماجراهای فیلم \"سریع و خشن\".",
+      "awards": "",
+      "director": "Louis Leterrier",
+      "stars": "Vin Diesel, Michelle Rodriguez, Jason Statham",
+      "countries": "ایالات متحده آمریکا، چین",
+      "writers": "Dan Mazeau, Justin Lin, Gary Scott Thompson",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt5433138",
+          "title": "F9: The Fast Saga",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "5.2"
+        },
+        {
+          "id": "tt6791350",
+          "title": "Guardians of the Galaxy Vol. 3",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "8.2"
+        },
+        {
+          "id": "tt4630562",
+          "title": "The Fate of the Furious",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.6"
+        },
+        {
+          "id": "tt2820852",
+          "title": "Furious 7",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTQxOTA2NDUzOV5BMl5BanBnXkFtZTgwNzY2MTMxMzE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.1"
+        },
+        {
+          "id": "tt1596343",
+          "title": "Fast Five",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUxNTk5MTE0OF5BMl5BanBnXkFtZTcwMjA2NzY3NA@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.3"
+        },
+        {
+          "id": "tt0232500",
+          "title": "The Fast and the Furious",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODctMzFmMjkwZmMxZjFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.8"
+        },
+        {
+          "id": "tt1905041",
+          "title": "Fast & Furious 6",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.0"
+        },
+        {
+          "id": "tt1013752",
+          "title": "Fast & Furious",
+          "image": "https://m.media-amazon.com/images/M/MV5BYjQ1ZTMxNzgtZDcxOC00NWY5LTk3ZjAtYzRhMDhlNDZlOWEzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt10366206",
+          "title": "John Wick: Chapter 4",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.9"
+        },
+        {
+          "id": "tt6806448",
+          "title": "Fast & Furious Presents: Hobbs & Shaw",
+          "image": "https://m.media-amazon.com/images/M/MV5BOTIzYmUyMmEtMWQzNC00YzExLTk3MzYtZTUzYjMyMmRiYzIwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "6.5"
+        },
+        {
+          "id": "tt0463985",
+          "title": "The Fast and the Furious: Tokyo Drift",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.0"
+        },
+        {
+          "id": "tt0322259",
+          "title": "2 Fast 2 Furious",
+          "image": "https://m.media-amazon.com/images/M/MV5BMzExYjcyYWMtY2JkOC00NDUwLTg2OTgtMDI3MGY2OWQzMDE2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "5.9"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BM2ZlZDFkNjktOWJjYi00NzNhLWE4MmEtYmUyZjRiYzhmMWZjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio2.4000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BYjFhZmNhNzktNjc4Ny00ZDliLWI0ZDgtNWM3MTNjZTI1MTViXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio2.4000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNjc4MGY3YzgtNTUxZi00M2JlLWE2MjEtMWM0MjU2NjcwNzkzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio2.4000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNDhlYmMwOTAtZTJjNy00YzUxLWJhMzEtZDQzZTU0NDkxNTQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio2.3800_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt0437086",
+      "name": "Alita: Battle Angel",
+      "year": "2019",
+      "genre": "اکشن، ماجراجویی، علمی تخیلی",
+      "rate": "7.3",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQzYWYwYjctY2JhZS00NTYzLTllM2UtZWY5ZTk0NmYwYzIyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_Ratio0.6762_AL_.jpg",
+      "time": "122",
+      "story": "یک سایبورگ که مدت ها غیرفعال شده بود بار دیگر به زندگی باز میگردد ولی چیزی از گذشته به یاد ندارد و تصمیم میگیرد که دریابد در گذشته چه اتفاقاتی برایش افتاده است.",
+      "awards": "Awards, 10 wins & 25 nominations",
+      "director": "Robert Rodriguez",
+      "stars": "Rosa Salazar, Christoph Waltz, Jennifer Connelly",
+      "countries": "ژاپن، کانادا، ایالات متحده آمریکا",
+      "writers": "James Cameron, Laeta Kalogridis, Yukito Kishiro",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt1677720",
+          "title": "Ready Player One",
+          "image": "https://m.media-amazon.com/images/M/MV5BY2JiYTNmZTctYTQ1OC00YjU4LWEwMjYtZjkwY2Y5MDI0OTU3XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt1219827",
+          "title": "Ghost in the Shell",
+          "image": "https://m.media-amazon.com/images/M/MV5BMzJiNTI3MjItMGJiMy00YzA1LTg2MTItZmE1ZmRhOWQ0NGY1XkEyXkFqcGdeQXVyOTk4MTM0NQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.3"
+        },
+        {
+          "id": "tt1571234",
+          "title": "Mortal Engines",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzY1MDA2OTQ0N15BMl5BanBnXkFtZTgwMTkzNjU2NTM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.1"
+        },
+        {
+          "id": "tt0433035",
+          "title": "Real Steel",
+          "image": "https://m.media-amazon.com/images/M/MV5BMjEzMzEzNjg0N15BMl5BanBnXkFtZTcwMzg4NDk0Ng@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.1"
+        },
+        {
+          "id": "tt2239822",
+          "title": "Valerian and the City of a Thousand Planets",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTkxMDAxNDUyNV5BMl5BanBnXkFtZTgwOTc3MzcxMjI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.4"
+        },
+        {
+          "id": "tt11303334",
+          "title": "Battle Angel",
+          "image": "https://m.media-amazon.com/images/M/MV5BYjg4YzA0OWUtMTc2Ny00Y2ZmLWI3NTQtNGViZGQxMTg4MmY5XkEyXkFqcGdeQXVyMTA5MDAzODkw._V1_Ratio1.2754_AL_.jpg",
+          "imDbRating": "8.3"
+        },
+        {
+          "id": "tt1663662",
+          "title": "Pacific Rim",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.9"
+        },
+        {
+          "id": "tt1104001",
+          "title": "TRON: Legacy",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.8"
+        },
+        {
+          "id": "tt3731562",
+          "title": "Kong: Skull Island",
+          "image": "https://m.media-amazon.com/images/M/MV5BMWUxNjZiNTAtZmMwMi00MmYxLTkxZGEtZWE1MzU0OWFjOTNhXkEyXkFqcGdeQXVyNzk1MzI3MTI@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.6"
+        },
+        {
+          "id": "tt0107061",
+          "title": "Battle Angel",
+          "image": "https://m.media-amazon.com/images/M/MV5BODYyYWU1M2QtYTMwOC00ZDFmLTk3NjUtOWNiODYyYWUyZTYzXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.2"
+        },
+        {
+          "id": "tt7837402",
+          "title": "Red 11",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTY2NjU4NTU1Nl5BMl5BanBnXkFtZTgwMjg1ODk1NzM@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "4.9"
+        },
+        {
+          "id": "tt1823672",
+          "title": "Chappie",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUyNTI4NTIwNl5BMl5BanBnXkFtZTgwMjQ4MTI0NDE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.8"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BNjg2OTc0NzcwNl5BMl5BanBnXkFtZTgwMzQzNjQ3NjM@._V1_Ratio1.7800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTk2NzU1ODQ1Ml5BMl5BanBnXkFtZTgwNjE5Mjc0NjM@._V1_Ratio1.8800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTc5MDI3Njg4Nl5BMl5BanBnXkFtZTgwNzE5Mjc0NjM@._V1_Ratio1.8800_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMjUyOTYwNjA3MF5BMl5BanBnXkFtZTgwOTE5Mjc0NjM@._V1_Ratio1.8800_AL_.jpg"
+      ]
+    },
+    {
+      "id": "tt2884206",
+      "name": "I Origins",
+      "year": "2014",
+      "genre": "درام، معمایی، عاشقانه",
+      "rate": "7.3",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTc4NWJjYTctZDhjOS00Y2MyLWEwYWYtNDVmYmJhN2VlYzU5XkEyXkFqcGdeQXVyMjQwMjk0NjI@._V1_Ratio0.6762_AL_.jpg",
+      "time": "106",
+      "story": "یک زیست شناس مولکولی و شریک آزمایشگاه خود شواهدی پیدا می کند که ممکن است اساساً جامعه را تغییر دهد و رو به نابودی ببرد...",
+      "awards": "Awards, 2 wins & 3 nominations",
+      "director": "Mike Cahill",
+      "stars": "Michael Pitt, Steven Yeun, Astrid Bergès-Frisbey",
+      "countries": "ایالات متحده آمریکا",
+      "writers": "Mike Cahill",
+      "CreatedAt": "2023-06-11",
+      "similars": [
+        {
+          "id": "tt0485947",
+          "title": "Mr. Nobody",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg4ODkzMDQ3Nl5BMl5BanBnXkFtZTgwNTEwMTkxMDE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.7"
+        },
+        {
+          "id": "tt1549572",
+          "title": "Another Earth",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTAzNTIzMjkxNjJeQTJeQWpwZ15BbWU3MDEwNDQ2OTU@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.9"
+        },
+        {
+          "id": "tt2866360",
+          "title": "Coherence",
+          "image": "https://m.media-amazon.com/images/M/MV5BNzQ3ODUzNDY2M15BMl5BanBnXkFtZTgwNzg0ODY2MTE@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.2"
+        },
+        {
+          "id": "tt2397535",
+          "title": "Predestination",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTAzODc3NjU1NzNeQTJeQWpwZ15BbWU4MDk5NTQ4NTMx._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt0756683",
+          "title": "The Man from Earth",
+          "image": "https://m.media-amazon.com/images/M/MV5BMzQ5NGQwOTUtNWJlZi00ZTFiLWI0ZTEtOGU3MTA2ZGU5OWZiXkEyXkFqcGdeQXVyMTczNjQwOTY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.9"
+        },
+        {
+          "id": "tt0272152",
+          "title": "K-PAX",
+          "image": "https://m.media-amazon.com/images/M/MV5BZjE2Mjc4Y2EtN2QyNy00YTI5LWFlMjUtYjkwOTdhYTliMTliXkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.4"
+        },
+        {
+          "id": "tt1748207",
+          "title": "Sound of My Voice",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTExMzcwODc5NDBeQTJeQWpwZ15BbWU3MDQ2MzU2NTc@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.6"
+        },
+        {
+          "id": "tt0435609",
+          "title": "Boxers and Ballerinas",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTg3NjQ2MjcwOF5BMl5BanBnXkFtZTcwNzYzNzcyMQ@@._V1_Ratio0.7150_AL_.jpg",
+          "imDbRating": "7.2"
+        },
+        {
+          "id": "tt0289879",
+          "title": "The Butterfly Effect",
+          "image": "https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.6957_AL_.jpg",
+          "imDbRating": "7.6"
+        },
+        {
+          "id": "tt1258197",
+          "title": "Exam",
+          "image": "https://m.media-amazon.com/images/M/MV5BNDg2NzM2NzIwNF5BMl5BanBnXkFtZTcwODE2ODc1Mg@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "6.8"
+        },
+        {
+          "id": "tt0414993",
+          "title": "The Fountain",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTU5OTczMTcxMV5BMl5BanBnXkFtZTcwNDg3MTEzMw@@._V1_Ratio0.6763_AL_.jpg",
+          "imDbRating": "7.2"
+        },
+        {
+          "id": "tt1182345",
+          "title": "Moon",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_Ratio0.6860_AL_.jpg",
+          "imDbRating": "7.8"
+        }
+      ],
+      "Image_Moviez": [
+        "https://m.media-amazon.com/images/M/MV5BMjI3OTQ1NTkwM15BMl5BanBnXkFtZTgwOTA0NjYxMjE@._V1_Ratio2.4000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTQzNjM5Nzg0OF5BMl5BanBnXkFtZTgwMDE0NjYxMjE@._V1_Ratio2.4200_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTk0MDk5NDc2OF5BMl5BanBnXkFtZTgwMTE0NjYxMjE@._V1_Ratio1.5000_AL_.jpg",
+        "https://m.media-amazon.com/images/M/MV5BMTg3OTkzOTgxMF5BMl5BanBnXkFtZTgwODA0NjYxMjE@._V1_Ratio2.4000_AL_.jpg"
+      ]
+    }
+  ],
+  "Comments": [],
+  "Collections": [],
+  "Users": [
+    {
+      "name": "amir",
+      "username": "sparta",
+      "id": 1
+    },
+    {
+      "name": "ali",
+      "username": "spartsa",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "user": "reza",
+      "email": "232",
+      "password": "3232",
+      "id": 4
+    }
+  ],
+  "BoxOffice": [
+    {
+      "gross": "$32.4M",
+      "id": "tt18079362",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzY4MzQ1MTgtNGZiYS00Y2M5LWJmODUtYzIzNWFlOGZjMjk5XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_Ratio0.6716_AL_.jpg",
+      "rank": "6",
+      "title": "80 for Brady",
+      "weekend": "$3.8M",
+      "weeks": "3"
+    },
+    {
+      "gross": "$12.5M",
+      "id": "tt0120338",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.6716_AL_.jpg",
+      "rank": "7",
+      "title": "Titanic",
+      "weekend": "$2.4M",
+      "weeks": "2"
+    },
+    {
+      "gross": "$2.6M",
+      "id": "tt6722802",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2EzNWEwNmYtMGE2NC00Y2NiLTk5NGEtZmRlZDE0Y2M0Yzg5XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_Ratio0.6716_AL_.jpg",
+      "rank": "8",
+      "title": "Marlowe",
+      "weekend": "$1.8M",
+      "weeks": "1"
+    },
+    {
+      "gross": "$29.7M",
+      "id": "tt10855768",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjAzYjUwNWUtYTYxOS00MTkzLWJkOTUtOTE4MTE4ODRmNGNhXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_Ratio0.6716_AL_.jpg",
+      "rank": "9",
+      "title": "Missing",
+      "weekend": "$1.7M",
+      "weeks": "5"
+    }
+  ]
+}

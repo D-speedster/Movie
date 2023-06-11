@@ -26,11 +26,15 @@ export default function Register() {
     }
     console.log('Register SuccessFully')
     console.log(obj)
-    fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json/' , {
-      method : 'Post' ,
-      body : JSON.stringify(obj)
-    }).then(res=>res.json())
-    .then(data=>console.log('End Process' , data))
+    fetch('http://localhost:3000/Users', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(obj)
+    }).then(res => res.json())
+      .then(data => console.log('End Process', data))
   }
   function EmailChanger(event) {
     SetEmail(event.target.value);

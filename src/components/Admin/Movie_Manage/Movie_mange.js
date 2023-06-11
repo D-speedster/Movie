@@ -18,7 +18,7 @@ export default function Movie_mange() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE/${movieToRemove}.json`, {
+        fetch(`http://localhost:3000/Moviez/${movieToRemove}.json`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -41,7 +41,7 @@ export default function Movie_mange() {
     }
 
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+        fetch('http://localhost:3000/Moviez')
             .then(res => res.json())
             .then(data => {
                 SetResult(data);
@@ -59,7 +59,7 @@ export default function Movie_mange() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            fetch('http://localhost:3000/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     let result = Object.entries(data).filter(res => {
@@ -69,7 +69,7 @@ export default function Movie_mange() {
                     SetResult(result);
                 });
         } else {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+            fetch('http://localhost:3000/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     SetResult(data);

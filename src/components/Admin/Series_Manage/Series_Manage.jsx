@@ -13,7 +13,7 @@ export default function Movie_Series() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series/${SeriesToRemove}.json`, {
+        fetch(`http://localhost:3000/Series/{SeriesToRemove}.json`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -36,7 +36,7 @@ export default function Movie_Series() {
     }
 
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+        fetch('http://localhost:3000/Series')
             .then(res => res.json())
             .then(data => {
                 SetResult(data);
@@ -54,7 +54,7 @@ export default function Movie_Series() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+            fetch('http://localhost:3000/Series')
                 .then(res => res.json())
                 .then(data => {
                     let result = Object.entries(data).filter(res => {
@@ -64,7 +64,7 @@ export default function Movie_Series() {
                     SetResult(result);
                 });
         } else {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+            fetch('http://localhost:3000/Series')
                 .then(res => res.json())
                 .then(data => {
                     SetResult(data);

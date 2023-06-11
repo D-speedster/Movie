@@ -13,8 +13,12 @@ export default function BoxInfo(props) {
         let finArray = { ...props, Image_Moviez }
         console.log(finArray);
         if (props.type == "TVSeries") {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json', {
-                method: "POST",
+            fetch('http://localhost:3000/Series', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(finArray)
             }).then(res => {
                 return res.json()
@@ -23,8 +27,12 @@ export default function BoxInfo(props) {
             })
         }
         else {
-            fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json', {
-                method: "POST",
+            fetch('http://localhost:3000/Moviez', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(finArray)
             }).then(res => {
                 return res.json()
