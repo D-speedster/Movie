@@ -28,11 +28,14 @@
     "web-vitals": "^3.3.2"
   },
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start" ,
+    "start": "set PORT=3006 && react-scripts start",
     "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"set PORT=3006 && react-scripts start\" \"json-server --watch db.json",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "json-server --watch db.json",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -59,7 +62,7 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
-    "jest": "^29.5.0"  ,
+    "jest": "^29.5.0",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
