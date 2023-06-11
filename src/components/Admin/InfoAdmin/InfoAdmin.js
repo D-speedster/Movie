@@ -21,27 +21,27 @@ export default function InfoAdmin() {
     const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
     let data2 = [{ name: '' }]
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+        fetch('https://database1.iran.liara.run/ALL_MOVIE')
             .then(res => res.json())
             .then(data => {
                 setMovie_Count(Object.keys(data).length)
             })
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+        fetch('https://database1.iran.liara.run/Series')
             .then(res => res.json())
             .then(data => {
                 setSeries_Count(Object.keys(data).length)
             })
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Users.json')
+        fetch('https://database1.iran.liara.run/Users')
             .then(res => res.json())
             .then(data => {
                 setUsers_Count(Object.keys(data).length)
             })
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Comments.json')
+        fetch('https://database1.iran.liara.run/Comments')
             .then(res => res.json())
             .then(data => {
                 setComments_Count(Object.keys(data).length)
             })
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections.json')
+        fetch('https://database1.iran.liara.run/Collections')
             .then(res => res.json())
             .then(data => {
                 setCollections_Count(Object.keys(data).length)

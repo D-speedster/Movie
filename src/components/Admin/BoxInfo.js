@@ -13,7 +13,7 @@ export default function BoxInfo(props) {
         let finArray = { ...props, Image_Moviez }
         console.log(finArray);
         if (props.type == "TVSeries") {
-            fetch('http://localhost:3000/Series', {
+            fetch('https://database1.iran.liara.run/Series', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -27,7 +27,7 @@ export default function BoxInfo(props) {
             })
         }
         else {
-            fetch('http://localhost:3000/Moviez', {
+            fetch('https://database1.iran.liara.run/Moviez', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

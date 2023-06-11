@@ -18,7 +18,7 @@ export default function Movie_mange() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`http://localhost:3000/Moviez/${movieToRemove}.json`, {
+        fetch(`https://database1.iran.liara.run/Moviez/${movieToRemove}.json`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -41,7 +41,7 @@ export default function Movie_mange() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/Moviez')
+        fetch('https://database1.iran.liara.run/Moviez')
             .then(res => res.json())
             .then(data => {
                 SetResult(data);
@@ -59,7 +59,7 @@ export default function Movie_mange() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('http://localhost:3000/Moviez')
+            fetch('https://database1.iran.liara.run/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     let result = Object.entries(data).filter(res => {
@@ -69,7 +69,7 @@ export default function Movie_mange() {
                     SetResult(result);
                 });
         } else {
-            fetch('http://localhost:3000/Moviez')
+            fetch('https://database1.iran.liara.run/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     SetResult(data);

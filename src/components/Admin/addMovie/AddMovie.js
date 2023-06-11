@@ -99,7 +99,7 @@ export default function AddMovie() {
             alert("لطفا آیدی فیلم مورد نظر را وارد کنید")
         } else {
             console.log("START PROCESS");
-            fetch('http://localhost:3000/Moviez')
+            fetch('https://database1.iran.liara.run/Moviez')
                 .then(res => res.json())
                 .then(data => {
                     let isAre = Object.entries(data).filter((i => {

@@ -68,7 +68,7 @@ export default function AddSeries() {
             alert("لطفا آیدی سریال مورد نظر را وارد کنید")
         } else {
             console.log("START PROCESS");
-            fetch('https://Series-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Series.json')
+            fetch('https://database1.iran.liara.run/Series.json')
                 .then(res => res.json())
                 .then(data => {
                     let isAre = Object.entries(data).filter((i => {

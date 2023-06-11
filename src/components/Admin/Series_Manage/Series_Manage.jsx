@@ -13,7 +13,7 @@ export default function Movie_Series() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`http://localhost:3000/Series/{SeriesToRemove}.json`, {
+        fetch(`https://database1.iran.liara.run/Series/{SeriesToRemove}.json`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -36,7 +36,7 @@ export default function Movie_Series() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/Series')
+        fetch('https://database1.iran.liara.run/Series')
             .then(res => res.json())
             .then(data => {
                 SetResult(data);
@@ -54,7 +54,7 @@ export default function Movie_Series() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('http://localhost:3000/Series')
+            fetch('https://database1.iran.liara.run/Series')
                 .then(res => res.json())
                 .then(data => {
                     let result = Object.entries(data).filter(res => {
@@ -64,7 +64,7 @@ export default function Movie_Series() {
                     SetResult(result);
                 });
         } else {
-            fetch('http://localhost:3000/Series')
+            fetch('https://database1.iran.liara.run/Series')
                 .then(res => res.json())
                 .then(data => {
                     SetResult(data);

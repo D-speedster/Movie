@@ -17,7 +17,7 @@ export default function Collection() {
         console.log(SetIdMovie)
     }, [SetIdMovie])
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections.json')
+        fetch('https://database1.iran.liara.run/Collections.json')
             .then(res => res.json())
             .then(data => {
                 SetCollection(data)
@@ -26,7 +26,7 @@ export default function Collection() {
 
     let RemoverHandler = (name) => {
         console.log(`Remover Start Movie : ${name} `)
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections/${name}.json`,
+        fetch(`https://database1.iran.liara.run/Collections/${name}.json`,
             {
                 method: 'DELETE'
             }
@@ -39,7 +39,7 @@ export default function Collection() {
     function SearchCollection(event) {
         let resultS = document.querySelector('.MovieInputSearch').value
 
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
+        fetch('https://database1.iran.liara.run/ALL_MOVIE.json')
             .then(res => res.json())
             .then(data => {
                 let findMovie = Object.entries(data).filter(ios => {
@@ -67,7 +67,7 @@ export default function Collection() {
             poster: input_poster_collection,
             movies: SearchIDMovie
         }
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Collections.json`, {
+        fetch(`https://database1.iran.liara.run/Collections.json`, {
             method: 'POST',
             body: JSON.stringify(objCollection)
         }).then(res => res.json)

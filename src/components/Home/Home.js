@@ -10,7 +10,7 @@ export default function Home() {
 
   let [BoxOffice, SetBoxOffice] = useState();
   useEffect(() => {
-    fetch('http://localhost:3000/BoxOffice').then(res => {
+    fetch('https://database1.iran.liara.run/BoxOffice').then(res => {
       return res.json()
     }).then(data => {
 
@@ -27,7 +27,7 @@ export default function Home() {
       MoviezArray.push(Moviez[Movie])
     }
     let spc = MoviezArray.filter((ols => {
-      return ols['genre']
+      return ols['genre'].includes(genre) == true;
 
     }))
 
@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3000/Moviez')
+    fetch('https://database1.iran.liara.run/Moviez')
       .then(res => res.json())
       .then(data => {
         SetMoviez(data);
