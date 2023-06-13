@@ -24,6 +24,7 @@
     "react-scripts": "^5.0.1",
     "recharts": "^2.6.2",
     "styled-components": "^5.3.11",
+    "sweetalert2": "^11.7.12",
     "swiper": "^9.3.2",
     "web-vitals": "^3.3.2"
   },
@@ -61,12 +62,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "jest": "^29.5.0",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-env": "7.22.5"
+    "@babel/preset-env": "7.22.5",
+    "gh-pages": "^5.0.0",
+    "jest": "^29.5.0"
   },
   "main": "index.js",
   "author": "speedster",

@@ -18,7 +18,7 @@ export default function Movie_mange() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`https://database1.iran.liara.run/Moviez/${movieToRemove}.json`, {
+        fetch(`https://database1.iran.liara.run/Moviez/${movieToRemove}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

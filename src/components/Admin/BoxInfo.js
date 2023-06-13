@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Col, Figure, Row, Form, Button, Table } from 'react-bootstrap';
 import './BoxInfo.css';
+import Swal from 'sweetalert2'
 
 export default function BoxInfo(props) {
     let [Movie,] = useState();
@@ -40,9 +41,25 @@ export default function BoxInfo(props) {
                 console.log(data)
             })
         }
-        console.log("START PROCESS POST", Movie)
+        // console.log("START PROCESS POST", Movie)
 
-        console.log("END PROCESS POST", Movie)
+        // console.log("END PROCESS POST", Movie)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: 'پست شما در دیتابیس ذخیره شد'
+        })
 
 
     }

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function Header() {
+ 
 
     let [Search_Word, SetSearch_Word] = useState("");
     let [Search_Res, SetSearch_Res] = useState([])
@@ -64,7 +65,7 @@ export default function Header() {
 
                         <Col className='Login_Register mt-3'>
                             <div className='d-flex float-start'>
-                                <Link to='/admin'>
+                                <Link to='/Login'>
                                     <Button className='me-3 Login_Btn'>ورود</Button>
                                 </Link>
 

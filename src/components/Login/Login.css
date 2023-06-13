@@ -1,57 +1,86 @@
-.background-form-2 {
-    background-image: url('/public//img/backi.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
+.Back_Form {
+    background-image: url('/public/img/backi.jpg');
+    height: 100vh;
 
-
-}
-
-.Register {
-    height: 600px;
-    width: 70%;
     display: flex;
-    margin: 50px auto;
-    background-color: rgba(238, 246, 237, 0.777);
-    box-shadow: 1px solid #EEE;
-    border-radius: 15px;
-
-}
-.Register h3{
-    color: #EEE;
-    font-size: 19px;
-    font-weight: 600;
-    
-
-}
-.Register-Form {
-
-    height: 400px;
-    background-color: rgb(13, 13, 12);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 15px;
-    color: #EEE;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.Register-Left {
+@media only screen and (max-width: 600px) {
+    .Back_Form {
+        height: max-content;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 
-
-    border-radius: 15px;
-
+.Box_Form {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 75%;
+    border-radius: 9px;
+    background-color: #000;
+    height: max-content;
+    margin: auto;
 
 }
 
-.Register-Left img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    filter: blur(50%);
+@media only screen and (max-width: 600px) {
+    .Box_Form {
+        width: 90%;
+    }
 }
-.Register-Left img:hover{
-    filter: blur(100%);
+
+.Right_Box {}
+
+.Right_Box img {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    width: 100%;
+    height: inherit !important;
+}
+
+.Left_Box {
+    color: white !important;
+    padding-bottom: 25px;
+}
+
+.Left_Box h2 {
+    text-align: center;
+    margin-top: 25px;
    
 }
-svg{
-    font-size: 21px;
+
+.Left_Box input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 45px;
+    border-bottom: 1px solid #CCC;
+    background-color: inherit;
+    font-size: 16px;
+    padding: 5px 8;
+    color: #FFF;
+
+}
+
+.Left_Box input:focus {
+    background-color: inherit;
+    border: 0;
+    outline: 0;
+
+}
+.Left_Box input::placeholder{
+    color: #8f8989;
 }
