@@ -35,8 +35,7 @@ function Header_Admin() {
                     <Nav>
                         {/* <Nav.Link href="#deets"><BsMoonStarsFill></BsMoonStarsFill></Nav.Link> */}
                         <Nav.Link eventKey={2} href="#memes">
-                            <img src='../img/speedster.jpg' style={{ width: '35px', height: '35px', borderRadius: '50%' }} />
-                            <span className='pe-2'>مدیر اصلی</span>
+                            <img src="/img/speedster.jpg" style={{ width: '35px', height: '35px', borderRadius: '50%' }} />                            <span className='pe-2'>مدیر اصلی</span>
                             <div className='navbar_dis'>
                                 <Link to='addMovie'><li> افزودن فیلم</li></Link>
                                 <Link to='addSerie'><li> افزودن سریال</li></Link>

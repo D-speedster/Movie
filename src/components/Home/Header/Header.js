@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function Header() {
- 
+
 
     let [Search_Word, SetSearch_Word] = useState("");
     let [Search_Res, SetSearch_Res] = useState([])
@@ -65,7 +65,7 @@ export default function Header() {
 
                         <Col className='Login_Register mt-3'>
                             <div className='d-flex float-start'>
-                                <Link to='/Login'>
+                                <Link to='/login'>
                                     <Button className='me-3 Login_Btn'>ورود</Button>
                                 </Link>
 
@@ -141,7 +141,9 @@ export default function Header() {
                                     </Nav>
 
                                     <Col lg={4} className='Search'>
-                                        <input onChange={Search_Handler} type='search' placeholder='اسم فیلم را وارد نمایید' className='form-control bg-secondary search_btn'></input>
+                                        <input
+                                            style={{ border: '0', outline: '0' }}
+                                            onChange={Search_Handler} type='search' placeholder='اسم فیلم را وارد نمایید' className='form-control bg-secondary search_btn'></input>
                                         <div className='Result_Search'>
                                             <Container>
                                                 <Row className='justify-content-between'>

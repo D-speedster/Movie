@@ -1,37 +1,65 @@
-.Search_Handler {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .Search_Input {
-    height: 40px;
-    width: 70%;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  .Search_Button {
-    background-color: #d80d0d;
-    border: none;
-    color: #fff;
-    height: 40px;
-    width: 30%;
-    padding: 0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-left: -10px; /* این خط تغییر داده شده است */
-  }
-  
-  .Search_Button:hover {
-    background-color: #ff1e1e;
-  }
-  
+.ADD_MOVIE {}
+
+.Title_Admin {
+  padding: 15px;
+  width: max-content;
+}
+
+.Title_Admin span {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 21px;
+  border-bottom: 3px solid #F44000;
+  padding-bottom: 12px
+}
+
+.Title_Admin svg {
+  color: #FFF;
+}
+
+.IMDB {}
+
+.IMDB_HEADER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 25px;
+  height: 65px;
+  width: 100%;
+  background-color: #feca43;
+  /* border-top-left-radius: 12px;
+  border-top-right-radius: 12px; */
+  border-radius: 12px;
+}
+
+.IMDB_HEADER_TEXT {
+  color: #161414;
+  font-weight: 700;
+  letter-spacing: 1.2;
+}
+
+.IMDB_ID {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.IMDB_ID button {
+
+  width: 20%;
+  border: 0;
+  outline: 0;
+
+
+}
+
+.IMDB_ID input {
+  width: 78%;
+  border: 0;
+  outline: 0;
+  color: green;
+
+}

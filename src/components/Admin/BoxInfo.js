@@ -13,7 +13,7 @@ export default function BoxInfo(props) {
     function SubmitHandler() {
         let finArray = { ...props, Image_Moviez }
         console.log(finArray);
-        if (props.type == "TVSeries") {
+        if (props.Type == "series") {
             fetch('https://database1.iran.liara.run/Series', {
                 method: 'POST',
                 headers: {
@@ -72,11 +72,6 @@ export default function BoxInfo(props) {
         if (imgIndex !== -1) {
             ImagesMoviez = ImagesMoviez.filter((img) => img.url !== imgSrc);
         } else {
-            // const objImg = {
-            //     id: Math.random(10, 50),
-            //     url: imgSrc.url,
-            // };
-
 
             SetImageMoviez(prevState => [...prevState, imgSrc]);
 
@@ -85,24 +80,33 @@ export default function BoxInfo(props) {
 
     }
     function ImageGetter() {
-        fetch(`https://imdb-api.com/en/API/Images/k_709yvj7w/${props.id}`).then(res => {
-            return res.json()
-        }).then(data => {
-            SetImages(data['items'])
-        })
-
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTc0N2FhOTczMTViZDI2MTdkMTVjOTk0MzVjYjc5YiIsInN1YiI6IjYyYTgzNTEzN2Y2YzhkNzdiYmE4NDc3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lOCBFIWI14W-dhVxANVCS-OG17kRiLcusMkXKU-dfSg'
+            }
+        };
+        fetch(`https://api.themoviedb.org/3/movie/${props.id}/images`, options)
+            .then(response => response.json())
+            .then(response => SetImages(response['backdrops']))
+            .catch(err => console.error(err));
     }
 
 
     useEffect(() => {
         console.log(Images_Movie)
+        let IMGSR = Images_Movie.filter(res => {
+            return res['vote_average'] > 5.32
+        })
+        let FinIMSRC = IMGSR.map((img) => {
+            return "https://image.tmdb.org/t/p/w500" + img.file_path
+
+        })
+        SetImageMoviez(FinIMSRC)
 
     }, [Images_Movie])
-    useEffect(() => {
 
-        console.log(Image_Moviez)
-
-    }, [Image_Moviez])
 
 
     return (
@@ -162,7 +166,7 @@ export default function BoxInfo(props) {
                             </Row>
                             <Row className='mb-3'>
                                 <Form.Group as={Col} lg={2} controlId='formWriters'>
-                                    <Form.Label>نویسنده</Form.Label>
+                                    <Form.Label>ژانر</Form.Label>
                                 </Form.Group>
                                 <Col lg={10}>
                                     <Form.Control type='text' placeholder='نویسنده' value={props.genre} />
@@ -251,7 +255,7 @@ export default function BoxInfo(props) {
 
                     </Row>
                     <Row className='mt-3' >
-                        {!Images_Movie ? null : (Images_Movie.slice(0, 15).map((img, index) => <img onClick={ImgHandlerClick} className='img-fluid col-lg-3 mt-3' src={img['image']} data-sd={index} />))}
+                        {!Images_Movie ? null : (Images_Movie.map((img, index) => <img onClick={ImgHandlerClick} className='img-fluid col-lg-3 mt-3' src={"https://image.tmdb.org/t/p/w500/" + img['file_path']} data-sd={index} />))}
                     </Row>
                     <button onClick={SubmitHandler} className='btn btn-success mt-3 '>ذخیره و انتشار</button>
 

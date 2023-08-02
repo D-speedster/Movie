@@ -17,7 +17,7 @@ export default function Settings() {
                     <Link to="Series">تنظیمات سریال</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to="Slider">تنظیمات اسلایدر</Link>
+                    <Link to="Top250">250 فیلم برتر</Link>
                 </Nav.Item>
 
                 <Nav.Item>

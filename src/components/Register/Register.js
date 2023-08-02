@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Register.css'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import 'sweetalert2/src/sweetalert2.scss'
 export default function Register() {
@@ -14,7 +15,8 @@ export default function Register() {
     let obj = {
       user: Username,
       email: Email,
-      password: Password
+      password: Password,
+      type: 'User'
     }
     console.log('Register SuccessFully')
     console.log(obj);
@@ -40,6 +42,7 @@ export default function Register() {
 
   }
   return (
+
     <div className='Back_Form'>
       <div className='container'>
         <div className='Box_Form'>

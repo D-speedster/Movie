@@ -1,45 +1,57 @@
 .BoxOffice {
 
-    background: url('/public//img/batman.jpg');
-    margin: 25px auto;
+    background: #7b4397;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397);
     height: max-content;
     background-repeat: no-repeat;
     background-position: 90% 40%;
     color: #FFF;
     border-radius: 10px;
-    padding: 8px;
+    padding-bottom: 25px;
+
 }
 
 
 .Item-Box-Office {
-    margin-top: 10px;
-    height: max-content;
+    margin-top: 18px;
+    height: 125px;
     width: 100%;
-    background-color: #020202;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
     padding: 10px;
     /* border: 1px solid #ccc; */
-    transition: 1s all;
-    cursor: pointer;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    justify-content: center;
+    align-items: center;
+ 
+    text-align: center;
 }
 
-
-.Item-Box-Office:hover .dd-lx {
-    opacity: 0;
-}
-
-.Item-Box-Office:hover {
-    background: url('/public/img/download-banner-1100X350.jpg');
-    background-position: 80% !important;
+.Item-Box-Office-img {
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+    width: 50%;
+    height: 125px;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-clip: content-box;
 
 
 
 }
 
-.Item-Box-Office img {
-    max-width: 60px;
-    border-radius: 10px;
+.Item-Box-Office-text {
+    border-bottom-left-radius: 15px ;
+    border-top-left-radius: 15px ;
+    padding-top: 17px;
+    width: 50%;
+    background-color: #020202;
+    height: 125px;
+
+
 }

@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'; 
+
 import { Container, Figure } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +12,7 @@ export { MovieContext };
 
 export default function SliderMovie(props) {
     
-    console.log(props)
+   
 
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {
@@ -104,7 +105,7 @@ export default function SliderMovie(props) {
                                                 <div className='Story' style={{ color: 'white' }}>
                                                     <Container>
                                                         <h5>خلاصه داستان</h5>
-                                                        {item[1].story.substr(1, 195)}
+                                                        {item[1].story}
                                                     </Container>
                                                 </div>
 

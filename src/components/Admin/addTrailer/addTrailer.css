@@ -1,0 +1,12 @@
+
+.Add_New_Trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.Last_trailer_added .card {
+    margin-top: 20px;
+
+}

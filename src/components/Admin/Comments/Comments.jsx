@@ -4,24 +4,25 @@ import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import './Comments.css';
+import ApiRequest from '../../../Services/Axios/config';
+import Title_Admin from '../TitleAdmin/TitleAdmin';
 
 export default function Comments() {
     let [Comments, SetComments] = useState('');
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/Comments.json')
-            .then(res => res.json())
-            .then(data => {
-                SetComments(data)
-                // setpending(false)
-                console.log(data)
-            })
+        ApiRequest.get('/Comments').then(data => {
+            SetComments(data)
+            // setpending(false)
+            console.log(data)
+        })
+
+
     }, [])
     return (
         <div>
             <Container>
                 <Row className='d-flex justify-content-between mt-3'>
-                    <Col lg={6}> <h3 className='title_admin'>مدیریت کامنت ها</h3></Col>
-
+                <Title_Admin Title={'مدیریت کامنت ها  : '}></Title_Admin>
                 </Row>
                 {!Comments ? 'Locading ...' : (
                     <Table responsive className='mt-3'>

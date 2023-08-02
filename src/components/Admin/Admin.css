@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    height: 100vh;
+    /* height: 100vh; */
     width: 200px;
     /* عرض دلخواه سایدبار */
     background-color: #212a44;
@@ -30,7 +30,7 @@
 .sec2 {
     margin-left: 200px;
     background-color: #171b31;
-    height: 100%;
+    height: initial !important;
 }
 
 @media only screen and (max-width : 600px) {

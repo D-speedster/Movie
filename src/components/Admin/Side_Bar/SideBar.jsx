@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { AiFillSetting, AiOutlineComment, AiTwotoneHome } from 'react-icons/ai';
 import { BiCameraMovie } from 'react-icons/bi';
 import { BsFillCollectionPlayFill } from 'react-icons/bs';
-import { FaRegNewspaper } from 'react-icons/fa';
+import { FaImdb, FaRegNewspaper } from 'react-icons/fa';
 import { HiUsers } from 'react-icons/hi';
 import { MdLocalMovies, MdMovie, MdOutlineMovieCreation, MdSlowMotionVideo } from 'react-icons/md';
 import { RiVipLine } from 'react-icons/ri';
@@ -32,10 +32,12 @@ export default function SideBar() {
             </ul>
             <ul className='menu-right-ul'>
                 <h6>مدیریت</h6>
-                <Link to='User-Management'><li> <HiUsers></HiUsers>مدیریت کاربران</li></Link>
-                <Link to='Movies-Management'><li><MdLocalMovies></MdLocalMovies>مدیریت فیلم ها  </li></Link>
-                <Link to='Series-Management'><li> <MdOutlineMovieCreation></MdOutlineMovieCreation>مدیریت سریال ها</li></Link>
-                <Link to='Comments-Management'><li><AiOutlineComment></AiOutlineComment> مدیریت کامنت ها</li></Link>
+                <Link to='User-Management'><li> <HiUsers style={{color : '#f0101'}}></HiUsers>مدیریت کاربران</li></Link>
+                <Link to='Movies-Management'><li><MdLocalMovies style={{color : '#f0101'}}></MdLocalMovies>مدیریت فیلم ها  </li></Link>
+                <Link to='Series-Management'><li> <MdOutlineMovieCreation style={{color : '#f0101'}}></MdOutlineMovieCreation>مدیریت سریال ها</li></Link>
+                <Link to='Comments-Management'><li><AiOutlineComment style={{color : '#f0101'}} ></AiOutlineComment> مدیریت کامنت ها</li></Link>
+                <Link to='Imdb'><li><FaImdb style={{color : 'yellow'}}></FaImdb> مدیریت IMDB</li></Link>
+
             </ul>
             <ul className='menu-right-ul'>
                 <h6>تنظیمات</h6>

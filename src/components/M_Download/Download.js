@@ -14,18 +14,20 @@ export function Download(props) {
     useEffect(() => {
         window.scrollTo(0, 0);
         document.body.style.backgroundColor = '#000'
+        
     }, []);
+    
     const { userId } = useParams();
     let [getDataMo, setgetDataMo] = useState([])
 
-    useEffect(() => {
-        console.log(getDataMo)
-        console.log(getDataMo.Image_Moviez)
-    }, [getDataMo])
+    // useEffect(() => {
+    //     console.log(getDataMo)
+       
+    // }, [getDataMo])
 
 
     useEffect(() => {
-        fetch(`https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json`)
+        fetch(`https://database1.iran.liara.run/Moviez`)
             .then(res => res.json())
             .then(data => {
                 const movies = Object.entries(data).map(ois => ois['1'])
@@ -33,7 +35,7 @@ export function Download(props) {
                 setgetDataMo(userMovies['0'])
 
             }, []);
-        console.log(getDataMo)
+      
 
 
     }, []);
@@ -44,7 +46,7 @@ export function Download(props) {
             <InfoMovie info={[getDataMo.story, getDataMo.poster, getDataMo.director, getDataMo.genre, getDataMo.time, getDataMo.name, getDataMo.rate, getDataMo.Image_Moviez , getDataMo.countries , getDataMo.year , getDataMo.stars]}><BoxDownload></BoxDownload><Suggestion></Suggestion><Comment /></InfoMovie>
             <BoxDownload />
             {/* <Suggestion info={getDataMo.similars}></Suggestion> */}
-            <Comment></Comment>
+            <Comment id={getDataMo.id}></Comment>
             <Footer></Footer>
 
 

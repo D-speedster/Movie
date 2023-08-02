@@ -5,19 +5,21 @@ import { BsTrash } from 'react-icons/bs';
 import './Collection.css';
 import { RiMovie2Fill } from 'react-icons/ri'
 import { fontSize } from '@mui/system';
+import Title_Admin from '../TitleAdmin/TitleAdmin';
+import axios from 'axios';
 export default function Collection() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [Collection, SetCollection] = useState('');
     let [SearchIDMovie, SetIdMovie] = useState('');
-    let [ReLoad_Collectio , SetReCollecton] = useState('');
+    let [ReLoad_Collectio, SetReCollecton] = useState('');
 
     useEffect(() => {
         console.log(SetIdMovie)
     }, [SetIdMovie])
     useEffect(() => {
-        fetch('https://database1.iran.liara.run/Collections.json')
+        fetch('https://database1.iran.liara.run/Collections')
             .then(res => res.json())
             .then(data => {
                 SetCollection(data)
@@ -26,7 +28,7 @@ export default function Collection() {
 
     let RemoverHandler = (name) => {
         console.log(`Remover Start Movie : ${name} `)
-        fetch(`https://database1.iran.liara.run/Collections/${name}.json`,
+        fetch(`https://database1.iran.liara.run/Collections/${name}`,
             {
                 method: 'DELETE'
             }
@@ -39,7 +41,7 @@ export default function Collection() {
     function SearchCollection(event) {
         let resultS = document.querySelector('.MovieInputSearch').value
 
-        fetch('https://database1.iran.liara.run/ALL_MOVIE.json')
+        fetch('https://database1.iran.liara.run/Moviez')
             .then(res => res.json())
             .then(data => {
                 let findMovie = Object.entries(data).filter(ios => {
@@ -67,11 +69,13 @@ export default function Collection() {
             poster: input_poster_collection,
             movies: SearchIDMovie
         }
-        fetch(`https://database1.iran.liara.run/Collections.json`, {
-            method: 'POST',
-            body: JSON.stringify(objCollection)
-        }).then(res => res.json)
-            .then(data => console.log(data))
+        console.log(objCollection)
+        axios.post('https://database1.iran.liara.run/' , {objCollection}).then(res=>console.log(res))
+        // fetch(`https://database1.iran.liara.run/`, {
+        //     method: 'POST',
+        //     body: JSON.stringify(objCollection)
+        // }).then(res => res.json())
+        //     .then(data => console.log(data))
         handleClose()
         SetIdMovie('')
 
@@ -80,6 +84,7 @@ export default function Collection() {
         <div className='Collection'>
             <div>
                 <Container>
+                    <Title_Admin Title={'افزودن کالکشن جدید : '}></Title_Admin>
                     <Row>
                         <Col>
                             <button className='btn btn-danger mt-2 me-2' onClick={handleShow}>
@@ -127,7 +132,7 @@ export default function Collection() {
                                                 </>
 
                                             }
-                                            ) ) : (<h1>فیلمی موجود نیست</h1>)}
+                                            )) : (<h1>فیلمی موجود نیست</h1>)}
 
 
                                     </div>

@@ -12,7 +12,7 @@ export default function Header_MovieSeries() {
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <img alt="" src='/img/john.jpg' />
+                            <img alt="" src='/img/flash.jpg' />
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>

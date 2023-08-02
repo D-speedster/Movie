@@ -19,15 +19,14 @@
 .Slider_Movie .Story {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 8px;
     padding-top: 20px;
-    text-align: center;
     color: #FFF !important;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     opacity: 0;
     transition: 1s all;
-    width: 100% !important;
+    width: 90% !important;
     height: 100% !important;
     overflow: hidden;
     /* جلوگیری از نمایش متن اضافی */
@@ -87,14 +86,18 @@
 
 .Slider_Movie .Rate_Movie {
     position: absolute;
-    height: 35px !important;
-    width: 35px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    height: 38px !important;
+    width: 38px !important;
     border-radius: 50%;
     background-color: #db3163;
     border: 0.5px solid #eee;
     color: #FFF;
     top: 0px;
-    left: 0px;
+    left: 4.5px;
 }
 
 .figure {

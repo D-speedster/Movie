@@ -23,12 +23,12 @@ export default function Movie(props) {
                     <Row className='pt-5 justify-content-between'>
 
                         <Col className='Poster' lg={4} md={5} xs={12} sm={12} onDragStart={(event) => event.preventDefault()}>
-                            <img alt="" className='img-mobile' src='http://localhost:3000//img/mobile2-removebg-preview.png' />
+                            <img alt="" className='img-mobile' src='http://localhost:3006//img/mobile2-removebg-preview.png' />
                             <img alt="" className='img-poster' src={props.info['0']}></img>
 
                         </Col>
                         <Col className='trailer' lg={7} md={5} xs={12} sm={12}>
-                            <img alt="" className='img-fluid img-tablet ' src='http://localhost:3000/img/tablet.png'></img>
+                            <img alt="" className='img-fluid img-tablet ' src='http://localhost:3006/img/tablet.png'></img>
                             <video poster='./img/video.jpg' className='img-video' controls>
                                 <source src='./img/Marvel.mp4' type="video/mp4"></source>
                             </video>

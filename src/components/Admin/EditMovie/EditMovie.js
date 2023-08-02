@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Form, Row, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
+import ApiRequest from '../../../Services/Axios/config';
 
 export default function EditMovie() {
     const { userId } = useParams();
     let [MovieEditInput, SetEditMovie] = useState();
     useEffect(() => {
-        fetch('https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json')
-            .then(res => res.json())
-            .then(data => {
-                let movieEdit = Object.entries(data).find((movie) => {
-                    return movie['1']['id'] == userId
-                })
-                SetEditMovie(movieEdit['1']);
-
-
-
-
-
-
+        ApiRequest.get('/Moviez').then(data => {
+            // Object.entries(data.data).map((i)=>{
+            //     console.log(i['1'])
+            // })
+            let movieEdit = Object.entries(data.data).find((movie) => {
+                return movie['1'].id == userId
             })
+            console.log(movieEdit)
+            SetEditMovie(movieEdit['1']);
+
+        })
+
     }, [])
     useEffect(() => {
 
@@ -104,7 +103,7 @@ export default function EditMovie() {
                                         <input className='form-control'
                                             placeholder='ژانر'
                                             value={MovieEditInput?.genre}
-                                            onClick={(event)=>SetEditMovie({...MovieEditInput , genre : event.target.value })}
+                                            onClick={(event) => SetEditMovie({ ...MovieEditInput, genre: event.target.value })}
                                         />
                                     </Col>
                                 </Col>

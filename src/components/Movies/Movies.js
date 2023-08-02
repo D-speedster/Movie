@@ -3,25 +3,16 @@ import { Container, Row, Col, Figure } from 'react-bootstrap'
 import Header from '../Home/Header/Header'
 import './Movies.css';
 import { SwiperSlide } from 'swiper/react';
+import ApiRequest from '../../Services/Axios/config';
 
-export default function Hi() {
+export default function Movies() {
     let [All_Moviez, setAll_Moviez] = useState([]);
     let SearchBtn = () => {
         console.log("EVENT CLICK")
-       
     }
     useEffect(() => {
-        fetch("https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json")
-            .then(res => res.json())
-            .then(data => setAll_Moviez(data));
-
-
-
+        ApiRequest.get('/Moviez').then(Response => setAll_Moviez(Response.data))
     }, [])
-
-
-
-
     return (
         <div>
             <Header></Header>

@@ -2,11 +2,14 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Container } from 'react-bootstrap';
 import BoxInfo from '../BoxInfo';
 import './AddMovie.css'
-
-
+import { Genre_List } from '../Utils/Variables';
+import { Convertor } from '../Utils/Functions';
+import UseUpdateLogger from '../../../Hooks/UseUpdateLogger';
+import axios from 'axios';
+import ApiRequest from '../../../Services/Axios/config';
+import Title_Admin from '../TitleAdmin/TitleAdmin';
 
 export default function AddMovie() {
-    const RefCheck = useRef();
     let [box, setBox] = useState('')
     let [Movie, SetMovie] = useState([]);
     let [GenreSelect, SetGenreSelect] = useState('')
@@ -14,33 +17,53 @@ export default function AddMovie() {
     let [EditImages, SetEditImages] = useState('');
     let [status, Setstatus] = useState(false);
     let [IsMovie, SetIsMovie] = useState([]);
+    function Convertor(genres) {
+        const genresArr = genres.split(", ");
+        const translatedGenres = genresArr.map((genre) => {
+            const backs = Genre_List.filter((back) => {
+                return back.en === genre;
+            });
+            return backs[0].fa;
+        });
+        return translatedGenres
 
+    }
+    const TranslatePlot = (Plot) => {
+        fetch(`https://one-api.ir/translate/?token=665599:63d7d40ada1334.05423749&action=google&lang=fa&q=${Plot}`)
+            .then(response => response.json())
+            .then(data => {
+                const result = data['result'];
+
+            })
+
+    }
+
+    UseUpdateLogger(box);
+    UseUpdateLogger(IDKey);
+    UseUpdateLogger(EditImages)
     let SelectGenre = (event) => {
         SetGenreSelect(event.target.value)
     }
 
     useEffect(() => {
-        console.log(IDKey)
-    }, [IDKey])
-
-    useEffect(() => {
         if (status === false) {
             console.log('waiting...')
         } else {
-            fetch(`https://imdb-api.com/fa/API/Title/k_709yvj7w/${box}`).then(res => (
-                res.json()
-            )).then(data => {
-                let newMovie2 = InfoFunction(data['title'], data['year'],
-                    data['genres'], data['imDbRating'], data['image'],
-                    data['runtimeMins'], data['plotLocal'], data['awards'],
-                    data['directors'], data['stars'], data['countries'], data['writers'], data['similars']
-                )
+            axios
+                .get(`https://www.omdbapi.com/?i=${box}&plot=full&apikey=e49bd8ed`)
+                .then((response) => {
+                    let Genre_Moviez = Convertor(response.data['Genre'])
+                    let Fa_Plot = TranslatePlot(response.data['Plot'])
+                    console.log(Fa_Plot)
+                    let newMovie2 = InfoFunction(response.data['Title'], response.data['Year'],
+                        Genre_Moviez, response.data['imdbRating'], response.data['Poster'],
+                        response.data['Runtime'], Fa_Plot, response.data['Awards'],
+                        response.data['Director'], response.data['Actors'], response.data['Country'], response.data['Writer'], response.data['similars']
+                    )
 
-                SetMovie(newMovie2);
-                console.log("END PROCESS GET", Movie);
-
-            })
-
+                    SetMovie(newMovie2);
+                    console.log("END PROCESS GET", Movie);
+                })
         }
         console.log(IsMovie)
     }, [IsMovie]);
@@ -67,13 +90,6 @@ export default function AddMovie() {
     }
 
     useEffect(() => {
-        console.log(EditImages)
-    }, [EditImages]);
-
-
-
-
-    useEffect(() => {
         // IsMovie ?
         //     alert("در دیتابیس موجوده")
         //     :
@@ -92,52 +108,60 @@ export default function AddMovie() {
         //     })
         // console.log(IsMovie)
     })
-
     let ADD_Handler = async (event) => {
 
         if (!box) {
             alert("لطفا آیدی فیلم مورد نظر را وارد کنید")
         } else {
             console.log("START PROCESS");
-            fetch('https://database1.iran.liara.run/Moviez')
-                .then(res => res.json())
-                .then(data => {
-                    let isAre = Object.entries(data).filter((i => {
-                        return i['1'].id == box
-                    }));
-                    isAre.length == 0 ? SetIsMovie(() => true) : SetIsMovie(() => false);
-                });
+            ApiRequest.get('/Moviez',).then(function (data) {
+                let isAre = Object.entries(data).filter((i => {
+                    return i['1'].id == box
+                }));
+                isAre.length == 0 ? SetIsMovie(() => true) : SetIsMovie(() => false);
+            });
+
+
             Setstatus(true)
+
         }
-
     };
-
     let Change_Handler = (event) => {
         setBox(event.target.value);
     }
 
     return (
-        <Container className='text-center mt-3'>
-            <h1 style={{ color: '#FFF' }}>افزودن فیلم جدید</h1>
+        <div className='ADD_MOVIE'>
+            <Title_Admin Title={'افزودن فیلم جدید'}></Title_Admin>
+            <Container fluid>
+                <div className='IMDB pe-4 ps-4'>
+                    <div className='IMDB_HEADER'>
+                        <h5 className='IMDB_HEADER_TEXT'>دریافت اطلاعات فیلم از سایت IMDB</h5>
 
-            <div className='Search_Handler'>
-                <button onClick={ADD_Handler}>دریافت اطلاعات</button>
-                <input ref={RefCheck} onChange={Change_Handler} type='text' placeholder='آیدی فیلم' />
-            </div>
+                    </div>
+                    <div className='IMDB_ID'>
+
+                        <input className='form-control' onChange={Change_Handler} type='text'
+                            placeholder='آِیدی IMDB فیلم مورد نظر را وارد کنید' />
+                        <button className='btn btn-primary' onClick={ADD_Handler}>دریافت اطلاعات</button>
+
+                    </div>
+                    <hr></hr>
+                    {
+                        status ? (
+                            <BoxInfo {...Movie} />
+                        ) : (
+                            null
+                        )
+                    }
+
+                </div>
+            </Container>
+
+        </div>
 
 
-            <br />
-            <br />
 
-            {
-                status ? (
-                    <BoxInfo {...Movie} />
-                ) : (
-                    null
-                )
 
-            }
-
-        </Container>
     )
 }

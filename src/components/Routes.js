@@ -21,6 +21,9 @@ import Home_Setting from './Admin/Settings/Home';
 import AddSeries from './Admin/addSeries/addSeries'
 import Comments from './Admin/Comments/Comments';
 import Movie_Series from './Admin/Series_Manage/Series_Manage';
+import Top250 from './Admin/Settings/Top250'
+import AddTrailer from './Admin/addTrailer/addTrailer';
+import IMDB from './Admin/IMDB/IMDB';
 
 let routes = [
   { path: '*', element: <h1>Sorry , Page Not Found</h1> },
@@ -37,7 +40,7 @@ let routes = [
       { path: '', element: <InfoAdmin /> },
       { path: 'addMovie', element: <AddMovie /> },
       { path: 'addSerie', element: <AddSeries></AddSeries> },
-      { path: 'addTrailer', element: <h1 style={{ color: 'red' }}>addTrailer</h1> },
+      { path: 'addTrailer', element: <AddTrailer></AddTrailer> },
       { path: 'addNews', element: <News></News> },
       { path: 'User-Management', element: <Users /> },
       { path: 'Series-Management', element: <Movie_Series /> },
@@ -46,6 +49,7 @@ let routes = [
       { path: 'newCollection', element: <Collection></Collection> },
       { path: 'Comments-Management', element: <Comments /> },
       { path: 'Plans', element: <Plans_Admin></Plans_Admin> },
+      {path : 'IMDB' , element : <IMDB></IMDB>},
       {
         path: 'setting/*', element: <Settings></Settings>, children: [
           { path: '', element: <Home_Setting></Home_Setting> },
@@ -54,7 +58,8 @@ let routes = [
           { path: 'Series', element: <h1>Slider Series</h1> },
           { path: 'Slider', element: <Slider></Slider> },
           { path: 'Box-Office', element: <Box_ofiice></Box_ofiice> },
-          { path: 'other', element: <Other></Other> }
+          { path: 'other', element: <Other></Other> },
+          { path: 'Top250', element: <Top250></Top250> }
 
         ]
       }

@@ -2,11 +2,16 @@ import './Login.css'
 import { Link, Navigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
-
+import UseLocalStorage from '../../Hooks/UseLocalStorage';
 export default function Register() {
   let [UserName, SetUserName] = useState();
   let [Password, SetPassword] = useState();
   let [CheckTrue, SetCheckTrue] = useState();
+  useEffect(() => {
+    console.log(CheckTrue)
+  }, [CheckTrue])
+
+
   function LoginToPanel() {
     console.log(Password, UserName)
     fetch('https://database1.iran.liara.run/Users')
@@ -33,8 +38,12 @@ export default function Register() {
             icon: 'success',
             title: 'Signed in successfully'
           })
-          setInterval(() => {
-            SetCheckTrue(true)
+          setTimeout(() => {
+            SetCheckTrue(true);
+            document.cookie = "checkLogin=True";
+            // alert(document.cookie)
+
+
           }, 2500)
 
 

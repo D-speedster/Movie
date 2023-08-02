@@ -11,7 +11,9 @@ import Chart from './Chart';
 import { RiAdminFill } from 'react-icons/ri'
 import { xAxisData } from './datas';
 import { MdOutlinePreview } from 'react-icons/md';
+
 import { GrUserAdmin, GrView } from 'react-icons/gr'
+import ApiRequest from '../../../Services/Axios/config';
 export default function InfoAdmin() {
     let [Movie_Count, setMovie_Count] = useState('');
     let [Series_Count, setSeries_Count] = useState('');
@@ -21,31 +23,21 @@ export default function InfoAdmin() {
     const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
     let data2 = [{ name: '' }]
     useEffect(() => {
-        fetch('https://database1.iran.liara.run/ALL_MOVIE')
-            .then(res => res.json())
-            .then(data => {
-                setMovie_Count(Object.keys(data).length)
-            })
-        fetch('https://database1.iran.liara.run/Series')
-            .then(res => res.json())
-            .then(data => {
-                setSeries_Count(Object.keys(data).length)
-            })
-        fetch('https://database1.iran.liara.run/Users')
-            .then(res => res.json())
-            .then(data => {
-                setUsers_Count(Object.keys(data).length)
-            })
-        fetch('https://database1.iran.liara.run/Comments')
-            .then(res => res.json())
-            .then(data => {
-                setComments_Count(Object.keys(data).length)
-            })
-        fetch('https://database1.iran.liara.run/Collections')
-            .then(res => res.json())
-            .then(data => {
-                setCollections_Count(Object.keys(data).length)
-            })
+        ApiRequest.get('./Moviez').then(data => {
+            setMovie_Count(Object.keys(data.data).length)
+        })
+        ApiRequest.get('./Series').then(data => {
+            setSeries_Count(Object.keys(data.data).length)
+        })
+        ApiRequest.get('./Users').then(data => {
+            setUsers_Count(Object.keys(data.data).length)
+        })
+        ApiRequest.get('./Comments').then(data => {
+            setComments_Count(Object.keys(data.data).length)
+        })
+        ApiRequest.get('./Collections').then(data => {
+            setCollections_Count(Object.keys(data.data).length)
+        })
     })
 
     return (

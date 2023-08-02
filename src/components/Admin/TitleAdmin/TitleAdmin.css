@@ -1,0 +1,16 @@
+.Title_Admin {
+    padding: 15px;
+    width: max-content;
+}
+
+.Title_Admin span {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 21px;
+    border-bottom: 3px solid #F44000;
+    padding-bottom: 12px
+}
+
+.Title_Admin svg {
+    color: #FFF;
+}
