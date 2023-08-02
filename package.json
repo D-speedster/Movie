@@ -41,18 +41,12 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "ignorePattern": [
-      "!src/*"
-    ],
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "env": {
-      "browser": true,
-      "node": true
+    "extends": "eslint:recommended",
+    "rules": {
+     
     }
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",
