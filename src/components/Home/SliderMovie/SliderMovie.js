@@ -89,14 +89,9 @@ export default function SliderMovie(props) {
                                         }}>
                                             <Figure onClick={() => handleMovieSelect(item[1])}
                                             >
-                                                <Figure.Image
-                                                    width={171}
-                                                    height={180}
-                                                    alt={item[1].name}
-                                                    src={item[1].poster}
+                                           
+                                                <lr-img src={item[1].poster}></lr-img>
 
-                                                />
-                                                
 
 
                                                 <div className='info_Sliders'>
@@ -111,7 +106,7 @@ export default function SliderMovie(props) {
                                                         {item[1].story}
                                                     </Container>
                                                 </div>
-                                               
+
                                             </Figure>
                                         </Link>
                                     </SwiperSlide>
