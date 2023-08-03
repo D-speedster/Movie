@@ -4,6 +4,7 @@ import './Comment.css'
 import { BiLike } from 'react-icons/bi';
 import { BiDislike } from 'react-icons/bi';
 import { ImForward } from 'react-icons/im';
+import UploadcareImage from '../../../Services/cdn/Cdn';
 
 export default function Comment(props) {
     let [LoadComment, SetComments] = useState('');

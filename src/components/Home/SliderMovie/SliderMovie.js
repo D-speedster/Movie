@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'; 
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import { Container, Figure } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -9,10 +9,11 @@ import './SliderMovie.css';
 import { FcFilmReel } from "react-icons/fc";
 const MovieContext = createContext();
 export { MovieContext };
+import UploadcareImage from '../../../Services/cdn/Cdn';
 
 export default function SliderMovie(props) {
-    
-   
+
+
 
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {
@@ -73,7 +74,7 @@ export default function SliderMovie(props) {
                 >
 
                     {
-                        
+
                         Object.entries(props).map(item => (
 
 
@@ -89,12 +90,14 @@ export default function SliderMovie(props) {
                                         }}>
                                             <Figure onClick={() => handleMovieSelect(item[1])}
                                             >
-                                                <Figure.Image
+                                                {/* <Figure.Image
                                                     width={171}
                                                     height={180}
                                                     alt={item[1].name}
                                                     src={item[1].poster}
-                                                />
+                                                /> */}
+                                                <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl={item[1].poster} />
+
 
                                                 <div className='info_Sliders'>
 
