@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Header_MovieSeries.css';
+import UploadcareImage from '../../../Services/cdn/Cdn';
+
 export default function Header_MovieSeries() {
     return (
         <Container>
@@ -8,17 +10,19 @@ export default function Header_MovieSeries() {
                 <Col lg={8} className='Movie_Top'>
                     <div className='d-flex'>
                         <Col className='Coming_Soon'>
-                           
-                            <lr-img src="/img/C_391.webp"></lr-img>
+                            {/* <img alt="" src='/img/C_391.webp' /> */}
+                            <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl='/img/C_391.webp' />
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <lr-img src="/img/flash.jpg"></lr-img>
+                            <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl='/img/flash.jpg' />
+
 
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <lr-img src="/img/amsterdam-poster.jpg"></lr-img>
+                            <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl='/img/amsterdam-poster.jpg' />
+
 
                             <div className='Coming_Text'>بزودی</div>
 

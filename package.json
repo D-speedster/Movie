@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@uploadcare/react-widget": "^2.4.5",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "chart.js": "^4.3.0",
@@ -32,7 +33,7 @@
   "scripts": {
     "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test" , 
+    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
     "eject": "react-scripts eject",
@@ -41,14 +42,9 @@
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
-    "rules": {
-     
-    },
-    "ignorePattern": [
-     
-    ]
+    "rules": {},
+    "ignorePattern": []
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
