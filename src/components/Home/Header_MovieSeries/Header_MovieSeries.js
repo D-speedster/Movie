@@ -8,15 +8,18 @@ export default function Header_MovieSeries() {
                 <Col lg={8} className='Movie_Top'>
                     <div className='d-flex'>
                         <Col className='Coming_Soon'>
-                            <img alt="" src='/img/C_391.webp' />
+                           
+                            <lr-img src="/img/C_391.webp"></lr-img>
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <img alt="" src='/img/flash.jpg' />
+                            <lr-img src="/img/flash.jpg"></lr-img>
+
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <img alt="" src='/img/amsterdam-poster.jpg' />
+                            <lr-img src="/img/amsterdam-poster.jpg"></lr-img>
+
                             <div className='Coming_Text'>بزودی</div>
 
                         </Col>

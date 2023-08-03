@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'; 
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import { Container, Figure } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,8 +11,8 @@ const MovieContext = createContext();
 export { MovieContext };
 
 export default function SliderMovie(props) {
-    
-   
+
+
 
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {
@@ -73,7 +73,7 @@ export default function SliderMovie(props) {
                 >
 
                     {
-                        
+
                         Object.entries(props).map(item => (
 
 
@@ -94,7 +94,10 @@ export default function SliderMovie(props) {
                                                     height={180}
                                                     alt={item[1].name}
                                                     src={item[1].poster}
+
                                                 />
+                                                
+
 
                                                 <div className='info_Sliders'>
 
@@ -108,7 +111,7 @@ export default function SliderMovie(props) {
                                                         {item[1].story}
                                                     </Container>
                                                 </div>
-
+                                               
                                             </Figure>
                                         </Link>
                                     </SwiperSlide>
