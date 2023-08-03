@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Header_MovieSeries.css';
-import UploadcareImage from '../../../Services/cdn/Cdn';
 import LazyLoad from 'react-lazy-load';
 
 export default function Header_MovieSeries() {
@@ -12,20 +11,23 @@ export default function Header_MovieSeries() {
                     <div className='d-flex'>
                         <Col className='Coming_Soon'>
                             {/* <img alt="" src='/img/C_391.webp' /> */}
-                            <LazyLoad height={762}>
+                            <LazyLoad>
                                 <img src='/img/C_391.webp' />
                             </LazyLoad>
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl='/img/flash.jpg' />
+                            <LazyLoad>
+                                <img src='/img/flash.jpg' />
+                            </LazyLoad>
 
 
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
-                            <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl='/img/amsterdam-poster.jpg' />
-
+                            <LazyLoad>
+                                <img src='/img/amsterdam-poster.jpg' />
+                            </LazyLoad>
 
                             <div className='Coming_Text'>بزودی</div>
 
