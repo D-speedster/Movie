@@ -10,6 +10,7 @@ import { FcFilmReel } from "react-icons/fc";
 const MovieContext = createContext();
 export { MovieContext };
 import UploadcareImage from '../../../Services/cdn/Cdn';
+import LazyLoad from 'react-lazy-load';
 
 export default function SliderMovie(props) {
 
@@ -96,7 +97,9 @@ export default function SliderMovie(props) {
                                                     alt={item[1].name}
                                                     src={item[1].poster}
                                                 /> */}
-                                                <UploadcareImage apiKey="b7820bcf169a30fade43" imageUrl={item[1].poster} />
+                                                <LazyLoad height={762}>
+                                                    <img src={item[1].poster} />
+                                                </LazyLoad>
 
 
                                                 <div className='info_Sliders'>
