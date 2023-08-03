@@ -8,11 +8,22 @@ export default function BoxInfo(props) {
     const [Images_Movie, SetImages] = useState([]);
     let [Image_Moviez, SetImageMoviez] = useState([]);
     let ImagesMoviez = [];
+    let [TranslateText, SetTranslate] = useState('داستانی مشخص نشده است .')
+
     let finArray = [];
-    console.log(props)
+    const TranslatePlot = (Plot) => {
+        fetch(`https://one-api.ir/translate/?token=665599:63d7d40ada1334.05423749&action=google&lang=fa&q=${Plot}`)
+            .then(response => response.json())
+            .then(data => {
+                SetTranslate(data['result'])
+
+            })
+        return TranslateText
+
+    }
     function SubmitHandler() {
-        let finArray = { ...props, Image_Moviez }
-        console.log(finArray);
+        let finArray = { ...props, Image_Moviez , TranslateText }
+
         if (props.Type == "series") {
             fetch('https://database1.iran.liara.run/Series', {
                 method: 'POST',
@@ -64,7 +75,6 @@ export default function BoxInfo(props) {
 
     }
     function ImgHandlerClick(event) {
-        console.log(event.target.src);
         event.target.classList.toggle("IsSelectImg");
         const imgSrc = event.target.src;
         const imgIndex = ImagesMoviez.findIndex((img) => img.url === imgSrc);
@@ -95,7 +105,6 @@ export default function BoxInfo(props) {
 
 
     useEffect(() => {
-        console.log(Images_Movie)
         let IMGSR = Images_Movie.filter(res => {
             return res['vote_average'] > 5.32
         })
@@ -193,10 +202,13 @@ export default function BoxInfo(props) {
                                     <Form.Label>خلاصه داستان</Form.Label>
                                 </Form.Group>
 
-                                <Col lg={10}>
-                                    <textarea value={props.story} style={{ resize: 'none' }} className='form-control mt-3' ></textarea>
+                                <Col lg={7}>
+                                    <textarea value={TranslateText} style={{ resize: 'none' }} className='form-control mt-3' ></textarea>
                                 </Col>
+                                <Col lg={3}>
+                                    <button onClick={() => TranslatePlot(props.story)} className='btn btn-info mt-4 '>دریافت خلاصه داستان</button>
 
+                                </Col>
                             </Row>
 
                             <Row className='mb-3 Bx_Dl mx-0'>

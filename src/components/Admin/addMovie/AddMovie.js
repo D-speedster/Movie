@@ -28,15 +28,7 @@ export default function AddMovie() {
         return translatedGenres
 
     }
-    const TranslatePlot = (Plot) => {
-        fetch(`https://one-api.ir/translate/?token=665599:63d7d40ada1334.05423749&action=google&lang=fa&q=${Plot}`)
-            .then(response => response.json())
-            .then(data => {
-                const result = data['result'];
 
-            })
-
-    }
 
     UseUpdateLogger(box);
     UseUpdateLogger(IDKey);
@@ -53,11 +45,11 @@ export default function AddMovie() {
                 .get(`https://www.omdbapi.com/?i=${box}&plot=full&apikey=e49bd8ed`)
                 .then((response) => {
                     let Genre_Moviez = Convertor(response.data['Genre'])
-                    let Fa_Plot = TranslatePlot(response.data['Plot'])
-                    console.log(Fa_Plot)
+                   
+
                     let newMovie2 = InfoFunction(response.data['Title'], response.data['Year'],
                         Genre_Moviez, response.data['imdbRating'], response.data['Poster'],
-                        response.data['Runtime'], Fa_Plot, response.data['Awards'],
+                        response.data['Runtime'], response.data['Plot'], response.data['Awards'],
                         response.data['Director'], response.data['Actors'], response.data['Country'], response.data['Writer'], response.data['similars']
                     )
 

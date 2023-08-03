@@ -15,17 +15,23 @@ export default function Home() {
   }, [])
   let [Moviez, SetMoviez] = useState('');
   function GenreMoviez(genre, title) {
-
     const movies = Object.entries(Moviez).map(i => i[1]);
-    const filteredMovies = movies.filter(movie => movie.genre.includes(genre));
-    console.log(filteredMovies);
-    return <SliderMovie {...filteredMovies} Title={title}></SliderMovie>;
+    const firstMovieWithGenre = movies.filter(movie => movie.genre.includes(genre));
+    const MovieSend = firstMovieWithGenre.filter(res=>{
+      return res.genre['0'] == genre
+    })
+    console.log(MovieSend)
+    return <SliderMovie {...MovieSend} Title={title} />;
+
   }
+  
+  
+  
 
   useEffect(() => {
     ApiRequest.get('/Moviez').then(data => {
-
-      SetMoviez(data.data)
+      let MovieZa = data.data;
+      SetMoviez(MovieZa.reverse())
     })
 
   }, []);
@@ -37,14 +43,14 @@ export default function Home() {
       <Header_MovieSeries></Header_MovieSeries>
       <Latest_Trailers />
       {GenreMoviez('ماجراجویی', 'فیلم های ماجراجویی')}
-      {GenreMoviez('عاشقانه', 'فیلم های عاشقانه')}
+      {GenreMoviez('اکشن', 'فیلم های اکشن')}
       <Boxoffice {...BoxOffice}></Boxoffice>
       {GenreMoviez('درام', 'فیلم های درام')}
       <br /><br />
       {GenreMoviez('تخیلی', 'فیلم های تخیلی')}
       <br /><br />
-      {GenreMoviez('فانتزی', 'فیلم های فانتزی')}
-      <br /><br />
+     
+  
 
       <Footer />
     </div>

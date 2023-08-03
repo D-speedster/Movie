@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Boxoffice.css';
 export default function Boxoffice(props) {
-    console.log(props)
+   
     return (
         <Container >
             <div className='BoxOffice'>

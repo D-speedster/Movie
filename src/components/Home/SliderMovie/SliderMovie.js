@@ -14,7 +14,7 @@ import LazyLoad from 'react-lazy-load';
 export default function SliderMovie(props) {
 
 
-
+    let [sliceMovie, SetMovieSlice] = useState('')
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {
         console.log(InMovie)
@@ -110,7 +110,7 @@ export default function SliderMovie(props) {
                                                 <div className='Story' style={{ color: 'white' }}>
                                                     <Container>
                                                         <h5>خلاصه داستان</h5>
-                                                        {item[1].story}
+                                                        {item[1].TranslateText}
                                                     </Container>
                                                 </div>
 
