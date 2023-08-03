@@ -44,7 +44,10 @@
     "extends": "eslint:recommended",
     "rules": {
      
-    }
+    },
+    "ignorePattern": [
+     
+    ]
   },
   
   "browserslist": {
