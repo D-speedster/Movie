@@ -49,7 +49,7 @@ let routes = [
       { path: 'newCollection', element: <Collection></Collection> },
       { path: 'Comments-Management', element: <Comments /> },
       { path: 'Plans', element: <Plans_Admin></Plans_Admin> },
-      {path : 'IMDB' , element : <IMDB></IMDB>},
+      { path: 'IMDB', element: <IMDB></IMDB> },
       {
         path: 'setting/*', element: <Settings></Settings>, children: [
           { path: '', element: <Home_Setting></Home_Setting> },
@@ -66,6 +66,7 @@ let routes = [
 
     ]
   }
+  , { path: '/User', element: <h1 style={{color : 'white' , textAlign : 'center'}}>Hello  To user Panel</h1> }
 ]
 
 export default routes

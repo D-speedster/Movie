@@ -14,13 +14,20 @@ import LazyLoad from 'react-lazy-load';
 export default function SliderMovie(props) {
 
 
+
+
+
+
     let [sliceMovie, SetMovieSlice] = useState('')
     let [InMovie, SetInMovie] = useState([]);
     useEffect(() => {
         console.log(InMovie)
+
     }, [InMovie])
     const [selectedMovie, setSelectedMovie] = useState(null);
-
+    function shortenParagraph(paragraph, maxLength) {
+        return paragraph.split(' ').slice(0, maxLength).join(' ') + (paragraph.split(' ').length > maxLength ? ' ...' : '');
+    }
     const handleMovieSelect = (movie) => {
         setSelectedMovie(movie);
     };
@@ -60,15 +67,15 @@ export default function SliderMovie(props) {
                         },
                         "@0.75": {
                             slidesPerView: 2,
-                            spaceBetween: 15,
+                            spaceBetween: 13,
                         },
                         "@1.00": {
                             slidesPerView: 2,
-                            spaceBetween: 25,
+                            spaceBetween: 22,
                         },
                         "@1.50": {
                             slidesPerView: 5,
-                            spaceBetween: 25
+                            spaceBetween: 22
                         },
                     }}
                 >
@@ -76,6 +83,7 @@ export default function SliderMovie(props) {
                     {
 
                         Object.entries(props).map(item => (
+
 
 
 
@@ -90,29 +98,27 @@ export default function SliderMovie(props) {
                                         }}>
                                             <Figure onClick={() => handleMovieSelect(item[1])}
                                             >
-                                                {/* <Figure.Image
-                                                    width={171}
-                                                    height={180}
-                                                    alt={item[1].name}
-                                                    src={item[1].poster}
-                                                /> */}
-                                                <LazyLoad>
-                                                    <img src={item[1].poster} />
-                                                </LazyLoad>
+                                                <div className='item_Slider'>
+                                                    <div className='item_Slider_img'>
+                                                        <LazyLoad>
+                                                            <img src={item[1].poster}></img>
+                                                        </LazyLoad>
+                                                    </div>
+                                                    <div className='item_Slider_story'>
+                                                        <p>
+                                                            <h6>خلاصه داستان : </h6>
 
-
-                                                <div className='info_Sliders'>
-
-                                                    <h5> {item[1].name}</h5>
+                                                            {item[1]?.TranslateText && shortenParagraph(item[1].TranslateText, 30)}
+                                                        </p>
+                                                    </div>
+                                                    <div className='item_Slider_name'>
+                                                        <h5>{item[1]?.name}</h5>
+                                                    </div>
+                                                    <div className='item_Slider_Rate'>
+                                                       <h6> {item[1].rate}</h6>
+                                                    </div>
                                                 </div>
-                                                <p className='Rate_Movie'>{item[1].rate}</p>
 
-                                                <div className='Story' style={{ color: 'white' }}>
-                                                    <Container>
-                                                        <h5>خلاصه داستان</h5>
-                                                        {item[1].TranslateText}
-                                                    </Container>
-                                                </div>
 
                                             </Figure>
                                         </Link>
@@ -131,7 +137,7 @@ export default function SliderMovie(props) {
                 </Swiper>
             </Container>
 
-        </div>
+        </div >
     )
 }
 

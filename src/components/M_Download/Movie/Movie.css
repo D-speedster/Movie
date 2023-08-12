@@ -3,15 +3,20 @@
 .Movie_Head {
     height: max-content;
     /* background: url('/public/img/Bg.jpg'); */
-    background-position: center !important;
+    /* background-position: center !important;
     background-repeat: no-repeat !important;
     background-clip: border-box !important;
     backface-visibility: visible !important;
     background-origin: padding-box !important;
     background-position: center !important;
     background-size: 100% 100% !important;
-    background-attachment: fixed !important;
+    background-attachment: fixed !important; */
     /* filter: brightness(50%); */
+    background-size: 100% 100% !important;
+
+    background-blend-mode: lighten !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
     z-index: 0;
 }
 
@@ -33,7 +38,7 @@
 .Movie_Head .img-poster {
 
     width: 234px;
-    height: 383px;
+    height: 370px;
     top: 71px;
     right: 94px;
     z-index: 0;

@@ -1,120 +1,89 @@
-.Slider_Movie {
-    background-color: #000;
-    border-radius: 14px;
-    padding-bottom: 20px;
-
-}
-
-
-
-
-.figure:hover .Story {
+.swiper-slide :hover .item_Slider_story p {
+    
     opacity: 1;
+  
 }
 
-.figure {
-    overflow: hidden;
+.swiper-slide :hover .item_Slider_img img{
+    opacity: 0.5;
 }
 
-.Slider_Movie .Story {
+.swiper-slide {
+    background-color: inherit !important;
+}
+
+.item_Slider {
+    position: relative;
+}
+
+.item_Slider_img img {
+    position: relative;
+    height: 330px !important;
+    padding: 0px !important;
+    border-radius: 15px;
+    transition: all 1s;
+}
+
+.item_Slider_story {
     position: absolute;
     top: 0;
-    left: 8px;
-    padding-top: 20px;
-    color: #FFF !important;
-    font-size: 20px;
-    font-weight: 500;
+    /* background-color: #3e1616; */
+    min-height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    word-break: keep-all;
+    border-radius: 15px;
+    transition: all 1s;
+
+}
+
+.item_Slider_story p {
+    color: #FFF;
+    font-size: 17px;
+    font-family: 400;
     opacity: 0;
-    transition: 1s all;
-    width: 90% !important;
-    height: 100% !important;
-    overflow: hidden;
-    /* جلوگیری از نمایش متن اضافی */
-    text-overflow: ellipsis;
-    /* جایگزینی متن اضافی با سه نقطه */
-    /* اندازه دیو Story برابر با اندازه عکس */
-    /* text-shadow: 1px 2px #1f2832; */
+    transition: all 1s;
+    padding-top: 15px;
+
+
 }
-
-
-
-.figure:hover img {
-    filter: blur(3.5px);
-    /* transform: scale(1.1); */
-}
-
-
-.Slider_Movie .card-body {
-    border: 0;
-    background-color: #1f2832;
-}
-
-.Slider_Movie .card-body p {
-    color: #FFF !important;
-
-    font-weight: 600;
-}
-
-.figure {
-    background-color: #1f2832;
-    padding: 0px;
-    overflow: hidden;
-}
-
-.Slider_Movie .info_Sliders {
+.item_Slider_name{
     position: absolute;
     bottom: 0;
     left: 0;
     border-radius: 11px;
     width: auto !important;
-    padding: 10px 0px 10px 0px;
-    word-break: break-all;
-    overflow-wrap: break-word !important;
+    padding: 10px 10px 10px 10px;
+    word-break: keep-all;
     margin: 0 auto;
     background-color: rgb(47, 52, 52);
     color: #FFF !important;
-
+    overflow: hidden;
     inline-size: 100% !important;
 }
-
-.swiper-slide .info_Sliders h5 {
-    padding-left: 2px;
-    padding-right: 2px;
-    font-size: 17.5px;
-    font-weight: 500;
+.item_Slider_name h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-variation-settings: "wght" 600;
 }
-
-.Slider_Movie .Rate_Movie {
+.item_Slider_Rate{
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px auto;
-    height: 38px !important;
-    width: 38px !important;
+    height: 35px !important;
+    width: 35px !important;
     border-radius: 50%;
     background-color: #db3163;
-    border: 0.5px solid #eee;
-    color: #FFF;
-    top: 0px;
-    left: 4.5px;
+    border: 0.5px solid #f9044e;
+    color: hsl(0, 0%, 100%);
+    top: 5px;
+    left: 5px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+.item_Slider_Rate h6{
+    font-size: 16px;
+    font-weight: 400;
 
-.figure {
-    height: max-content !important;
-    background-color: #0000 !important;
-    cursor: pointer;
-    transition: 1s all;
-}
-
-.swiper-slide {
-    height: fit-content;
-    padding: 0px !important;
-    background-color: #0000 !important;
-}
-
-.swiper-slide img {
-    padding: 0px;
-    height: 375px !important;
-    border-radius: 15px;
 }

@@ -9,7 +9,10 @@ export default function BoxInfo(props) {
     let [Image_Moviez, SetImageMoviez] = useState([]);
     let ImagesMoviez = [];
     let [TranslateText, SetTranslate] = useState('داستانی مشخص نشده است .')
-
+    let [BackgroundImage, SetBackground] = useState('لینک مورد نظر را وارد کنید')
+    const BackSetter = (event) => {
+        SetBackground(event.target.value)
+    }
     let finArray = [];
     const TranslatePlot = (Plot) => {
         fetch(`https://one-api.ir/translate/?token=665599:63d7d40ada1334.05423749&action=google&lang=fa&q=${Plot}`)
@@ -22,7 +25,7 @@ export default function BoxInfo(props) {
 
     }
     function SubmitHandler() {
-        let finArray = { ...props, Image_Moviez , TranslateText }
+        let finArray = { ...props, Image_Moviez, TranslateText , BackgroundImage }
 
         if (props.Type == "series") {
             fetch('https://database1.iran.liara.run/Series', {
@@ -210,7 +213,14 @@ export default function BoxInfo(props) {
 
                                 </Col>
                             </Row>
-
+                            <Row className='mb-3'>
+                                <Form.Group as={Col} lg={2} controlId='formWriters'>
+                                    <Form.Label>بک گراند</Form.Label>
+                                </Form.Group>
+                                <Col lg={10}>
+                                    <Form.Control onChange={BackSetter} type='text' placeholder='مدت زمان' value={BackgroundImage} />
+                                </Col>
+                            </Row>
                             <Row className='mb-3 Bx_Dl mx-0'>
                                 <Col lg={2}>
                                     <h5>لیست دانلود </h5>

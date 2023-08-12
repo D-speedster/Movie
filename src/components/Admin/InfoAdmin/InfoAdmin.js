@@ -177,7 +177,7 @@ export default function InfoAdmin() {
 
                             </Row>
                         </Card.Header>
-                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>41</Card.Title>
+                        <Card.Title style={{ fontSize: '38px' }} className='me-3 mt-3'>2</Card.Title>
                         <Card.Body>
                             {/* <Card.Title>Card Title</Card.Title> */}
 

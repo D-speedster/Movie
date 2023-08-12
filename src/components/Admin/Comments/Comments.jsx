@@ -11,18 +11,17 @@ export default function Comments() {
     let [Comments, SetComments] = useState('');
     useEffect(() => {
         ApiRequest.get('/Comments').then(data => {
-            SetComments(data)
+            SetComments(data.data)
             // setpending(false)
-            console.log(data)
-        })
 
+        })
 
     }, [])
     return (
         <div>
             <Container>
                 <Row className='d-flex justify-content-between mt-3'>
-                <Title_Admin Title={'مدیریت کامنت ها  : '}></Title_Admin>
+                    <Title_Admin Title={'مدیریت کامنت ها  : '}></Title_Admin>
                 </Row>
                 {!Comments ? 'Locading ...' : (
                     <Table responsive className='mt-3'>
@@ -38,20 +37,30 @@ export default function Comments() {
                         </thead>
 
                         <tbody>
+                            {Object.entries(Comments).map(Comment => (
 
-                            {Object.entries(Comments).map((Comment) => (
+
                                 <tr>
-                                    {/* <td>{Comment[1].user}</td>
-                                    <td>{Comment[1].email}</td>
-                                    <td>{Comment[1].password}</td> */}
-                                    {/* <td>{console.log(user)}</td> */}
-
+                                    <td>{Comment[1].member}</td>
+                                    <td>{Comment[1].comment}</td>
+                                    <td>{Comment[1].data}</td>
+                                    <td><a href={`http://localhost:3000/movie/${Comment[1].idMovie}`}>
+                                        مشاهده پست
+                                    </a>  </td>
+                                    <td>مشخص نشده</td>
                                 </tr>
 
 
-                            )
 
-                            )}
+
+
+
+                            ))}
+
+                            {/* <td>سلام</td>
+                            <td>سلام</td>
+                            <td>سلام</td>
+                            <td>سلام</td> */}
 
 
                         </tbody>
@@ -59,6 +68,6 @@ export default function Comments() {
                 )}
 
             </Container>
-        </div>
+        </div >
     )
 }

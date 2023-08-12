@@ -7,6 +7,7 @@ export default function Register() {
   let [UserName, SetUserName] = useState();
   let [Password, SetPassword] = useState();
   let [CheckTrue, SetCheckTrue] = useState();
+  let [CheckPermession, SetPermession] = useState('');
   useEffect(() => {
     console.log(CheckTrue)
   }, [CheckTrue])
@@ -21,7 +22,15 @@ export default function Register() {
           return datas['1']['user'] == UserName
         })
         if (ResultDataBase['0']['1']['password'] == Password) {
-          // console.log("Login Successfuly")
+          if (ResultDataBase['0']['1']['type'] == 'Owner') {
+            console.log("Welcome Admin")
+            SetPermession(ResultDataBase['0']['1']['type'])
+          }
+          else {
+            console.log("Welcome User")
+            SetPermession(ResultDataBase['0']['1']['type'])
+
+          }
           const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -40,10 +49,8 @@ export default function Register() {
           })
           setTimeout(() => {
             SetCheckTrue(true);
+
             document.cookie = "checkLogin=True";
-            // alert(document.cookie)
-
-
           }, 2500)
 
 
@@ -69,7 +76,7 @@ export default function Register() {
         <div className='Box_Form'>
           <div className='row'>
             <div className='col-lg-6 col-md-6 col-xs-12 col-sm-12 Right_Box'>
-              <img src='./img/Welcome.jpg ' />
+              <img src='../img/Welcome.jpg ' />
             </div>
             <div className='col-lg-6 col-md-6 col-xs-12 col-sm-12 Left_Box text-center'>
               <h2>ورود به سایت</h2>
@@ -91,7 +98,9 @@ export default function Register() {
             </div>
 
           </div>
-          {CheckTrue ? <Navigate to="/admin" /> : null}
+          {CheckPermession === 'Owner' ? <Navigate to="/admin" /> : CheckPermession === 'User' ? <Navigate to="/user" /> : null}
+
+
 
         </div>
       </div>

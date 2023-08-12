@@ -10,7 +10,10 @@ export const Genre_List = [
     { en: "Sci-Fi", fa: "تخیلی" },
     { en: "Romance", fa: "رمانتیک" },
     { en: "Crime", fa: "جنایی" },
-    { en: "Family", fa: "خانوادگی" } , 
-    {en : "Horror" , fa : "ترسناک"}
+    { en: "Family", fa: "خانوادگی" },
+    { en: "Horror", fa: "ترسناک" },
+    { en: "War", fa: "جنگی" },
+    { en: "Music", fa: "موزیکال" } , 
+    {en : "Mystery" , fa : "رمزآلود"}
 ];
 

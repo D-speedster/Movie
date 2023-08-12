@@ -47,7 +47,7 @@ export default function Home() {
       <Boxoffice {...BoxOffice}></Boxoffice>
       {GenreMoviez('درام', 'فیلم های درام')}
       <br /><br />
-      {GenreMoviez('تخیلی', 'فیلم های تخیلی')}
+      {GenreMoviez('جنایی', 'فیلم های جنایی')}
       <br /><br />
      
   

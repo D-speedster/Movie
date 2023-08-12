@@ -70,7 +70,15 @@ export default function Collection() {
             movies: SearchIDMovie
         }
         console.log(objCollection)
-        axios.post('https://database1.iran.liara.run/' , {objCollection}).then(res=>console.log(res))
+        fetch('https://database1.iran.liara.run/Collections', {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(objCollection)
+        })
+        // axios.post('https://database1.iran.liara.run/Collections', { objCollection }).then(res => console.log(res))
         // fetch(`https://database1.iran.liara.run/`, {
         //     method: 'POST',
         //     body: JSON.stringify(objCollection)

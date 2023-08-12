@@ -10,6 +10,7 @@ export default function InfoMovie(props, { children }) {
     return (
         <div className='Info_Movie'>
             <Container>
+
                 <Row>
                     <Col className='Info_Movie_Section' lg={5} md={6} xs={12} sm={12}>
                         <ul>
@@ -46,7 +47,7 @@ export default function InfoMovie(props, { children }) {
                             </li>
                             <li>
                                 <span>🎬 خلاصه داستان : </span>
-                                {props.info['0']}
+                                {props.info['11']}
                             </li>
                         </ul>
                     </Col>
