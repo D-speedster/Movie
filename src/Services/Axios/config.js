@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ApiRequest = axios.create({
-    baseURL: "https://database1.iran.liara.run/",
+    baseURL: "http://5.75.193.140:3000/",
     headers: {
         'Content-Type': 'application/json'
     }

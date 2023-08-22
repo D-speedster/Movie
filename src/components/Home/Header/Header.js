@@ -5,6 +5,7 @@ import { RiMovie2Fill } from "react-icons/ri";
 import { BiMoviePlay } from "react-icons/bi";
 import { MdHome } from "react-icons/md"
 import { Link } from 'react-router-dom';
+import ApiRequest from '../../../Services/Axios/config';
 
 
 export default function Header() {
@@ -17,36 +18,41 @@ export default function Header() {
         console.log(Search_Res);
     }, [Search_Res]);
     function ShowResult__Search() {
-
         const sXXS = Object.values(Search_Res).find((DlItem) => {
-            return DlItem['name'].includes(Search_Word)
+            return DlItem.name.toLowerCase().includes(Search_Word.toLowerCase())
         });
         if (sXXS) {
-            return <>
-                <Col lg={9}>
-                    <h6>{sXXS['name']}</h6>
-                </Col>
-                <Col lg={3}>
-                    <img alt="" width='70px' height='90px' src={sXXS['poster']} />
-                </Col>
-            </>
+            return (
+                <>
+                    <Col lg={9}>
+                        <h6>{sXXS['name']}</h6>
+                    </Col>
+                    <Col lg={3}>
+                        <img alt="" width='70px' height='90px' src={sXXS['poster']} />
+                    </Col>
+                </>
+            )
         }
-        return null
+        return sXXS
     }
     ShowResult__Search();
 
 
     let Search_Handler = (event) => {
         SetSearch_Word(event.target.value);
-        // if (event.target.value.length < 1) {
-        //     document.querySelector('.Result_Search').style.display = 'none'
-        // }
+        if (event.target.value.length < 1) {
+            document.querySelector('.Result_Search').style.display = 'none '
+        }
+
     }
     useEffect(() => {
         if (Search_Word.length === 3) {
-            fetch("https://movie-club-90077-default-rtdb.asia-southeast1.firebasedatabase.app/ALL_MOVIE.json")
-                .then(res => res.json())
-                .then(data => SetSearch_Res(data))
+            document.querySelector('.Result_Search').style.display = 'block'
+
+            ApiRequest.get('/Moviez').then(data => {
+                SetSearch_Res(data['data'])
+
+            })
 
         }
     }, [Search_Word])

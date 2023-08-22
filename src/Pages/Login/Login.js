@@ -2,7 +2,6 @@ import './Login.css'
 import { Link, Navigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
-import UseLocalStorage from '../../Hooks/UseLocalStorage';
 export default function Register() {
   let [UserName, SetUserName] = useState();
   let [Password, SetPassword] = useState();

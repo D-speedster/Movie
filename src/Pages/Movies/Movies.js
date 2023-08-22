@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Figure } from 'react-bootstrap'
-import Header from '../Home/Header/Header'
+import Header from '../../components/Home/Header/Header'
 import './Movies.css';
 import { SwiperSlide } from 'swiper/react';
 import ApiRequest from '../../Services/Axios/config';

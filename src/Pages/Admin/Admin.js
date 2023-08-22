@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import Header_Admin from './Header_Admin/Header_Admin'
+import Header_Admin from '../../components/Admin/Header_Admin/Header_Admin'
 import { Outlet, Navigate } from 'react-router-dom';
-import SideBar from './Side_Bar/SideBar';
+import SideBar from '../../components/Admin/Side_Bar/SideBar';
 import './Admin.css';
-import { IsLogin } from '../Utils'
-
 let cookie = document.cookie;
-
 export default function Admin() {
     // SetIsUserLogin(IsLogin(cookie));
     // useEffect(() => {
     //     console.log(IsUserLogin)
     // }, IsUserLogin)
-    let IsUserLogin = IsLogin(cookie)
+
 
     useEffect(() => {
         document.body.style.backgroundColor = '#171b31';

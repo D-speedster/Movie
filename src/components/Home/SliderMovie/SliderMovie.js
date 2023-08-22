@@ -13,17 +13,7 @@ import LazyLoad from 'react-lazy-load';
 
 export default function SliderMovie(props) {
 
-
-
-
-
-
     let [sliceMovie, SetMovieSlice] = useState('')
-    let [InMovie, SetInMovie] = useState([]);
-    useEffect(() => {
-        console.log(InMovie)
-
-    }, [InMovie])
     const [selectedMovie, setSelectedMovie] = useState(null);
     function shortenParagraph(paragraph, maxLength) {
         return paragraph.split(' ').slice(0, maxLength).join(' ') + (paragraph.split(' ').length > maxLength ? ' ...' : '');
@@ -57,8 +47,8 @@ export default function SliderMovie(props) {
                     touchAngle={true}
                     navigation={true}
                     modules={[Navigation]}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     className="mySwiper"
                     breakpoints={{
                         "@0.00": {

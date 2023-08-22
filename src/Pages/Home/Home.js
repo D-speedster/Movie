@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import Header from './Header/Header'
-import Latest_Trailers from './Latest_Trailers/Latest_Trailers'
-import SliderMovie from './SliderMovie/SliderMovie'
+import Header from '../../components/Home/Header/Header'
+import Latest_Trailers from '../../components/Home/Latest_Trailers/Latest_Trailers'
+import SliderMovie from '../../components/Home/SliderMovie/SliderMovie'
 import './Home.css';
-import Footer from './Footer/Footer'
-import Boxoffice from './Boxofiice/Boxoffice'
-import Header_MovieSeries from './Header_MovieSeries/Header_MovieSeries'
+import Footer from '../../components/Home/Footer/Footer'
+import Boxoffice from '../../components/Home/Boxofiice/Boxoffice'
+import Header_MovieSeries from '../../components/Home/Header_MovieSeries/Header_MovieSeries'
 import ApiRequest from '../../Services/Axios/config';
 export default function Home() {
 
@@ -20,19 +20,16 @@ export default function Home() {
     const MovieSend = firstMovieWithGenre.filter(res=>{
       return res.genre['0'] == genre
     })
-    console.log(MovieSend)
+
     return <SliderMovie {...MovieSend} Title={title} />;
 
   }
-  
-  
-  
-
   useEffect(() => {
     ApiRequest.get('/Moviez').then(data => {
       let MovieZa = data.data;
       SetMoviez(MovieZa.reverse())
     })
+    
 
   }, []);
 

@@ -4,6 +4,7 @@ import './Comment.css'
 import { BiLike } from 'react-icons/bi';
 import { BiDislike } from 'react-icons/bi';
 import { ImForward } from 'react-icons/im';
+import ApiRequest from '../../../Services/Axios/config';
 
 export default function Comment(props) {
     let [LoadComment, SetComments] = useState('');
@@ -11,11 +12,11 @@ export default function Comment(props) {
     let [nameMember, SetnameMember] = useState('');
     let [EmailComment, SetnEmailComment] = useState('')
     useEffect(() => {
-        fetch('https://database1.iran.liara.run/Comments').then(res => res.json())
-            .then(data => {
-                const matchingData = Object.values(data).filter(i => i.idMovie === props.id);
-                SetComments(matchingData);
-            })
+        ApiRequest.get('/Comments').then(data=>{
+            const matchingData = Object.values(data).filter(i => i.idMovie === props.id);
+            SetComments(matchingData);
+        })
+
     }, [props.id]);
 
     const CommentHandlr = () => {
@@ -26,16 +27,12 @@ export default function Comment(props) {
             data: new Date().toISOString().slice(0, 10),
             comment: comment
         }
-        fetch('https://database1.iran.liara.run/Comments', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(obj)
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
+
+            ApiRequest.post('/Comments' , obj ).then(data=>{
+                console.log(data)
+            }).catch(err=>{
+                console.log(err)
+            })
 
     }
     const CommentText = (event) => {

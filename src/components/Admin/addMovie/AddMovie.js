@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useId, useLayoutEffect } from 'react'
 import { Container } from 'react-bootstrap';
 import BoxInfo from '../BoxInfo';
 import './AddMovie.css'
@@ -8,9 +8,13 @@ import UseUpdateLogger from '../../../Hooks/UseUpdateLogger';
 import axios from 'axios';
 import ApiRequest from '../../../Services/Axios/config';
 import Title_Admin from '../TitleAdmin/TitleAdmin';
+import { Box_Info } from '../../../Contexs/Contex_BoxInfo';
+import {Profiler} from 'react'
 
 export default function AddMovie() {
-    let [box, setBox] = useState('')
+    let testContex = 'Hello This is Text For Use Contex'
+    let [box, setBox] = useState('');
+    let iduniqe =  ('');
     let [Movie, SetMovie] = useState([]);
     let [GenreSelect, SetGenreSelect] = useState('')
     let [IDKey, SetIDKey] = useState('');
@@ -45,7 +49,7 @@ export default function AddMovie() {
                 .get(`https://www.omdbapi.com/?i=${box}&plot=full&apikey=e49bd8ed`)
                 .then((response) => {
                     let Genre_Moviez = Convertor(response.data['Genre'])
-                   
+
 
                     let newMovie2 = InfoFunction(response.data['Title'], response.data['Year'],
                         Genre_Moviez, response.data['imdbRating'], response.data['Poster'],
@@ -76,7 +80,8 @@ export default function AddMovie() {
             countries: countries,
             writers: writers,
             CreatedAt: new Date().toISOString().slice(0, 10),
-            similars: similars
+            similars: similars , 
+            idUniq : iduniqe 
         };
         return newMovie
     }
@@ -123,34 +128,37 @@ export default function AddMovie() {
     }
 
     return (
-        <div className='ADD_MOVIE'>
-            <Title_Admin Title={'افزودن فیلم جدید'}></Title_Admin>
-            <Container fluid>
-                <div className='IMDB pe-4 ps-4'>
-                    <div className='IMDB_HEADER'>
-                        <h5 className='IMDB_HEADER_TEXT'>دریافت اطلاعات فیلم از سایت IMDB</h5>
+        <Box_Info.Provider value={testContex}>
+            <div className='ADD_MOVIE'>
+                <Title_Admin Title={'افزودن فیلم جدید'}></Title_Admin>
+                <Container fluid>
+                    <div className='IMDB pe-4 ps-4'>
+                        <div className='IMDB_HEADER'>
+                            <h5 className='IMDB_HEADER_TEXT'>دریافت اطلاعات فیلم از سایت IMDB</h5>
+
+                        </div>
+                        <div className='IMDB_ID'>
+
+                            <input className='form-control' onChange={Change_Handler} type='text'
+                                placeholder='آِیدی IMDB فیلم مورد نظر را وارد کنید' />
+                            <button className='btn btn-primary' onClick={ADD_Handler}>دریافت اطلاعات</button>
+
+                        </div>
+                        <hr></hr>
+                        {
+                            status ? (
+                                <BoxInfo {...Movie} />
+                            ) : (
+                                null
+                            )
+                        }
 
                     </div>
-                    <div className='IMDB_ID'>
+                </Container>
 
-                        <input className='form-control' onChange={Change_Handler} type='text'
-                            placeholder='آِیدی IMDB فیلم مورد نظر را وارد کنید' />
-                        <button className='btn btn-primary' onClick={ADD_Handler}>دریافت اطلاعات</button>
+            </div>
+        </Box_Info.Provider>
 
-                    </div>
-                    <hr></hr>
-                    {
-                        status ? (
-                            <BoxInfo {...Movie} />
-                        ) : (
-                            null
-                        )
-                    }
-
-                </div>
-            </Container>
-
-        </div>
 
 
 

@@ -14,6 +14,8 @@ export const Genre_List = [
     { en: "Horror", fa: "ترسناک" },
     { en: "War", fa: "جنگی" },
     { en: "Music", fa: "موزیکال" } , 
-    {en : "Mystery" , fa : "رمزآلود"}
+    {en : "Mystery" , fa : "رمزآلود"} ,
+    {en : "Sport" , fa : "ورزشی"}
+
 ];
 

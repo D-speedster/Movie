@@ -1,12 +1,11 @@
-import Home from './Home/Home';
+
 import React from 'react';
-import Movies from './Movies/Movies';
-import Admin from './Admin/Admin';
+import Movies from '../Pages/Movies/Movies';
 import AddMovie from './Admin/addMovie/AddMovie';
 import { Download } from './M_Download/Download';
 import Users from './Admin/Users/Users'
-import Register from './Register/Register';
-import Login from './Login/Login';
+import Register from '../Pages/Register/Register';
+import Login from '../Pages/Login/Login';
 import Movie_mange from './Admin/Movie_Manage/Movie_mange'
 import Collection from './Admin/Ncollection/Collection';
 import InfoAdmin from './Admin/InfoAdmin/InfoAdmin';
@@ -24,6 +23,8 @@ import Movie_Series from './Admin/Series_Manage/Series_Manage';
 import Top250 from './Admin/Settings/Top250'
 import AddTrailer from './Admin/addTrailer/addTrailer';
 import IMDB from './Admin/IMDB/IMDB';
+import Home from '../Pages/Home/Home';
+import Admin from '../Pages/Admin/Admin';
 
 let routes = [
   { path: '*', element: <h1>Sorry , Page Not Found</h1> },
@@ -66,7 +67,7 @@ let routes = [
 
     ]
   }
-  , { path: '/User', element: <h1 style={{color : 'white' , textAlign : 'center'}}>Hello  To user Panel</h1> }
+  , { path: '/User', element: <h1 style={{ color: 'white', textAlign: 'center' }}>Hello  To user Panel</h1> }
 ]
 
 export default routes

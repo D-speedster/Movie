@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Container, Col, Figure, Row, Form, Button, Table } from 'react-bootstrap';
 import './BoxInfo.css';
 import Swal from 'sweetalert2'
-
+import { Box_Info } from '../../Contexs/Contex_BoxInfo'
+import ApiRequest from '../../Services/Axios/config';
+import axios from 'axios';
 export default function BoxInfo(props) {
-    let [Movie,] = useState();
     const [Images_Movie, SetImages] = useState([]);
     let [Image_Moviez, SetImageMoviez] = useState([]);
     let ImagesMoviez = [];
     let [TranslateText, SetTranslate] = useState('داستانی مشخص نشده است .')
-    let [BackgroundImage, SetBackground] = useState('لینک مورد نظر را وارد کنید')
+    let [BackgroundImage, SetBackground] = useState('لینک مورد نظر را وارد کنید');
+    let shows = useContext(Box_Info);
     const BackSetter = (event) => {
         SetBackground(event.target.value)
     }
@@ -25,35 +27,21 @@ export default function BoxInfo(props) {
 
     }
     function SubmitHandler() {
-        let finArray = { ...props, Image_Moviez, TranslateText , BackgroundImage }
+        let finArray = { ...props, Image_Moviez, TranslateText, BackgroundImage }
 
         if (props.Type == "series") {
-            fetch('https://database1.iran.liara.run/Series', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(finArray)
-            }).then(res => {
-                return res.json()
-            }).then(data => {
-                console.log(data)
-            })
+            ApiRequest.post('http://5.75.193.140:3000/Series', finArray).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            });
         }
         else {
-            fetch('https://database1.iran.liara.run/Moviez', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(finArray)
-            }).then(res => {
-                return res.json()
-            }).then(data => {
-                console.log(data)
-            })
+            ApiRequest.post('http://5.75.193.140:3000/Moviez', finArray).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            });
         }
         // console.log("START PROCESS POST", Movie)
 
@@ -126,6 +114,7 @@ export default function BoxInfo(props) {
             <div>
                 <Container>
                     <Row className='mt-2'>
+                        <h1>{shows}</h1>
 
                         <Col lg={9} className='justify-content-center'>
                             <Row className='mb-3'>
