@@ -54,7 +54,7 @@ export default function Movie_mange() {
             })
 
         } else {
-            ApiRequest.get('./Moviez').then(data => {
+            ApiRequest.get('/Moviez').then(data => {
                 SetResult(data.data);
             })
 
