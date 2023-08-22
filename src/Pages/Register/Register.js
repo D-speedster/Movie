@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Register.css'
 import { Link, Navigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import ApiRequest from '../../Services/Axios/config';
 
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import 'sweetalert2/src/sweetalert2.scss'
@@ -21,15 +22,8 @@ export default function Register() {
     console.log('Register SuccessFully')
     console.log(obj);
 
-    fetch('https://database1.iran.liara.run/Users', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(obj)
-    }).then(res => res.json())
-      .then(data => console.log('End Process', data))
+    ApiRequest.post('/Users').then(data => console.log(data)).catch(error => console.log(error))
+
   }
   function EmailChanger(event) {
     SetEmail(event.target.value);

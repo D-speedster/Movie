@@ -2,6 +2,7 @@ import './Login.css'
 import { Link, Navigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
+import ApiRequest from '../../Services/Axios/config';
 export default function Register() {
   let [UserName, SetUserName] = useState();
   let [Password, SetPassword] = useState();
@@ -14,51 +15,49 @@ export default function Register() {
 
   function LoginToPanel() {
     console.log(Password, UserName)
-    fetch('https://database1.iran.liara.run/Users')
-      .then(res => res.json())
-      .then(data => {
-        let ResultDataBase = Object.entries(data).filter(datas => {
-          return datas['1']['user'] == UserName
-        })
-        if (ResultDataBase['0']['1']['password'] == Password) {
-          if (ResultDataBase['0']['1']['type'] == 'Owner') {
-            console.log("Welcome Admin")
-            SetPermession(ResultDataBase['0']['1']['type'])
-          }
-          else {
-            console.log("Welcome User")
-            SetPermession(ResultDataBase['0']['1']['type'])
-
-          }
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-
-          Toast.fire({
-            icon: 'success',
-            title: 'Signed in successfully'
-          })
-          setTimeout(() => {
-            SetCheckTrue(true);
-
-            document.cookie = "checkLogin=True";
-          }, 2500)
-
-
-        } else {
-          console.log("Login Failed , Please Try")
+    ApiRequest.get('/Users').then(data => {
+      let ResultDataBase = Object.entries(data).filter(datas => {
+        return datas['1']['user'] == UserName
+      })
+      if (ResultDataBase['0']['1']['password'] == Password) {
+        if (ResultDataBase['0']['1']['type'] == 'Owner') {
+          console.log("Welcome Admin")
+          SetPermession(ResultDataBase['0']['1']['type'])
+        }
+        else {
+          console.log("Welcome User")
+          SetPermession(ResultDataBase['0']['1']['type'])
 
         }
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
 
-      })
+        Toast.fire({
+          icon: 'success',
+          title: 'Signed in successfully'
+        })
+        setTimeout(() => {
+          SetCheckTrue(true);
+
+          document.cookie = "checkLogin=True";
+        }, 2500)
+
+
+      } else {
+        console.log("Login Failed , Please Try")
+
+      }
+    })
+
 
   }
   function UserUpdate(event) {

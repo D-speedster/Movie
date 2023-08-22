@@ -51,7 +51,7 @@ export default function Header() {
 
             ApiRequest.get('/Moviez').then(data => {
                 SetSearch_Res(data['data'])
-
+                
             })
 
         }

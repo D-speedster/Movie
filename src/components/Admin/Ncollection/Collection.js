@@ -7,6 +7,7 @@ import { RiMovie2Fill } from 'react-icons/ri'
 import { fontSize } from '@mui/system';
 import Title_Admin from '../TitleAdmin/TitleAdmin';
 import axios from 'axios';
+import ApiRequest from '../../../Services/Axios/config';
 export default function Collection() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -19,42 +20,37 @@ export default function Collection() {
         console.log(SetIdMovie)
     }, [SetIdMovie])
     useEffect(() => {
-        fetch('https://database1.iran.liara.run/Collections')
-            .then(res => res.json())
-            .then(data => {
-                SetCollection(data)
-            })
+        ApiRequest.get('/Collections')
+        .then(data=>{
+            SetCollection(data['data'])
+        })
+
     }, [])
 
     let RemoverHandler = (name) => {
+        ApiRequest.delete(`Collections/${name}`).then(data => {
+            SetCollection(Collection)
+        })
         console.log(`Remover Start Movie : ${name} `)
-        fetch(`https://database1.iran.liara.run/Collections/${name}`,
-            {
-                method: 'DELETE'
-            }
-        ).then(res => res.json())
-            .then(data => console.log(SetCollection(Collection)))
+
 
     }
 
 
     function SearchCollection(event) {
         let resultS = document.querySelector('.MovieInputSearch').value
-
-        fetch('https://database1.iran.liara.run/Moviez')
-            .then(res => res.json())
-            .then(data => {
-                let findMovie = Object.entries(data).filter(ios => {
-                    return ios['1'].id == resultS
-                })
-
-                findMovie.length == 1 ? SetIdMovie(prevImages => [...prevImages, findMovie['0']['1']])
-                    : alert("فیلم در دیتابیس یافت نشد . ابتدا آن را به سایت اضافه کنید ");
-
+        ApiRequest.post('/Moviez').then(data => {
+            let findMovie = Object.entries(data).filter(ios => {
+                return ios['1'].id == resultS
             })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+
+            findMovie.length == 1 ? SetIdMovie(prevImages => [...prevImages, findMovie['0']['1']])
+                : alert("فیلم در دیتابیس یافت نشد . ابتدا آن را به سایت اضافه کنید ");
+
+        }).catch(error => {
+            console.log(error)
+        })
+
         document.querySelector('.MovieInputSearch').value = ''
         console.log(SearchIDMovie)
     }
@@ -70,20 +66,11 @@ export default function Collection() {
             movies: SearchIDMovie
         }
         console.log(objCollection)
-        fetch('https://database1.iran.liara.run/Collections', {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(objCollection)
-        })
-        // axios.post('https://database1.iran.liara.run/Collections', { objCollection }).then(res => console.log(res))
-        // fetch(`https://database1.iran.liara.run/`, {
-        //     method: 'POST',
-        //     body: JSON.stringify(objCollection)
-        // }).then(res => res.json())
-        //     .then(data => console.log(data))
+        ApiRequest.post("/Collections", objCollection).then(data => {
+            console.log(data)
+        }).catch(err => console.log(err))
+
+
         handleClose()
         SetIdMovie('')
 

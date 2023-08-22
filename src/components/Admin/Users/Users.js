@@ -56,7 +56,7 @@ export default function DataTable() {
     ApiRequest.get('/Users').then(data => {
       Setusers(data.data);
     })
-  } , [users])
+  }, [users])
   const SubmitEdit = () => {
     setShow(false);
     let obj = {
@@ -83,7 +83,7 @@ export default function DataTable() {
         // ApiRequest.delete(`/Users/`, id).then(data => console.log(data))
         async function DeleteAsyncUser() {
           try {
-            const response = await axios.delete(`https://database1.iran.liara.run/Users/${id}`);
+            const response = await ApiRequest.delete(`Users/${id}`)
             console.log(response.data); // نتیجه‌ای که از سرور دریافت می‌شود
             // ...
           } catch (error) {

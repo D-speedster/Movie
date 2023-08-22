@@ -19,18 +19,7 @@ export default function Movie_mange() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`https://database1.iran.liara.run/Moviez/${movieToRemove}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setMovieToRemove('');
-            })
-            .catch(error => {
-                console.error('Error removing movie:', error);
-            });
-
+        ApiRequest.delete(`/Moviez/${movieToRemove}`).then(data => setMovieToRemove(''))
     }
     const DeleteMovie = (id) => {
         setShow(true)
@@ -56,15 +45,14 @@ export default function Movie_mange() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('https://database1.iran.liara.run/Moviez')
-                .then(res => res.json())
-                .then(data => {
-                    let result = Object.entries(data).filter(res => {
-                        return res[1].name.toLowerCase().includes(TextSearch.toLowerCase());
-                    });
-                    result = result.map(es => es[1]);
-                    SetResult(result);
+            ApiRequest.get('/Moviez').then(data => {
+                let result = Object.entries(data['data']).filter(res => {
+                    return res[1].name.toLowerCase().includes(TextSearch.toLowerCase());
                 });
+                result = result.map(es => es[1]);
+                SetResult(result);
+            })
+
         } else {
             ApiRequest.get('./Moviez').then(data => {
                 SetResult(data.data);
