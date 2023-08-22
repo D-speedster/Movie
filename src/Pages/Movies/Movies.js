@@ -5,6 +5,7 @@ import './Movies.css';
 import { SwiperSlide } from 'swiper/react';
 import ApiRequest from '../../Services/Axios/config';
 
+
 export default function Movies() {
     let [All_Moviez, setAll_Moviez] = useState([]);
     let SearchBtn = () => {
