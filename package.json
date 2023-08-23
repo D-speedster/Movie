@@ -31,7 +31,7 @@
     "web-vitals": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "client": "npm start --prefix client",
@@ -69,5 +69,10 @@
   "author": "speedster",
   "license": "ISC",
   "keywords": [],
-  "description": "��#\u0000 \u0000m\u0000o\u0000v\u0000i\u0000e\u0000_\u0000s\u0000p\u0000e\u0000e\u0000d\u0000\r\u0000 \u0000"
+  "description": "��#\u0000 \u0000m\u0000o\u0000v\u0000i\u0000e\u0000_\u0000s\u0000p\u0000e\u0000e\u0000d\u0000\r\u0000 \u0000",
+  "eslint": {
+    "ignorePattern": [
+      "*.test.js"
+    ]
+  }
 }
