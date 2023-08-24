@@ -4,6 +4,7 @@ import { AiOutlineEdit } from 'react-icons/ai';
 import { BsTrash3 } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Title_Admin from '../TitleAdmin/TitleAdmin';
+import ApiRequest from '../../../Services/Axios/config';
 
 export default function Movie_Series() {
     let [result, SetResult] = useState([]);
@@ -14,17 +15,8 @@ export default function Movie_Series() {
 
     const Remover = () => {
         setShow(false);
-        fetch(`http://5.75.193.140:3000/Series/{SeriesToRemove}.json`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setSeriesToRemove('');
-            })
-            .catch(error => {
-                console.error('Error removing Serie:', error);
-            });
+        ApiRequest.delete(`Series/${SeriesToRemove}.json`).then(data=>setSeriesToRemove(''))
+
 
     }
     const DeleteMovie = (id) => {
@@ -37,14 +29,7 @@ export default function Movie_Series() {
     }
 
     useEffect(() => {
-        fetch('http://5.75.193.140:3000/Series')
-            .then(res => res.json())
-            .then(data => {
-                SetResult(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
+        ApiRequest.get('/Series').then(data => SetResult(data['data']))
 
     }, [SeriesToRemove]);
 
@@ -55,24 +40,17 @@ export default function Movie_Series() {
     }
     useEffect(() => {
         if (TextSearch.length >= 3) {
-            fetch('http://5.75.193.140:3000/Series')
-                .then(res => res.json())
-                .then(data => {
-                    let result = Object.entries(data).filter(res => {
-                        return res[1].name.toLowerCase().includes(TextSearch.toLowerCase());
-                    });
-                    result = result.map(es => es[1]);
-                    SetResult(result);
+            ApiRequest.get('/Serires').then(data => {
+                let result = Object.entries(data['data']).filter(res => {
+                    return res[1].name.toLowerCase().includes(TextSearch.toLowerCase());
                 });
+                result = result.map(es => es[1]);
+                SetResult(result);
+            })
+        
         } else {
-            fetch('http://5.75.193.140:3000/Series')
-                .then(res => res.json())
-                .then(data => {
-                    SetResult(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
+            ApiRequest('/Series').then(data=>SetResult(data['data']))
+                
         }
     }, [TextSearch]);
     return (

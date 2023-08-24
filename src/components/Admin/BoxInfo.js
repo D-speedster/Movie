@@ -30,14 +30,14 @@ export default function BoxInfo(props) {
         let finArray = { ...props, Image_Moviez, TranslateText, BackgroundImage }
 
         if (props.Type == "series") {
-            ApiRequest.post('http://5.75.193.140:3000/Series', finArray).then(res => {
+            ApiRequest.post('/Series', finArray).then(res => {
                 console.log(res);
             }).catch(err => {
                 console.log(err);
             });
         }
         else {
-            ApiRequest.post('http://5.75.193.140:3000/Moviez', finArray).then(res => {
+            ApiRequest.post('/Moviez', finArray).then(res => {
                 console.log(res);
             }).catch(err => {
                 console.log(err);
