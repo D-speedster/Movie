@@ -4,7 +4,6 @@ import { AiOutlinePlus, AiTwotoneEdit } from 'react-icons/ai'
 import { BsTrash } from 'react-icons/bs';
 import './Collection.css';
 import { RiMovie2Fill } from 'react-icons/ri'
-import { fontSize } from '@mui/system';
 import Title_Admin from '../TitleAdmin/TitleAdmin';
 import axios from 'axios';
 import ApiRequest from '../../../Services/Axios/config';
