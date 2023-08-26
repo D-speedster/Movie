@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Figure } from 'react-bootstrap'
 import Header from '../../components/Home/Header/Header'
-import './Movies.css';
+import './Series.css';
 import { SwiperSlide } from 'swiper/react';
 import ApiRequest from '../../Services/Axios/config';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ export default function Movies() {
         console.log("EVENT CLICK")
     }
     useEffect(() => {
-        ApiRequest.get('/Moviez').then(Response => setAll_Moviez(Response.data))
+        ApiRequest.get('/Series').then(Response => setAll_Moviez(Response.data))
     }, [])
     function shortenParagraph(paragraph, maxLength) {
         return paragraph.split(' ').slice(0, maxLength).join(' ') + (paragraph.split(' ').length > maxLength ? ' ...' : '');
@@ -96,8 +96,7 @@ export default function Movies() {
                                 <Link to={{
                                     pathname: `/Movie/${item[1].id}`
                                 }}>
-                                    <Figure
-                                    >
+                                    <Figure>
                                         <div className='item_Slider'>
                                             <div className='item_Slider_img'>
                                                 <LazyLoad>

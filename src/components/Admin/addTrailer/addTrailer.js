@@ -5,7 +5,7 @@ import { BsPlusCircle } from 'react-icons/bs';
 import Title_Admin from '../TitleAdmin/TitleAdmin';
 
 
-export default function addTrailer() {
+export default function AddTrailer() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);

@@ -51,7 +51,7 @@ export default function Header() {
 
             ApiRequest.get('/Moviez').then(data => {
                 SetSearch_Res(data['data'])
-                
+
             })
 
         }
@@ -120,17 +120,16 @@ export default function Header() {
                                         <Nav.Link>
                                             <Link to='/Movies'>
 
-                                                {/* <RiMovie2Fill style={{ color: '#CF0A0A', fontSize: '26px' }}></RiMovie2Fill>
-                                                <img style={{mixBlendMode : 'color-burn' , objectFit : 'contain'}}  src='img/cinema.png'/>
-                                                دانلود فیلم */}
                                                 <RiMovie2Fill style={{ color: '#CF0A0A', fontSize: '30px' }}></RiMovie2Fill>
                                                 <span>دانلود فیلم</span>
 
                                             </Link>
                                         </Nav.Link>
                                         <Nav.Link>
-                                            <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>
-                                            <span>دانلود سریال</span>
+                                            <Link to='/Series'>
+                                                <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>
+                                                <span>دانلود سریال</span>
+                                            </Link>
                                         </Nav.Link>
                                         <Nav.Link>
                                             <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>

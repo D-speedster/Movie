@@ -1,6 +1,9 @@
 
 import React from 'react';
 import Movies from '../Pages/Movies/Movies';
+
+import Series from '../Pages/Series/Series';
+
 import AddMovie from './Admin/addMovie/AddMovie';
 import { Download } from './M_Download/Download';
 import Users from './Admin/Users/Users'
@@ -32,6 +35,8 @@ let routes = [
   { path: '/Movie', element: <h1 style={{ color: '#FFF' }}>404</h1> },
   { path: '/Movie/:userId', element: <Download></Download> },
   { path: '/Movies', element: <Movies></Movies> },
+  { path: '/Series', element: <Series></Series> },
+
   { path: '/new', element: <AddMovie></AddMovie> },
   { path: '/Register', element: <Register></Register> },
   { path: '/Login', element: <Login></Login> },

@@ -7,12 +7,10 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { Navigation } from "swiper";
 import './SliderMovie.css';
 import { FcFilmReel } from "react-icons/fc";
-const MovieContext = createContext();
-export { MovieContext };
 import LazyLoad from 'react-lazy-load';
-
+export { MovieContext };
+const MovieContext = createContext();
 export default function SliderMovie(props) {
-
     let [sliceMovie, SetMovieSlice] = useState('')
     const [selectedMovie, setSelectedMovie] = useState(null);
     function shortenParagraph(paragraph, maxLength) {
@@ -105,7 +103,7 @@ export default function SliderMovie(props) {
                                                         <h5>{item[1]?.name}</h5>
                                                     </div>
                                                     <div className='item_Slider_Rate'>
-                                                       <h6> {item[1].rate}</h6>
+                                                        <h6> {item[1].rate}</h6>
                                                     </div>
                                                 </div>
 

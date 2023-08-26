@@ -13,21 +13,11 @@ export default function Movie(props) {
         <div className='Movie'>
 
             <div className='Movie_Head' style={{
-                background: `url(${props.info[3]})`,
-                // backgroundPosition : 'center' ,
-                // backgroundSize : '100% 100%;' ,
-                // backgroundAttachment : 'fixed' ,
-                // zIndex : '0' ,
-                // backgroundRepeat : 'no-repeat'
-
+                background: `url(${props.info[3]})`
             }}>
                 <Container>
-                    <Row>
-                        <Col lg={5} style={{ textAlign: 'right' }}>
-                            <h1 style={{ color: '#fff', display: 'block' }}>{props.info[2]}</h1>
-                        </Col>
-                    </Row>
-                    <Row className='pt-5 justify-content-between'>
+
+                    <Row className='justify-content-between'>
 
                         <Col className='Poster' lg={4} md={5} xs={12} sm={12} onDragStart={(event) => event.preventDefault()}>
 
@@ -35,12 +25,18 @@ export default function Movie(props) {
                             <img alt="" className='img-poster' src={props.info['0']}></img>
 
                         </Col>
-                        <Col className='trailer' lg={7} md={5} xs={12} sm={12}>
-                            <img alt="" className='img-fluid img-tablet ' src='../img/tablet.png'></img>
-                            <video poster='../img/trailer-793x358.jpg' className='img-video' controls>
-                                <source src='./img/Marvel.mp4' type="video/mp4"></source>
-                            </video>
+                        <Col className='INFO_HEAD' lg={6}>
+                            <ul>
+                                <h44 style={{ color: '#fff', display: 'block' }}>فیلم : {props.info[2]}</h44>
+                                <li>فروش کلی : 248 میلیون دلار</li>
+                                <li>افتخارات : برنده 2 اسکار و نامرد 3 اسکار دیگر</li>
+                                <li>دوبله فارسی + زیرنویس چسبیده</li>
+                                <li>جزو 250 فیلم برتر جهان</li>
+                                <li>دوبله فارسی + زیرنویس چسبیده</li>
 
+
+
+                            </ul>
 
                         </Col>
                     </Row>
