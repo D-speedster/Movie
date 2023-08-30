@@ -14,11 +14,12 @@ export default function Register() {
 
 
   function LoginToPanel() {
-    console.log(Password, UserName)
     ApiRequest.get('/Users').then(data => {
-      let ResultDataBase = Object.entries(data).filter(datas => {
+      let ResultDataBase = Object.entries(data.data).filter(datas => {
         return datas['1']['user'] == UserName
       })
+      console.log(ResultDataBase)
+
       if (ResultDataBase['0']['1']['password'] == Password) {
         if (ResultDataBase['0']['1']['type'] == 'Owner') {
           console.log("Welcome Admin")

@@ -22,7 +22,7 @@ export default function Register() {
     console.log('Register SuccessFully')
     console.log(obj);
 
-    ApiRequest.post('/Users').then(data => console.log(data)).catch(error => console.log(error))
+    ApiRequest.post('/Users' , obj).then(data => console.log(data)).catch(error => console.log(error))
 
   }
   function EmailChanger(event) {
