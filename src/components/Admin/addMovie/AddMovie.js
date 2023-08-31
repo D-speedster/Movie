@@ -12,7 +12,7 @@ import { Box_Info } from '../../../Contexs/Contex_BoxInfo';
 import {Profiler} from 'react'
 
 export default function AddMovie() {
-    let testContex = 'Hello This is Text For Use Contex'
+    // let testContex = 'Hello This is Text For Use Contex'
     let [box, setBox] = useState('');
     let iduniqe =  ('');
     let [Movie, SetMovie] = useState([]);
@@ -128,7 +128,7 @@ export default function AddMovie() {
     }
 
     return (
-        <Box_Info.Provider value={testContex}>
+        <Box_Info.Provider>
             <div className='ADD_MOVIE'>
                 <Title_Admin Title={'افزودن فیلم جدید'}></Title_Admin>
                 <Container fluid>

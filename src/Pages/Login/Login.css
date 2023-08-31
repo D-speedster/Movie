@@ -1,5 +1,5 @@
 .Back_Form {
-    background-image: url('/public/img/backi.jpg');
+    background-image: url('../../../public/img/backi.jpg');
     height: 100vh;
 
     display: flex;
@@ -49,7 +49,7 @@
 .Left_Box h2 {
     text-align: center;
     margin-top: 25px;
-   
+
 }
 
 .Left_Box input {
@@ -81,6 +81,7 @@
     outline: 0;
 
 }
-.Left_Box input::placeholder{
+
+.Left_Box input::placeholder {
     color: #8f8989;
 }

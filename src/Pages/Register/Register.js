@@ -42,7 +42,7 @@ export default function Register() {
         <div className='Box_Form'>
           <div className='row'>
             <div className='col-lg-6 col-md-6 col-xs-12 col-sm-12 Right_Box'>
-              <img src='./img/Welcome.jpg ' />
+              <img src='/img/Welcome.jpg' />
             </div>
             <div className='col-lg-6 col-md-6 col-xs-12 col-sm-12 Left_Box text-center'>
               <h2>ثبت نام</h2>

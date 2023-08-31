@@ -1,5 +1,5 @@
 .Back_Form {
-    background-image: url('/public/img/backi.jpg');
+    background-image: url('../../../public/img/backi.jpg');
     height: 100vh;
 
     display: flex;
