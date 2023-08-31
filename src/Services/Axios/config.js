@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ApiRequest = axios.create({
-    baseURL: " http://5.144.130.7:3001/",
+    baseURL: " https://database-vert.vercel.app/",
     headers: {
         'Content-Type': 'application/json'
     }
