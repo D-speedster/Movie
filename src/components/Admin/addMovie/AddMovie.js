@@ -12,7 +12,6 @@ import { Box_Info } from '../../../Contexs/Contex_BoxInfo';
 import {Profiler} from 'react'
 
 export default function AddMovie() {
-    // let testContex = 'Hello This is Text For Use Contex'
     let [box, setBox] = useState('');
     let iduniqe =  ('');
     let [Movie, SetMovie] = useState([]);
