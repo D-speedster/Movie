@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ApiRequest = axios.create({
-    baseURL: " https://database-vert.vercel.app/",
+    baseURL: " database-kappa-five.vercel.app/",
     headers: {
         'Content-Type': 'application/json'
     }
