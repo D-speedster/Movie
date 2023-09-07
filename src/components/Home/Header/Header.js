@@ -6,7 +6,7 @@ import { BiMoviePlay } from "react-icons/bi";
 import { MdHome } from "react-icons/md"
 import { Link } from 'react-router-dom';
 import ApiRequest from '../../../Services/Axios/config';
-
+import {HiUsers} from 'react-icons/hi'
 
 export default function Header() {
 
@@ -64,7 +64,7 @@ export default function Header() {
 
                     <Row className='justify-content-center text-end '>
                         <Col className='Logo_Web mt-3'>
-                            <img alt="" width='250px' src='/img/movie-club-banner-2x.png' className='img-fluid'></img>
+                            <img alt="" height='50px !important' width='240px' src='/img/movie-club-banner-2x.png' className='img-fluid'></img>
 
 
                         </Col>
@@ -72,12 +72,16 @@ export default function Header() {
                         <Col className='Login_Register mt-3'>
                             <div className='d-flex float-start'>
                                 <Link to='/login'>
-                                    <Button className='me-3 Login_Btn'>ورود</Button>
+                                    <Button className='me-3 Login_Btn'>
+                                        <HiUsers></HiUsers>
+
+                                        پنل کاربری
+                                    </Button>
                                 </Link>
 
-                                <Link to='/register'>
-                                    <Button className='me-3 Register_Btn'>ثبت نام</Button>
-                                </Link>
+                                {/* <Link to='/register'>
+                                    <Button className='me-3 Register_Btn'></Button>
+                                </Link> */}
 
                             </div>
                         </Col>

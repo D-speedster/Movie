@@ -24,7 +24,7 @@ export default function SliderMovie(props) {
     return (
 
 
-        <div className='Slider_Movie'>
+        <div className='Slider_Movie me-3'>
 
 
 
