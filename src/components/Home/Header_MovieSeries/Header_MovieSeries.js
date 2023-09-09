@@ -12,13 +12,13 @@ export default function Header_MovieSeries() {
                         <Col className='Coming_Soon'>
                             {/* <img alt="" src='/img/C_391.webp' /> */}
                             <LazyLoad>
-                                <img src='/img/C_391.webp' />
+                                <img alt='Coming_Soon-1' src='/img/C_391.webp' />
                             </LazyLoad>
                             <div className='Coming_Text'>بزودی</div>
                         </Col>
                         <Col className='Coming_Soon'>
                             <LazyLoad>
-                                <img src='/img/flash.jpg' />
+                                <img alt='Coming_Soon-2' src='/img/flash.jpg' />
                             </LazyLoad>
 
 
@@ -26,7 +26,7 @@ export default function Header_MovieSeries() {
                         </Col>
                         <Col className='Coming_Soon'>
                             <LazyLoad>
-                                <img src='/img/amsterdam-poster.jpg' />
+                                <img alt='Coming_Soon-3' src='/img/amsterdam-poster.jpg' />
                             </LazyLoad>
 
                             <div className='Coming_Text'>بزودی</div>

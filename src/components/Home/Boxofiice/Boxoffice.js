@@ -2,15 +2,16 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Boxoffice.css';
 export default function Boxoffice(props) {
-   
+
     return (
         <Container >
+            {/* <h4 style={{ color: '#ّFFF' }} className='mt-4 p-4'>فروش هفتگی سینمای جهان</h4> */}
+
             <div className='BoxOffice'>
-                <h4 style={{ color: '#ّFFF' }} className='mt-4 p-4'>فروش هفتگی سینمای جهان</h4>
                 <Container>
                     <Row className='justify-content-start'>
                         {Object.entries(props).map(item => (
-                            <Col key={Math.random(10, 1000)} lg={4} sm={12} xs={12}>
+                            <Col key={Math.random(10, 1000)} lg={12} sm={12} xs={12}>
                                 <div className='Item-Box-Office'>
 
                                     <Col className='Item-Box-Office-img' lg={6} xs={4} sm={4} style={{ backgroundImage: `url(${item[1].image})` }}>
