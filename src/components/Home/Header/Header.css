@@ -1,27 +1,79 @@
+/* استایل‌دهی به فونت */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* استایل‌دهی به سایه متن */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: 0 1px 2px black;
+}
+
+/* استایل‌دهی به حاشیه و فاصله */
+.header {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.nav {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* استایل‌دهی به تصاویر و آیکون‌ها */
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* استایل‌دهی به هدر */
+.header {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
 .Header_Top {
-    color: #EEEEEE !important;
+    color: #222;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
+}
+
+/* استایل‌دهی به نوبار */
+nav {
+    background-color: #424242;
+    border-radius: 5px;
+
+}
+.navbar-spical {
+    height: 82px !important;
+    box-shadow: 5px 5px red !important;
+
 }
 
 .navbar-nav a {
-    color: #EEEEEE !important;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: 600;
     font-size: 16.5px;
 }
 
-nav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 8px 32px rgba(0, 0, 0, 0.08);
-    background: #222;
-    margin-top: 25px;
-    margin-bottom: 20px;
-}
-
 .navbar-toggler {
-    color: #EEEEEE;
+    color: #ffffff;
     background: #CCC;
 }
 
@@ -41,7 +93,7 @@ svg {
 .Register_Btn {
     font-family: 'MyWebFont';
     font-weight: 600;
-    color: #EEEEEE;
+    color: #ffffff;
     padding: 10px 20px;
     border: 2px solid #EEEEEE;
     border-radius: 25px;
@@ -57,9 +109,20 @@ svg {
     color: #222;
 }
 
-.Search {  
+.Search {
     z-index: 10;
     position: relative;
+}
+
+.Search input {
+    border: 0px;
+    outline: 0px;
+    border-radius: 15px;
+    padding-right: 15px;
+    width: 333px;
+    margin-right: 85px;
+    background-color: #0f0f0f !important;
+    color: #f8f6f6 !important;
 }
 
 .Result_Search {
@@ -68,18 +131,21 @@ svg {
     background-color: #222;
     z-index: 25;
     top: 100%;
-    color: #EEEEEE;
+    color: #ffffff;
     border-radius: 15px;
     padding: 20px;
     display: none;
 }
 
 input::placeholder {
-    color: #EEEEEE;
+    color: #d1d1d1 !important;
+
+
 }
 
+
 a {
-    color: #EEEEEE;
+    color: #ffffff;
     text-decoration: none;
 }
 

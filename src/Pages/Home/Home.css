@@ -19,9 +19,11 @@
     text-align: center;
     font-size: 14px;
 }
+
 *:focus {
     outline: none;
 }
+
 .Search_Handler button {
     background-color: rgb(216, 13, 13);
     border: 0;
@@ -33,4 +35,50 @@
     font-weight: 600;
     color: #fff;
     font-size: 13px;
+}
+
+.mobile-nav {
+    background-color: #424242;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.mobile-nav-item {
+    margin-left: 14px;
+    font-family: sans-serif Arial, Helvetica, sans-serif;
+    color: #fff !important;
+    line-height: 21.7px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s ease-out;
+    text-decoration: none;
+}
+.mobile-nav-item a{
+    text-decoration: none;
+    color: #FFF ;
+}
+
+.mobile-nav-item span {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.mobile-nav-item svg {
+    margin-left: 4px;
+    margin-top: 0px;
+}
+
+.mobile-nav-item:hover  {
+    color: #eee;
+    margin-top: -4px;
 }

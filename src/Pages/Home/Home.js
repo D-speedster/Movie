@@ -7,6 +7,13 @@ import Footer from '../../components/Home/Footer/Footer'
 import Boxoffice from '../../components/Home/Boxofiice/Boxoffice'
 import Header_MovieSeries from '../../components/Home/Header_MovieSeries/Header_MovieSeries'
 import ApiRequest from '../../Services/Axios/config';
+import { Container, Row, Col } from 'react-bootstrap';
+import { AiOutlineHome } from 'react-icons/ai';
+import { PiTelevisionLight } from 'react-icons/pi';
+import { RiMovie2Line } from 'react-icons/ri';
+import { BiLogInCircle } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
+
 export default function Home() {
 
   let [BoxOffice, SetBoxOffice] = useState();
@@ -17,7 +24,7 @@ export default function Home() {
   function GenreMoviez(genre, title) {
     const movies = Object.entries(Moviez).map(i => i[1]);
     const firstMovieWithGenre = movies.filter(movie => movie.genre.includes(genre));
-    const MovieSend = firstMovieWithGenre.filter(res=>{
+    const MovieSend = firstMovieWithGenre.filter(res => {
       return res.genre['0'] == genre
     })
 
@@ -29,7 +36,7 @@ export default function Home() {
       let MovieZa = data.data;
       SetMoviez(MovieZa.reverse())
     })
-    
+
 
   }, []);
 
@@ -38,7 +45,7 @@ export default function Home() {
     <div className='body'>
       <Header />
       <Header_MovieSeries></Header_MovieSeries>
-      <Latest_Trailers {...BoxOffice}/>
+      <Latest_Trailers {...BoxOffice} />
       {GenreMoviez('ماجراجویی', 'فیلم های ماجراجویی')}
       {GenreMoviez('اکشن', 'فیلم های اکشن')}
       {/* <Boxoffice {...BoxOffice}></Boxoffice> */}
@@ -46,10 +53,48 @@ export default function Home() {
       <br /><br />
       {GenreMoviez('جنایی', 'فیلم های جنایی')}
       <br /><br />
-     
-  
+
+
 
       <Footer />
-    </div>
+      <div className='mobile-nav d-lg-none d-md-none'>
+        <Container>
+          <Row>
+            <Col className='mobile-nav-item'>
+              <Link to='/'>
+                <AiOutlineHome></AiOutlineHome>
+                <span>خانه</span>
+
+              </Link>
+            </Col>
+
+            <Col className='mobile-nav-item'>
+              <Link to='/Movies'>
+
+                <RiMovie2Line></RiMovie2Line>
+                <span>فیلم ها</span>
+              </Link>
+
+            </Col>
+            <Col className='mobile-nav-item'>
+              <Link to='/Series'>
+
+                <PiTelevisionLight></PiTelevisionLight>
+                <span>سریال ها</span>
+              </Link>
+            </Col>
+            <Col className='mobile-nav-item'>
+              <Link to='/Login'>
+
+                <BiLogInCircle></BiLogInCircle>
+                <span>ورود</span>
+              </Link>
+            </Col>
+
+          </Row>
+        </Container>
+
+      </div>
+    </div >
   )
 }

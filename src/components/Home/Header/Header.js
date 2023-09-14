@@ -6,9 +6,26 @@ import { BiMoviePlay } from "react-icons/bi";
 import { MdHome } from "react-icons/md"
 import { Link } from 'react-router-dom';
 import ApiRequest from '../../../Services/Axios/config';
-import {HiUsers} from 'react-icons/hi'
+import { HiUsers } from 'react-icons/hi'
 
 export default function Header() {
+    let scroll = document.querySelector('.navbar-special');
+
+    if (scroll) {
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            if (scrollY > 100) {
+                scroll.classList.add('fixed-top');
+            } else {
+                scroll.classList.remove('fixed-top');
+            }
+        });
+    } else {
+        console.log("Element not found");
+    }
+
+
 
 
     let [Search_Word, SetSearch_Word] = useState("");
@@ -60,6 +77,7 @@ export default function Header() {
 
         <div>
             <div className='Header_Top'>
+
                 <Container>
 
                     <Row className='justify-content-center text-end '>
@@ -85,6 +103,7 @@ export default function Header() {
 
                             </div>
                         </Col>
+
                     </Row>
 
                 </Container>
@@ -92,20 +111,28 @@ export default function Header() {
 
 
             </div>
+
             <div>
+
                 {['lg'].map((expand) => (
-                    <Navbar key={expand} expand={expand} style={{ height: '82px' }} >
-                        <Container >
+                    <Navbar
+
+                        className='navbar-special d-lg-block d-sm-block d-none '
+                        key={expand} expand={expand}
+                        style={{ height: '82px', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;' }} >
+
+                        <Container>
+
                             <Navbar.Brand href="#" >
                                 {/* <img alt="" style={{ height: '65px', marginTop: '7px', width: '120px' }} className='img-fluid' src='/img/MOVIECLUBLOGO.png' /> */}
 
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+                        
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
                                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                                 placement="end"
-                                className="bg-dark"
+                                className="bg-dark mt-3"
                             >
                                 <Offcanvas.Header closeButton>
                                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -151,8 +178,8 @@ export default function Header() {
 
                                     <Col lg={4} className='Search'>
                                         <input
-                                            style={{ border: '0', outline: '0' }}
-                                            onChange={Search_Handler} type='search' placeholder='اسم فیلم را وارد نمایید' className='form-control bg-secondary search_btn'></input>
+
+                                            onChange={Search_Handler} type='search' placeholder='جستجو کنید ...' className='form-control bg-secondary search_btn'></input>
                                         <div className='Result_Search'>
                                             <Container>
                                                 <Row className='justify-content-between'>
