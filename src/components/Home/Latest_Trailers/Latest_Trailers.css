@@ -11,6 +11,7 @@
 }
 
 .Latest_Trailers_Box {
+    width: 100%;
     height: 300px;
     background-position: 100% center !important;
     background-repeat: no-repeat !important;
@@ -22,8 +23,36 @@
     cursor: pointer;
     transition: 1s all !important;
     padding-bottom: 60px;
-}
 
+}
+.Latest_Trailers_Box .trailer-play {
+    top: 48%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(244, 4, 4);
+    font-size: 43px;
+    text-align: center;
+    margin: auto;
+    transition: all 2s;
+
+}
+.pagin_img{
+
+}
+.pagin_img_item{
+
+}
+.pagin_img_item img{
+    width: 140px !important;
+    height: 60px !important;
+    
+}
+.trailer-play:hover{
+    
+    font-size: 48px;
+    color: rgb(244, 14, 74);
+}
 .Latest_Trailers_Box h4 {
     color: #F0F0F0;
     padding-right: 24px;
@@ -35,10 +64,8 @@
     width: 90%;
     height: 140px;
     border-radius: 9px;
-    
-
-
 }
+
 
 .Last_Trailer_Item {
     position: relative;
@@ -48,21 +75,21 @@
     
 }
 
-.Last_Trailer_Item svg {
+.play-circle{
     position: absolute;
-    left: 0;
+    font-size: 45px;
+    color: red;
+    top: 36%;
     right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    font-size: 40px;
-    color: #db3163;
-    cursor: pointer;
-    transition: 0.5s all;
+    left: 0;
+    margin: 0px auto !important;
+    text-align: center;
+    display: flex !important;
+    justify-content: center!important ;
+    align-items: center !important;
+    transition: 1s all;
 
 }
-
-.Last_Trailer_Item svg:hover {
-    font-size: 50px;
-    color: red;
+.play-circle:hover{
+    color:black
 }
