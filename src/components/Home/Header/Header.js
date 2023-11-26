@@ -7,6 +7,7 @@ import { MdHome } from "react-icons/md"
 import { Link } from 'react-router-dom';
 import ApiRequest from '../../../Services/Axios/config';
 import { HiUsers } from 'react-icons/hi'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Header() {
     let scroll = document.querySelector('.navbar-special');
@@ -35,19 +36,25 @@ export default function Header() {
         console.log(Search_Res);
     }, [Search_Res]);
     function ShowResult__Search() {
-        const sXXS = Object.values(Search_Res).find((DlItem) => {
+        const sXXS = Object.values(Search_Res).filter((DlItem) => {
             return DlItem.name.toLowerCase().includes(Search_Word.toLowerCase())
         });
+        console.log(sXXS)
         if (sXXS) {
+
             return (
-                <>
-                    <Col lg={9}>
-                        <h6>{sXXS['name']}</h6>
-                    </Col>
-                    <Col lg={3}>
-                        <img alt="" width='70px' height='90px' src={sXXS['poster']} />
-                    </Col>
-                </>
+                sXXS.map(ios => {
+
+                    <>
+                        <Col lg={9}>
+                            <h6>{console.log(ios['name'])}</h6>
+                        </Col>
+                        <Col lg={3}>
+                            <img alt="" width='70px' height='90px' src={ios['poster']} />
+                        </Col>
+                    </>
+                })
+
             )
         }
         return sXXS
@@ -127,7 +134,7 @@ export default function Header() {
                                 {/* <img alt="" style={{ height: '65px', marginTop: '7px', width: '120px' }} className='img-fluid' src='/img/MOVIECLUBLOGO.png' /> */}
 
                             </Navbar.Brand>
-                        
+
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
                                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -143,34 +150,39 @@ export default function Header() {
                                     <Nav>
                                         <Nav.Link href='#Home' className=''>
                                             <Link to='/'>
-                                                <MdHome style={{ color: '#CF0A0A', fontSize: '30px' }}></MdHome>
-
+                                                <i className="fa-solid fa-house-chimney"></i>
                                                 <span>خانه</span>
                                             </Link>
                                         </Nav.Link>
                                         <Nav.Link>
                                             <Link to='/Movies'>
 
-                                                <RiMovie2Fill style={{ color: '#CF0A0A', fontSize: '30px' }}></RiMovie2Fill>
+                                                <i className="fa-solid fa-clapperboard"></i>
                                                 <span>دانلود فیلم</span>
 
                                             </Link>
                                         </Nav.Link>
                                         <Nav.Link>
                                             <Link to='/Series'>
-                                                <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>
+                                                <i className="fa-solid fa-tv"></i>
                                                 <span>دانلود سریال</span>
                                             </Link>
                                         </Nav.Link>
                                         <Nav.Link>
-                                            <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>
-                                            <span>انیمیشن | انیمه</span>
+
+                                            <i className="fa-solid fa-dragon"></i>
+                                            <span>انیمه</span>
                                         </Nav.Link>
                                         <Nav.Link>
-                                            <BiMoviePlay style={{ color: '#CF0A0A', fontSize: '30px' }}></BiMoviePlay>
+
+                                            <i className="fa-solid fa-newspaper"></i>
                                             <span>اخبار</span>
                                         </Nav.Link>
+                                        <Nav.Link>
 
+                                            <i className="fa-solid fa-newspaper"></i>
+                                            <span>تماس با ما</span>
+                                        </Nav.Link>
 
 
 

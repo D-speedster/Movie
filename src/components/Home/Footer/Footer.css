@@ -1,36 +1,18 @@
 .Footer {
     height: max-content;
     padding-bottom: 30px;
-    background-color: #313a3f !important;
+    background-color: #424242 !important;
     color: #FFF;
     border-radius: 5px;
     position: relative;
     left: 0px;
     right: 0px;
 }
-.svg-footer {
-    height: 230px;
-    width: 100%;
-    margin-left: 0px;
-    padding-top: 3px;
-    padding-right: 4px;
-}
 
-.Footer .Footer-Item ul {
-    color: #eeee;
-    padding-top: 0px;
-    text-align: right;
-    list-style: none;
-}
 
-.footer-item h5 {
-    color: #FFF;
-    padding-bottom: 8px;
-    width: 50%;
-    text-align: center;
-    border-bottom: thick solid #e41616;
-    transition: all 1.5s;
-}
+
+
+
 
 .footer-box {
     display: flex;
@@ -42,8 +24,4 @@
     width: inherit;
     margin-right: 44px;
     cursor: pointer;
-}
-.footer-item h5:hover {
-   color: #000;
-   
 }

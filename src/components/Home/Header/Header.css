@@ -50,13 +50,13 @@ h6 {
 .Header_Top {
     color: #222;
     width: 100%;
-    margin-bottom: 24px;
 }
 
 /* استایل‌دهی به نوبار */
 nav {
-    background-color: #424242;
+    background-color: #002233;
     border-radius: 5px;
+    margin-top: 0px;
 
 }
 .navbar-spical {
@@ -66,10 +66,24 @@ nav {
 }
 
 .navbar-nav a {
-    color: #ffffff !important;
+    color: #f5f5f5 !important;
     text-decoration: none;
     font-weight: 600;
     font-size: 16.5px;
+    margin-top: 5px;
+    padding-left: 4px;
+    transition: 1s all !important;
+}
+.navbar-nav a:hover i {
+    font-size: 22px;
+    color: blueviolet !important;
+
+}
+.navbar-nav a i {
+    color:  #f5f5f5 !important;
+    font-size: 20px;
+    padding-left: 5px;
+    transition: 1s all !important;
 }
 
 .navbar-toggler {
@@ -78,6 +92,7 @@ nav {
 }
 
 .nav-link {
+    margin-top: -5px !important;
     font-size: 22px;
     font-weight: 600;
     margin-left: 25px;
@@ -117,6 +132,7 @@ svg {
 .Search input {
     border: 0px;
     outline: 0px;
+    margin-top: 0px;
     border-radius: 15px;
     padding-right: 15px;
     width: 333px;

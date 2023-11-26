@@ -8,9 +8,13 @@ import { ImBin2 } from 'react-icons/im';
 import Swal from 'sweetalert2'
 import ApiRequest from '../../../Services/Axios/config';
 import axios from "axios";
-
+import { useReducer } from 'react';
 
 export default function DataTable() {
+  let UsersHandler = (state, action) => {
+
+  }
+  let [UsersMang, SetUsersMang] = useReducer(UsersHandler, { age: 42 })
   const [users, Setusers] = useState(true);
   const [pending, setpending] = useState(true);
   const [show, setShow] = useState(false);
