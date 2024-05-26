@@ -71,7 +71,8 @@
 
 .mobile-nav-item span {
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 2px;
+    font-weight: bold;
 }
 
 .mobile-nav-item svg {
