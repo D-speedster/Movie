@@ -6,6 +6,10 @@ import { SwiperSlide } from 'swiper/react';
 import ApiRequest from '../../Services/Axios/config';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+import { PiTelevisionLight } from 'react-icons/pi';
+import { BiLogInCircle } from 'react-icons/bi';
+import { RiMovie2Line } from 'react-icons/ri';
+import { AiOutlineHome } from 'react-icons/ai';
 
 
 export default function Movies() {
@@ -126,6 +130,44 @@ export default function Movies() {
                     ))}
                 </Row>
             </Container>
+            <div className='mobile-nav d-lg-none d-md-none'>
+                <div className='container'>
+                    <Row>
+                        <Col className='mobile-nav-item'>
+                            <Link to='/'>
+                                <AiOutlineHome style={{ fontSize: '21px' }}></AiOutlineHome>
+                                <span className='d-block ' >خانه</span>
+
+                            </Link>
+                        </Col>
+
+                        <Col className='mobile-nav-item d-inline'>
+                            <Link to='/Movies'>
+
+                                <RiMovie2Line style={{ fontSize: '21px' }}></RiMovie2Line>
+                                <span className='d-block'>فیلم ها</span>
+                            </Link>
+
+                        </Col>
+                        <Col className='mobile-nav-item'>
+                            <Link to='/Series'>
+
+                                <PiTelevisionLight style={{ fontSize: '21px' }}></PiTelevisionLight>
+                                <span className='d-block'>سریال ها</span>
+                            </Link>
+                        </Col>
+                        <Col className='mobile-nav-item'>
+                            <Link to='/Login'>
+
+                                <BiLogInCircle style={{ fontSize: '21px' }}></BiLogInCircle>
+                                <span className='d-block'>ورود</span>
+                            </Link>
+                        </Col>
+
+                    </Row>
+                </div>
+
+            </div>
         </div>
     )
 }
