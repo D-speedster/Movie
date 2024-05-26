@@ -89,7 +89,7 @@ export default function Header() {
 
                     <Row className='justify-content-center text-end '>
                         <Col className='Logo_Web mt-3'>
-                            <img alt="" height='50px !important' width='240px' src='/img/movie-club-banner-2x.png' className='img-fluid'></img>
+                            <img alt="" height='90px !important' width='160px' src='/img/movie-club-banner-2x.png'></img>
 
 
                         </Col>
@@ -97,7 +97,7 @@ export default function Header() {
                         <Col className='Login_Register mt-3'>
                             <div className='d-flex float-start'>
                                 <Link to='/login'>
-                                    <Button className='me-3 Login_Btn'>
+                                    <Button className='me-3 Login_Btn mt-4'>
                                         <HiUsers></HiUsers>
 
                                         پنل کاربری
@@ -124,7 +124,7 @@ export default function Header() {
                 {['lg'].map((expand) => (
                     <Navbar
 
-                        className='navbar-special d-lg-block d-sm-block d-none '
+                        className='navbar-special d-lg-block d-sm-block d-none mb-4 '
                         key={expand} expand={expand}
                         style={{ height: '82px', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;' }} >
 
