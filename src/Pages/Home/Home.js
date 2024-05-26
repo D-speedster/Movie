@@ -58,41 +58,41 @@ export default function Home() {
 
       <Footer />
       <div className='mobile-nav d-lg-none d-md-none'>
-        <Container>
+        <div className='container'>
           <Row>
             <Col className='mobile-nav-item'>
               <Link to='/'>
-                <AiOutlineHome></AiOutlineHome>
-                <span>خانه</span>
+                <AiOutlineHome style={{fontSize : '23px'}}></AiOutlineHome>
+                <span className='d-block' >خانه</span>
 
               </Link>
             </Col>
 
-            <Col className='mobile-nav-item'>
+            <Col className='mobile-nav-item d-inline'>
               <Link to='/Movies'>
 
-                <RiMovie2Line></RiMovie2Line>
-                <span>فیلم ها</span>
+                <RiMovie2Line style={{fontSize : '23px'}}></RiMovie2Line>
+                <span className='d-block'>فیلم ها</span>
               </Link>
 
             </Col>
             <Col className='mobile-nav-item'>
               <Link to='/Series'>
 
-                <PiTelevisionLight></PiTelevisionLight>
-                <span>سریال ها</span>
+                <PiTelevisionLight style={{fontSize : '23px'}}></PiTelevisionLight>
+                <span className='d-block'>سریال ها</span>
               </Link>
             </Col>
             <Col className='mobile-nav-item'>
               <Link to='/Login'>
 
-                <BiLogInCircle></BiLogInCircle>
-                <span>ورود</span>
+                <BiLogInCircle style={{fontSize : '23px'}}></BiLogInCircle>
+                <span className='d-block'>ورود</span>
               </Link>
             </Col>
 
           </Row>
-        </Container>
+        </div>
 
       </div>
     </div >
