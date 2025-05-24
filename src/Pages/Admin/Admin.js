@@ -23,7 +23,7 @@ export default function Admin() {
 
             <Header_Admin></Header_Admin>
             <div className='d-lg-flex'>
-                <Col lg={2} sm={12} xs={12} className='sec1'>
+                <Col style={{minHeight : '100vh'}} lg={2} sm={12} xs={12} className='sec1'>
                     <SideBar></SideBar>
                 </Col>
                 <Col lg={10} className='sec2'>
