@@ -56,10 +56,13 @@
     padding: 10px 10px 10px 10px;
     word-break: keep-all;
     margin: 0 auto;
-    background-color: #002233;
+    background-color: #111111;
     color: #f5f5f5 !important;
     overflow: hidden;
+    font-size: 14px;
     inline-size: 100% !important;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.2);
 }
 .item_Slider_name h5 {
     font-size: 1rem;
