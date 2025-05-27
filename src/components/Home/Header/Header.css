@@ -61,7 +61,7 @@ h6 {
 
 /* استایل‌دهی به نوبار */
 nav {
-    background-color: #002233;
+    background-color: #111111 ;
     border-radius: 5px;
     margin-top: 0px;
 
@@ -74,7 +74,7 @@ nav {
 }
 
 .navbar-nav a {
-    color: #f5f5f5 !important;
+    color: #cccccc !important;
     text-decoration: none;
     font-weight: 600;
     font-size: 16.5px;
@@ -85,7 +85,7 @@ nav {
 
 .navbar-nav a:hover i {
     font-size: 22px;
-    color: blueviolet !important;
+    color: #e50914 !important;
 
 }
 
