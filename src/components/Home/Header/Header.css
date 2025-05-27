@@ -20,7 +20,7 @@ h6 {
 }
 
 .Logo_Web {
-    
+
     object-fit: contain;
     width: 240px;
     height: 90px !important;
@@ -61,7 +61,7 @@ h6 {
 
 /* استایل‌دهی به نوبار */
 nav {
-    background-color: #111111 ;
+    background-color: #111111;
     border-radius: 5px;
     margin-top: 0px;
 
@@ -102,11 +102,15 @@ nav {
 }
 
 .nav-link {
-    margin-top: -5px !important;
-    font-size: 22px;
-    font-weight: 600;
+    margin-top: -4px !important;
     margin-left: 25px;
+   
 
+}
+.nav-link span {
+    font-family: 'IRANYEKAN' !important;
+    font-weight: bold !important;
+    font-size: 17px;
 }
 
 svg {

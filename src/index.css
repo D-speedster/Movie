@@ -1,16 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-  
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+@font-face {
+  font-family: 'IRANYEKAN';
+  src: url('/public/IRANYekan/fonts/woff2/IRANYekanWebBlack.woff2') format('woff2'),
+    url('/public/IRANYekan/fonts/woff/IRANYekanWebBlack.woff') format('woff'),
+    url('/public/IRANYekan/fonts/eot/IRANYekanWebBlack.eot') format('eot'),
+    url('/public/IRANYekan/fonts/ttf/IRANYekanWebBlack.ttf') format('truetype'),
+    url('/public/IRANYekan/fonts/svg/iranyekanwebblack.svg') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANYEKAN';
+  src: url('/public/IRANYekan/fonts/woff2/IRANYekanWebBold.woff2') format('woff2'),
+    url('/public/IRANYekan/fonts/woff/IRANYekanWebBold.woff') format('woff'),
+    url('/public/IRANYekan/fonts/eot/IRANYekanWebBold.eot') format('eot'),
+    url('/public/IRANYekan/fonts/ttf/IRANYekanWebBold.ttf') format('truetype'),
+    url('/public/IRANYekan/fonts/svg/iranyekanwebbold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANYEKAN';
+  src: url('/public/IRANYekan/fonts/woff2/IRANYekanWebMedium.woff2') format('woff2'),
+    url('/public/IRANYekan/fonts/woff/IRANYekanWebMedium.woff') format('woff'),
+    url('/public/IRANYekan/fonts/eot/IRANYekanWebMedium.eot') format('eot'),
+    url('/public/IRANYekan/fonts/ttf/IRANYekanWebMedium.ttf') format('truetype'),
+    url('/public/IRANYekan/fonts/svg/iranyekanwebmedium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANYEKAN';
+  src: url('/public/IRANYekan/fonts/woff2/IRANYekanWebRegular.woff2') format('woff2'),
+    url('/public/IRANYekan/fonts/woff/IRANYekanWebRegular.woff') format('woff'),
+    url('/public/IRANYekan/fonts/eot/IRANYekanWebRegular.eot') format('eot'),
+    url('/public/IRANYekan/fonts/ttf/IRANYekanWebRegular.ttf') format('truetype'),
+    url('/public/IRANYekan/fonts/svg/IRANYekanWebRegular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'IRANYEKAN', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
