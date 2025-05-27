@@ -30,7 +30,7 @@ export default function SliderMovie(props) {
 
             <Container>
                 <div className='d-flex justify-content-between mb-4 mt-2'>
-                    <h5 style={{ paddingRight: '0px', color: '#FFF', fontSize: '24px', fontWeight: 'bold', textAlign: 'right' }}>
+                    <h5 style={{ paddingRight: '0px', color: '#FFF', fontSize: '22px', fontWeight: '700', textAlign: 'right' , fontFamily : 'IRANYEKAN' }}>
                         <FcFilmReel></FcFilmReel>
                         {props.Title}
                     </h5>
