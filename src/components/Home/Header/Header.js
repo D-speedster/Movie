@@ -88,7 +88,7 @@ export default function Header() {
                 <Container>
 
                     <Row className='justify-content-center text-end '>
-                        <Col className=' mt-3'>
+                        <Col className='mt-3'>
                             <img className='Logo_Web' alt="Logo" src='/img/movie-club-banner-2x.png'></img>
 
 
@@ -126,11 +126,11 @@ export default function Header() {
 
                         className='navbar-special d-lg-block d-sm-block d-none mb-4 '
                         key={expand} expand={expand}
-                        style={{ height: '82px', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;' }} >
+                        style={{ height: '82px', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px' }} >
 
                         <Container>
 
-                           
+
 
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
@@ -145,67 +145,66 @@ export default function Header() {
                                 </Offcanvas.Header>
                                 <Offcanvas.Body className='justify-content-between'>
                                     <Nav>
-                                        <Nav.Link href='#Home' className=''>
-                                            <Link to='/'>
-                                                <i className="fa-solid fa-house-chimney"></i>
-                                                <span>خانه</span>
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link>
-                                            <Link to='/Movies'>
 
-                                                <i className="fa-solid fa-clapperboard"></i>
-                                                <span>دانلود فیلم</span>
+                                        <Link className='nav-link' to='/'>
+                                            <i className="fa-solid fa-house-chimney"></i>
+                                            <span>خانه</span>
+                                        </Link>
 
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link>
-                                            <Link to='/Series'>
-                                                <i className="fa-solid fa-tv"></i>
-                                                <span>دانلود سریال</span>
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link>
+
+                                        <Link className='nav-link' to='/Movies'>
+
+                                            <i className="fa-solid fa-clapperboard"></i>
+                                            <span>دانلود فیلم</span>
+
+                                        </Link>
+
+                                        <Link className='nav-link' to='/Series'>
+                                            <i className="fa-solid fa-tv"></i>
+                                            <span>دانلود سریال</span>
+                                        </Link>
+
+                                        <Link className='nav-link'>
 
                                             <i className="fa-solid fa-dragon"></i>
-                                            <span>انیمه</span>
-                                        </Nav.Link>
-                                        <Nav.Link>
+                                        <span>انیمه</span>
+                                    </Link>
+                                    <Link className='nav-link'>
 
-                                            <i className="fa-solid fa-newspaper"></i>
-                                            <span>اخبار</span>
-                                        </Nav.Link>
-                                        <Nav.Link>
+                                        <i className="fa-solid fa-newspaper"></i>
+                                        <span>اخبار</span>
+                                    </Link>
+                                    <Link className='nav-link'>
 
-                                            <i className="fa-solid fa-newspaper"></i>
-                                            <span>تماس با ما</span>
-                                        </Nav.Link>
-
-
-
-                                    </Nav>
-
-                                    <Col lg={4} className='Search'>
-                                        <input
-
-                                            onChange={Search_Handler} type='search' placeholder='جستجو کنید ...' className='form-control bg-secondary search_btn'></input>
-                                        <div className='Result_Search'>
-                                            <Container>
-                                                <Row className='justify-content-between'>
-                                                    {Search_Res ? ShowResult__Search() : null}
-                                                </Row>
-                                            </Container>
+                                        <i className="fa-solid fa-newspaper"></i>
+                                        <span>تماس با ما</span>
+                                    </Link>
 
 
-                                        </div>
-                                    </Col>
 
-                                </Offcanvas.Body>
-                            </Navbar.Offcanvas>
-                        </Container>
+                                </Nav>
+
+                                <Col lg={4} className='Search'>
+                                    <input
+
+                                        onChange={Search_Handler} type='search' placeholder='جستجو کنید ...' className='form-control bg-secondary search_btn'></input>
+                                    <div className='Result_Search'>
+                                        <Container>
+                                            <Row className='justify-content-between'>
+                                                {Search_Res ? ShowResult__Search() : null}
+                                            </Row>
+                                        </Container>
+
+
+                                    </div>
+                                </Col>
+
+                            </Offcanvas.Body>
+                        </Navbar.Offcanvas>
+                    </Container>
                     </Navbar>
                 ))}
-            </div>
         </div>
+        </div >
     )
 }
