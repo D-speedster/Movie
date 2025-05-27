@@ -88,8 +88,8 @@ export default function Header() {
                 <Container>
 
                     <Row className='justify-content-center text-end '>
-                        <Col className='Logo_Web mt-3'>
-                            <img alt="" height='90px !important' width='160px' src='/img/movie-club-banner-2x.png'></img>
+                        <Col className=' mt-3'>
+                            <img className='Logo_Web' alt="Logo" src='/img/movie-club-banner-2x.png'></img>
 
 
                         </Col>
