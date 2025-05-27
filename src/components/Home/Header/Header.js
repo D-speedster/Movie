@@ -130,10 +130,8 @@ export default function Header() {
 
                         <Container>
 
-                            <Navbar.Brand href="#" >
-                                {/* <img alt="" style={{ height: '65px', marginTop: '7px', width: '120px' }} className='img-fluid' src='/img/MOVIECLUBLOGO.png' /> */}
-
-                            </Navbar.Brand>
+                           
+                           
 
                             <Navbar.Offcanvas
                                 id={`offcanvasNavbar-expand-${expand}`}
