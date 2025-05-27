@@ -74,8 +74,8 @@
     height: 35px !important;
     width: 35px !important;
     border-radius: 50%;
-    background-color: #e66c3a;
-    border: 0.5px solid #e66c3a;
+    background-color: #e50914;
+    border: 0.5px solid #e50914;
     color: hsl(0, 0%, 100%);
     top: 5px;
     left: 5px;
@@ -84,9 +84,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+   
 }
 .item_Slider_Rate h6{
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
 
 }
