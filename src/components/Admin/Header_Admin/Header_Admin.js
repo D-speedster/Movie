@@ -8,17 +8,11 @@ import { BsMoonStarsFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 function Header_Admin() {
-    function BackHandler(event) {
-        console.log(event.target.classList.toggle("BackActive"));
-        if (event.target.classList == "BackActive") {
+    const [isDarkMode, setIsDarkMode] = React.useState(true);
 
-            document.body.style.backgroundColor = '#FFFF';
-        } else {
-
-            document.body.style.backgroundColor = '#0000';
-
-
-        }
+    const BackHandler = () => {
+        setIsDarkMode(prev => !prev);
+        document.body.style.backgroundColor = isDarkMode ? '#FFFFFF' : '#171b31';
     }
     return (
         <Navbar className='NavBar_Admin' collapseOnSelect expand="lg" >
@@ -29,13 +23,25 @@ function Header_Admin() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
 
-                        <BsMoonStarsFill onClick={BackHandler}></BsMoonStarsFill>
+                        <button
+                            onClick={BackHandler}
+                            className='btn btn-link'
+                            aria-label={isDarkMode ? 'تغییر به حالت روز' : 'تغییر به حالت شب'}
+                            title={isDarkMode ? 'حالت روز' : 'حالت شب'}
+                        >
+                            <BsMoonStarsFill style={{ color: '#FFF' }} />
+                        </button>
 
                     </Nav>
                     <Nav>
                         {/* <Nav.Link href="#deets"><BsMoonStarsFill></BsMoonStarsFill></Nav.Link> */}
                         <Nav.Link eventKey={2} href="#memes">
-                            <img src="/img/speedster.jpg" style={{ width: '35px', height: '35px', borderRadius: '50%' }} />                            <span className='pe-2'>مدیر اصلی</span>
+                            <img 
+                                src="/img/speedster.jpg" 
+                                alt="تصویر پروفایل مدیر"
+                                style={{ width: '35px', height: '35px', borderRadius: '50%' }} 
+                            />
+                            <span className='pe-2'>مدیر اصلی</span>
                             <div className='navbar_dis'>
                                 <Link to='addMovie'><li> افزودن فیلم</li></Link>
                                 <Link to='addSerie'><li> افزودن سریال</li></Link>

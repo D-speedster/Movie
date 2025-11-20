@@ -45,3 +45,72 @@
     font-weight: 700;
     font-size: 20px;
 }
+
+
+/* Responsive Improvements */
+@media only screen and (max-width: 768px) {
+    .BoxDownload {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .BoxDownload h5 {
+        font-size: 16px;
+    }
+
+    .accordion-body .item-download {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .accordion-body .item-download img {
+        width: 80px;
+    }
+
+    .accordion-body .item-download span {
+        top: 35px;
+        right: 35px;
+        font-size: 16px;
+    }
+
+    .accordion-body .item-download h6 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .BoxDownload {
+        padding: 10px;
+    }
+
+    .accordion-body .item-download {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .accordion-body .item-download img {
+        width: 70px;
+    }
+
+    .accordion-body .item-download span {
+        top: 30px;
+        right: 30px;
+        font-size: 14px;
+    }
+}
+
+/* Better Accordion Styling */
+.accordion-button:not(.collapsed) {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+/* Loading State */
+.item-download.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}

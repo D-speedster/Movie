@@ -7,7 +7,7 @@ import { BiLogInCircle } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import './MobileNav.css';
 
-export default function MobileNav() {
+const MobileNav = React.memo(function MobileNav() {
   return (
     <div className='mobile-nav d-lg-none d-md-none'>
       <div className='container'>
@@ -43,4 +43,6 @@ export default function MobileNav() {
       </div>
     </div>
   );
-}
+});
+
+export default MobileNav;

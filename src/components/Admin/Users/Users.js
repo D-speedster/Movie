@@ -42,34 +42,40 @@ export default function DataTable() {
   };
   const handleShow = () => setShow(true);
   useEffect(() => {
-    // تابع برای دریافت اطلاعات اولیه از دیتابیس
     async function fetchData() {
       try {
         const response = await ApiRequest.get('Users');
         Setusers(response.data);
         setpending(false);
-        console.log(response.data);
       } catch (error) {
         console.error('خطا در دریافت اطلاعات از دیتابیس', error);
+        setpending(false);
       }
     }
 
-    fetchData(); // فراخوانی تابع برای دریافت اطلاعات اولیه
+    fetchData();
   }, []);
-  useEffect(() => {
-    ApiRequest.get('/Users').then(data => {
-      Setusers(data.data);
-    })
-  }, [users])
-  const SubmitEdit = () => {
-    setShow(false);
-    let obj = {
-      user: UserName,
-      email: Email,
-      password: Password,
-      type: Type
+  const SubmitEdit = async () => {
+    try {
+      const obj = {
+        user: UserName,
+        email: Email,
+        password: Password,
+        type: Type
+      };
+      
+      await ApiRequest.put(`/Users/${NumEdit}`, obj);
+      setShow(false);
+      
+      // Refresh user list
+      const response = await ApiRequest.get('Users');
+      Setusers(response.data);
+      
+      Swal.fire('موفق!', 'کاربر با موفقیت ویرایش شد', 'success');
+    } catch (error) {
+      console.error('خطا در ویرایش کاربر:', error);
+      Swal.fire('خطا!', 'مشکلی در ویرایش کاربر پیش آمد', 'error');
     }
-    ApiRequest.put(`/Users/${NumEdit}`, obj).then(data => console.log(data.data))
   }
 
   const DeleteUser = (id) => {
@@ -83,15 +89,16 @@ export default function DataTable() {
       confirmButtonText: 'بله حذف شود!'
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log(id)
-        // ApiRequest.delete(`/Users/`, id).then(data => console.log(data))
         async function DeleteAsyncUser() {
           try {
-            const response = await ApiRequest.delete(`Users/${id}`)
-            console.log(response.data); // نتیجه‌ای که از سرور دریافت می‌شود
-            // ...
+            await ApiRequest.delete(`Users/${id}`);
+            // Refresh user list
+            const response = await ApiRequest.get('Users');
+            Setusers(response.data);
           } catch (error) {
-            console.error(error); // نمایش پیام خطا در صورت بروز خطا
+            console.error('خطا در حذف کاربر:', error);
+            Swal.fire('خطا!', 'مشکلی در حذف کاربر پیش آمد', 'error');
+            return;
           }
         }
         DeleteAsyncUser()
@@ -190,7 +197,18 @@ export default function DataTable() {
           <input className='form-control ' placeholder='کاربر مورد نظر ...' />
         </Col>
       </Row>
-      {!users ? 'Locading ...' : (
+      {pending ? (
+        <div className='text-center mt-5'>
+          <div className="spinner-border text-info" role="status">
+            <span className="visually-hidden">در حال بارگذاری...</span>
+          </div>
+          <p className='mt-3' style={{ color: '#999' }}>در حال بارگذاری کاربران...</p>
+        </div>
+      ) : !users || Object.keys(users).length === 0 ? (
+        <div className='text-center mt-5' style={{ color: '#999' }}>
+          <p>هیچ کاربری یافت نشد</p>
+        </div>
+      ) : (
         <Table responsive className='mt-3'>
           <thead>
             <tr>
@@ -198,38 +216,41 @@ export default function DataTable() {
               <th>ایمیل</th>
               <th>سطح دسترسی</th>
               <th>عملیات</th>
-
             </tr>
           </thead>
-
           <tbody>
-
-            {Object.entries(users).map((user) => (
-              <tr>
-                <td>{user[1].user}</td>
-                <td>{user[1].email}</td>
-                {/* <td>{console.log(user)}</td> */}
-                <td>{user[1].type}</td>
+            {Object.entries(users).map((user, index) => (
+              <tr key={user[1]?.id || `user-${index}`}>
+                <td>{user[1]?.user}</td>
+                <td>{user[1]?.email}</td>
                 <td>
-
-
-                  <BiEditAlt onClick={() => EditUser(user[1].id)} style={{ color: 'green', fontSize: '19px' }}></BiEditAlt>
-                  <ImBin2 onClick={() => DeleteUser(user[1].id)} className='me-3' style={{ color: 'red', fontSize: '19px' }}></ImBin2>
+                  <span className={`badge ${user[1]?.type === 'Owner' ? 'bg-danger' : 'bg-info'}`}>
+                    {user[1]?.type}
+                  </span>
                 </td>
-
-
+                <td>
+                  <button
+                    onClick={() => EditUser(user[1].id)}
+                    className='btn btn-sm btn-link'
+                    aria-label={`ویرایش کاربر ${user[1]?.user}`}
+                    title="ویرایش"
+                  >
+                    <BiEditAlt style={{ color: 'green', fontSize: '19px' }} />
+                  </button>
+                  <button
+                    onClick={() => DeleteUser(user[1].id)}
+                    className='btn btn-sm btn-link me-2'
+                    aria-label={`حذف کاربر ${user[1]?.user}`}
+                    title="حذف"
+                  >
+                    <ImBin2 style={{ color: 'red', fontSize: '19px' }} />
+                  </button>
+                </td>
               </tr>
-
-
-            )
-
-            )}
-
-
+            ))}
           </tbody>
         </Table>
-      )
-      }
+      )}
     </Container>
   );
 }

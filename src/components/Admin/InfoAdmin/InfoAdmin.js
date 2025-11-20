@@ -15,30 +15,51 @@ import { MdOutlinePreview } from 'react-icons/md';
 import { GrUserAdmin, GrView } from 'react-icons/gr'
 import ApiRequest from '../../../Services/Axios/config';
 export default function InfoAdmin() {
-    let [Movie_Count, setMovie_Count] = useState('');
-    let [Series_Count, setSeries_Count] = useState('');
-    let [Users_Count, setUsers_Count] = useState('');
-    let [Comments_Count, setComments_Count] = useState('');
-    let [Collections_Count, setCollections_Count] = useState('')
-    const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
-    let data2 = [{ name: '' }]
+    const [Movie_Count, setMovie_Count] = useState(0);
+    const [Series_Count, setSeries_Count] = useState(0);
+    const [Users_Count, setUsers_Count] = useState(0);
+    const [Comments_Count, setComments_Count] = useState(0);
+    const [Collections_Count, setCollections_Count] = useState(0);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
-        ApiRequest.get('./Moviez').then(data => {
-            setMovie_Count(Object.keys(data.data).length)
-        })
-        ApiRequest.get('./Series').then(data => {
-            setSeries_Count(Object.keys(data.data).length)
-        })
-        ApiRequest.get('./Users').then(data => {
-            setUsers_Count(Object.keys(data.data).length)
-        })
-        ApiRequest.get('./Comments').then(data => {
-            setComments_Count(Object.keys(data.data).length)
-        })
-        ApiRequest.get('./Collections').then(data => {
-            setCollections_Count(Object.keys(data.data).length)
-        })
-    })
+        const fetchAllData = async () => {
+            try {
+                const [movies, series, users, comments, collections] = await Promise.all([
+                    ApiRequest.get('./Moviez'),
+                    ApiRequest.get('./Series'),
+                    ApiRequest.get('./Users'),
+                    ApiRequest.get('./Comments'),
+                    ApiRequest.get('./Collections')
+                ]);
+
+                setMovie_Count(Object.keys(movies.data).length);
+                setSeries_Count(Object.keys(series.data).length);
+                setUsers_Count(Object.keys(users.data).length);
+                setComments_Count(Object.keys(comments.data).length);
+                setCollections_Count(Object.keys(collections.data).length);
+                setLoading(false);
+            } catch (error) {
+                console.error('خطا در دریافت اطلاعات:', error);
+                setLoading(false);
+            }
+        };
+
+        fetchAllData();
+    }, []);
+
+    if (loading) {
+        return (
+            <Container>
+                <div className='text-center mt-5'>
+                    <div className="spinner-border text-info" role="status">
+                        <span className="visually-hidden">در حال بارگذاری...</span>
+                    </div>
+                    <p className='mt-3' style={{ color: '#999' }}>در حال بارگذاری داشبورد...</p>
+                </div>
+            </Container>
+        );
+    }
 
     return (
         <Container>
