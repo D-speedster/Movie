@@ -14,7 +14,9 @@ export default function SliderMovie(props) {
     let [sliceMovie, SetMovieSlice] = useState('')
     const [selectedMovie, setSelectedMovie] = useState(null);
     function shortenParagraph(paragraph, maxLength) {
-        return paragraph.split(' ').slice(0, maxLength).join(' ') + (paragraph.split(' ').length > maxLength ? ' ...' : '');
+        if (!paragraph) return '';
+        const words = paragraph.split(' ');
+        return words.slice(0, maxLength).join(' ') + (words.length > maxLength ? ' ...' : '');
     }
     const handleMovieSelect = (movie) => {
         setSelectedMovie(movie);
@@ -68,59 +70,44 @@ export default function SliderMovie(props) {
                     }}
                 >
 
-                    {
+                    {Object.entries(props).map((item, index) => {
+                        if (typeof item['1'] !== "object") return null;
 
-                        Object.entries(props).map(item => (
+                        const movie = item[1];
+                        const movieId = movie.id || `movie-${index}`;
 
-
-
-
-                            typeof (item['1']) == "object" ? (
-
-                                <div key={Math.random(10, 1000)} >
-
-                                    <SwiperSlide key={Math.random(10, 1000)} >
-
-                                        <Link to={{
-                                            pathname: `/Movie/${item[1].id}`
-                                        }}>
-                                            <Figure onClick={() => handleMovieSelect(item[1])}
-                                            >
-                                                <div className='item_Slider'>
-                                                    <div className='item_Slider_img'>
-                                                        <LazyLoad>
-                                                            <img src={item[1].poster}></img>
-                                                        </LazyLoad>
-                                                    </div>
-                                                    <div className='item_Slider_story'>
-                                                        <p>
-                                                            <h6>خلاصه داستان : </h6>
-
-                                                            {item[1]?.TranslateText && shortenParagraph(item[1].TranslateText, 30)}
-                                                        </p>
-                                                    </div>
-                                                    <div className='item_Slider_name'>
-                                                        <h5>{item[1]?.name}</h5>
-                                                    </div>
-                                                    <div className='item_Slider_Rate'>
-                                                        <h6> {item[1].rate}</h6>
-                                                    </div>
-                                                </div>
-
-
-                                            </Figure>
-                                        </Link>
-                                    </SwiperSlide>
-
-
-                                </div>
-
-                            ) : null
-
-
-
-
-                        ))}
+                        return (
+                            <SwiperSlide key={movieId}>
+                                <Link to={`/Movie/${movie.id}`}>
+                                    <Figure onClick={() => handleMovieSelect(movie)}>
+                                        <div className='item_Slider'>
+                                            <div className='item_Slider_img'>
+                                                <LazyLoad>
+                                                    <img 
+                                                        src={movie.poster} 
+                                                        alt={movie.name || 'پوستر فیلم'}
+                                                        loading="lazy"
+                                                    />
+                                                </LazyLoad>
+                                            </div>
+                                            <div className='item_Slider_story'>
+                                                <p>
+                                                    <h6>خلاصه داستان : </h6>
+                                                    {movie?.TranslateText && shortenParagraph(movie.TranslateText, 30)}
+                                                </p>
+                                            </div>
+                                            <div className='item_Slider_name'>
+                                                <h5>{movie?.name}</h5>
+                                            </div>
+                                            <div className='item_Slider_Rate'>
+                                                <h6>{movie.rate}</h6>
+                                            </div>
+                                        </div>
+                                    </Figure>
+                                </Link>
+                            </SwiperSlide>
+                        );
+                    })}
 
                 </Swiper>
             </Container>

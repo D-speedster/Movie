@@ -1,0 +1,90 @@
+/* Responsive improvements for Series page */
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 576px) {
+    .Advanced_search {
+        padding: 15px 10px;
+    }
+
+    .Advanced_search h5 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .Advanced_search select {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .Advanced_search button {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    .Movies_Item {
+        padding: 5px;
+    }
+
+    .item_Slider_name h5 {
+        font-size: 14px;
+    }
+
+    .item_Slider_Rate h6 {
+        font-size: 12px;
+    }
+
+    .item_Slider_story {
+        padding: 8px;
+    }
+
+    .item_Slider_story h6 {
+        font-size: 12px;
+    }
+
+    .item_Slider_story p {
+        font-size: 11px;
+    }
+}
+
+/* Tablets (portrait) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .Advanced_search {
+        padding: 20px 15px;
+    }
+
+    .Advanced_search select {
+        font-size: 13px;
+    }
+
+    .Movies_Item {
+        padding: 8px;
+    }
+}
+
+/* Tablets (landscape) and small desktops */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .Movies_Item {
+        padding: 10px;
+    }
+}
+
+/* Improve image loading */
+.item_Slider_img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item_Slider:hover .item_Slider_img img {
+    transform: scale(1.05);
+}
+
+/* Better touch targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .Advanced_search select,
+    .Advanced_search button {
+        min-height: 44px;
+        padding: 10px;
+    }
+}

@@ -11,9 +11,25 @@ export default function BoxInfo(props) {
     let ImagesMoviez = [];
     let [TranslateText, SetTranslate] = useState('داستانی مشخص نشده است .')
     let [BackgroundImage, SetBackground] = useState('لینک مورد نظر را وارد کنید');
+    let [downloadLinks, setDownloadLinks] = useState({
+        '1080p': { dubbed: '', subtitle: '', audio: '' },
+        '720p': { dubbed: '', subtitle: '', audio: '' },
+        '480p': { dubbed: '', subtitle: '', audio: '' }
+    });
     let shows = useContext(Box_Info);
+    
     const BackSetter = (event) => {
         SetBackground(event.target.value)
+    }
+
+    const handleDownloadLinkChange = (quality, type, value) => {
+        setDownloadLinks(prev => ({
+            ...prev,
+            [quality]: {
+                ...prev[quality],
+                [type]: value
+            }
+        }));
     }
     let finArray = [];
     const TranslatePlot = (Plot) => {
@@ -27,7 +43,7 @@ export default function BoxInfo(props) {
 
     }
     function SubmitHandler() {
-        let finArray = { ...props, Image_Moviez, TranslateText, BackgroundImage }
+        let finArray = { ...props, Image_Moviez, TranslateText, BackgroundImage, downloadLinks }
 
         if (props.Type == "series") {
             ApiRequest.post('/Series', finArray).then(res => {
@@ -227,22 +243,93 @@ export default function BoxInfo(props) {
                                         <tbody>
                                             <tr>
                                                 <td>1080p</td>
-                                                <td><input type='text' /></td>
-                                                <td><input type='text' /></td>
-                                                <td><input type='text' /></td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['1080p'].dubbed}
+                                                        onChange={(e) => handleDownloadLinkChange('1080p', 'dubbed', e.target.value)}
+                                                        placeholder="لینک دوبله"
+                                                        aria-label="لینک دوبله 1080p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['1080p'].subtitle}
+                                                        onChange={(e) => handleDownloadLinkChange('1080p', 'subtitle', e.target.value)}
+                                                        placeholder="لینک زیرنویس"
+                                                        aria-label="لینک زیرنویس 1080p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['1080p'].audio}
+                                                        onChange={(e) => handleDownloadLinkChange('1080p', 'audio', e.target.value)}
+                                                        placeholder="لینک صوت"
+                                                        aria-label="لینک صوت 1080p"
+                                                    />
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>720p</td>
-                                                <td><input type='text' /></td>
-                                                <td><input type='text' /></td>
-                                                <td><input type='text' /></td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['720p'].dubbed}
+                                                        onChange={(e) => handleDownloadLinkChange('720p', 'dubbed', e.target.value)}
+                                                        placeholder="لینک دوبله"
+                                                        aria-label="لینک دوبله 720p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['720p'].subtitle}
+                                                        onChange={(e) => handleDownloadLinkChange('720p', 'subtitle', e.target.value)}
+                                                        placeholder="لینک زیرنویس"
+                                                        aria-label="لینک زیرنویس 720p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['720p'].audio}
+                                                        onChange={(e) => handleDownloadLinkChange('720p', 'audio', e.target.value)}
+                                                        placeholder="لینک صوت"
+                                                        aria-label="لینک صوت 720p"
+                                                    />
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>480p</td>
-                                                <td ><input type='text' /></td>
-                                                <td><input type='text' /></td>
-                                                <td><input type='text' /></td>
-
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['480p'].dubbed}
+                                                        onChange={(e) => handleDownloadLinkChange('480p', 'dubbed', e.target.value)}
+                                                        placeholder="لینک دوبله"
+                                                        aria-label="لینک دوبله 480p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['480p'].subtitle}
+                                                        onChange={(e) => handleDownloadLinkChange('480p', 'subtitle', e.target.value)}
+                                                        placeholder="لینک زیرنویس"
+                                                        aria-label="لینک زیرنویس 480p"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input 
+                                                        type='text' 
+                                                        value={downloadLinks['480p'].audio}
+                                                        onChange={(e) => handleDownloadLinkChange('480p', 'audio', e.target.value)}
+                                                        placeholder="لینک صوت"
+                                                        aria-label="لینک صوت 480p"
+                                                    />
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </Table>

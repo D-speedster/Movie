@@ -29,55 +29,77 @@ export default function Header() {
 
 
 
-    let [Search_Word, SetSearch_Word] = useState("");
-    let [Search_Res, SetSearch_Res] = useState([])
+    const [Search_Word, SetSearch_Word] = useState("");
+    const [Search_Res, SetSearch_Res] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
 
-    useEffect(() => {
-        console.log(Search_Res);
-    }, [Search_Res]);
     function ShowResult__Search() {
-        const sXXS = Object.values(Search_Res).filter((DlItem) => {
-            return DlItem.name.toLowerCase().includes(Search_Word.toLowerCase())
+        if (!Search_Res || Search_Res.length === 0) return null;
+
+        const filteredResults = Object.values(Search_Res).filter((DlItem) => {
+            return DlItem.name && DlItem.name.toLowerCase().includes(Search_Word.toLowerCase());
         });
-        console.log(sXXS)
-        if (sXXS) {
 
+        if (filteredResults.length === 0) {
             return (
-                sXXS.map(ios => {
-
-                    <>
-                        <Col lg={9}>
-                            <h6>{console.log(ios['name'])}</h6>
-                        </Col>
-                        <Col lg={3}>
-                            <img alt="" width='70px' height='90px' src={ios['poster']} />
-                        </Col>
-                    </>
-                })
-
-            )
-        }
-        return sXXS
-    }
-    ShowResult__Search();
-
-
-    let Search_Handler = (event) => {
-        SetSearch_Word(event.target.value);
-        if (event.target.value.length < 1) {
-            document.querySelector('.Result_Search').style.display = 'none '
+                <div className='no-results'>
+                    <p>نتیجه‌ای یافت نشد</p>
+                </div>
+            );
         }
 
+        return filteredResults.slice(0, 5).map((movie, index) => (
+            <Link 
+                to={`/Movie/${movie.id}`} 
+                key={movie.id || index}
+                className='search-result-item'
+            >
+                <Row className='align-items-center'>
+                    <Col xs={3}>
+                        <img 
+                            alt={movie.name || 'پوستر فیلم'} 
+                            width='70px' 
+                            height='90px' 
+                            src={movie.poster}
+                            loading="lazy"
+                        />
+                    </Col>
+                    <Col xs={9}>
+                        <h6 className='movie-title'>{movie.name}</h6>
+                        <p className='movie-year'>{movie.year}</p>
+                        <span className='movie-rate'>⭐ {movie.rate}</span>
+                    </Col>
+                </Row>
+            </Link>
+        ));
     }
+
+
+    const Search_Handler = (event) => {
+        const value = event.target.value;
+        SetSearch_Word(value);
+        
+        const resultDiv = document.querySelector('.Result_Search');
+        if (resultDiv) {
+            resultDiv.style.display = value.length >= 2 ? 'block' : 'none';
+        }
+    }
+
     useEffect(() => {
-        if (Search_Word.length === 3) {
-            document.querySelector('.Result_Search').style.display = 'block'
-
-            ApiRequest.get('/Moviez').then(data => {
-                SetSearch_Res(data['data'])
-
-            })
-
+        if (Search_Word.length >= 2) {
+            setIsSearching(true);
+            
+            ApiRequest.get('/Moviez')
+                .then(data => {
+                    SetSearch_Res(data['data']);
+                    setIsSearching(false);
+                })
+                .catch(error => {
+                    console.error('Error fetching search results:', error);
+                    setIsSearching(false);
+                });
+        } else {
+            SetSearch_Res([]);
         }
     }, [Search_Word])
     return (
@@ -186,16 +208,23 @@ export default function Header() {
 
                                 <Col lg={4} className='Search'>
                                     <input
-
-                                        onChange={Search_Handler} type='search' placeholder='جستجو کنید ...' className='form-control bg-secondary search_btn'></input>
+                                        onChange={Search_Handler}
+                                        value={Search_Word}
+                                        type='search'
+                                        placeholder='جستجو کنید ...'
+                                        className='form-control bg-secondary search_btn'
+                                        aria-label="جستجوی فیلم"
+                                    />
                                     <div className='Result_Search'>
-                                        <Container>
-                                            <Row className='justify-content-between'>
-                                                {Search_Res ? ShowResult__Search() : null}
-                                            </Row>
-                                        </Container>
-
-
+                                        {isSearching ? (
+                                            <div className='search-loading'>
+                                                <p>در حال جستجو...</p>
+                                            </div>
+                                        ) : (
+                                            <Container>
+                                                {ShowResult__Search()}
+                                            </Container>
+                                        )}
                                     </div>
                                 </Col>
 

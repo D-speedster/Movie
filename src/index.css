@@ -52,6 +52,7 @@ body {
   font-family: 'IRANYEKAN', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
 }
+
+/* Import accessibility styles */
+@import './utils/accessibility.css';

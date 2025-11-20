@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './InfoMovie.css';
 export default function InfoMovie(props, { children }) {
-    useState(() => {
-        console.log([props.info])
+    useEffect(() => {
+        // Component mounted
     }, [])
 
 

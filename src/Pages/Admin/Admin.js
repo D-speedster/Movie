@@ -14,7 +14,11 @@ export default function Admin() {
 
     useEffect(() => {
         document.body.style.backgroundColor = '#171b31';
-    })
+        
+        return () => {
+            document.body.style.backgroundColor = '';
+        };
+    }, [])
 
 
 

@@ -6,11 +6,22 @@ import { HiVideoCamera } from 'react-icons/hi'
 import Boxoffice from '../Boxofiice/Boxoffice';
 
 export default function Latest_Trailers(props) {
-  let [countImg, SetcountImg] = useState(0)
-  let ChangeBackTrailer = (event) => {
-    console.log(event.target.dataset.img)
-    console.log(event.target.parentNode.parentNode.parentNode.style.background = `url(${event.target.dataset.img})`)
-    console.log(event.target.parentElement)
+  const [countImg, SetcountImg] = useState(0);
+  const [selectedTrailer, setSelectedTrailer] = useState(0);
+
+  const ChangeBackTrailer = (event) => {
+    const imgUrl = event.target.dataset.img;
+    const index = parseInt(event.target.dataset.index);
+    
+    if (imgUrl) {
+      const parentElement = event.target.closest('.Latest_Trailers_Box');
+      if (parentElement) {
+        parentElement.style.background = `url(${imgUrl})`;
+        parentElement.style.backgroundSize = 'cover';
+        parentElement.style.backgroundPosition = 'center';
+        setSelectedTrailer(index);
+      }
+    }
   }
   let last_trailer = [
     { id: 1, img: 'img/Last_Trailer/Trailer_Background.jpg' },
@@ -21,16 +32,14 @@ export default function Latest_Trailers(props) {
   ]
   useEffect(() => {
     const interval = setInterval(() => {
-      let counter = countImg + 1;
-      if (counter === 3) {
-        counter = 0;
-      }
-      SetcountImg(counter)
-      console.log(countImg)
+      SetcountImg(prevCount => {
+        const nextCount = prevCount + 1;
+        return nextCount >= last_trailer.length ? 0 : nextCount;
+      });
     }, 5500);
   
     return () => clearInterval(interval);
-  }, [countImg]);
+  }, []);
 
   return (
     <Container>
@@ -46,19 +55,21 @@ export default function Latest_Trailers(props) {
 
 
               <div className='pagin_img'>
-                <div className='pagin_img_item'>
-                  <img src={last_trailer['1'].img} data-img={last_trailer['1'].img} onMouseEnter={ChangeBackTrailer} />
-                </div>
-                <div className='pagin_img_item mt-2' >
-                  <img src={last_trailer['2'].img} data-img={last_trailer['2'].img} onMouseEnter={ChangeBackTrailer} />
-                </div>
-                <div className='pagin_img_item mt-2'>
-                  <img src={last_trailer['3'].img} data-img={last_trailer['3'].img} onMouseEnter={ChangeBackTrailer} />
-                </div>
-                <div className='pagin_img_item mt-2' >
-                  <img src={last_trailer['0'].img} data-img={last_trailer['0'].img} onMouseEnter={ChangeBackTrailer} />
-                </div>
-
+                {last_trailer.map((trailer, index) => (
+                  <div 
+                    key={trailer.id} 
+                    className={`pagin_img_item ${index > 0 ? 'mt-2' : ''} ${selectedTrailer === index ? 'active' : ''}`}
+                  >
+                    <img 
+                      src={trailer.img} 
+                      data-img={trailer.img}
+                      data-index={index}
+                      onMouseEnter={ChangeBackTrailer}
+                      alt={`تریلر ${index + 1}`}
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
               <div className='play-circle'>
                 <BsPlayCircleFill></BsPlayCircleFill>

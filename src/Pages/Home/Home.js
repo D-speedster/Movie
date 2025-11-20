@@ -2,99 +2,143 @@ import React, { useState, useEffect } from 'react'
 import Header from '../../components/Home/Header/Header'
 import Latest_Trailers from '../../components/Home/Latest_Trailers/Latest_Trailers'
 import SliderMovie from '../../components/Home/SliderMovie/SliderMovie'
+import MobileNav from '../../components/Home/MobileNav/MobileNav'
 import './Home.css';
+import './Home.improved.css';
 import Footer from '../../components/Home/Footer/Footer'
 import Boxoffice from '../../components/Home/Boxofiice/Boxoffice'
 import Header_MovieSeries from '../../components/Home/Header_MovieSeries/Header_MovieSeries'
 import ApiRequest from '../../Services/Axios/config';
-import { Container, Row, Col } from 'react-bootstrap';
-import { AiOutlineHome } from 'react-icons/ai';
-import { PiTelevisionLight } from 'react-icons/pi';
-import { RiMovie2Line } from 'react-icons/ri';
-import { BiLogInCircle } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import { BiArrowToTop } from 'react-icons/bi';
+import { MdError } from 'react-icons/md';
 
 export default function Home() {
+  const [BoxOffice, SetBoxOffice] = useState(null);
+  const [Moviez, SetMoviez] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-  let [BoxOffice, SetBoxOffice] = useState();
+  // Fetch BoxOffice data
   useEffect(() => {
-    ApiRequest.get('/BoxOffice').then(data => SetBoxOffice(data.data['0']))
-  }, [])
-  let [Moviez, SetMoviez] = useState('');
-  function GenreMoviez(genre, title) {
-    const movies = Object.entries(Moviez).map(i => i[1]);
-    const firstMovieWithGenre = movies.filter(movie => movie.genre.includes(genre));
-    const MovieSend = firstMovieWithGenre.filter(res => {
-      return res.genre['0'] == genre
-    })
-
-    return <SliderMovie {...MovieSend} Title={title} />;
-
-  }
-  useEffect(() => {
-    ApiRequest.get('/Moviez').then(data => {
-      let MovieZa = data.data;
-      SetMoviez(MovieZa.reverse())
-    })
-
-
+    ApiRequest.get('/BoxOffice')
+      .then(data => SetBoxOffice(data.data['0']))
+      .catch(err => {
+        console.error('Error fetching BoxOffice:', err);
+      });
   }, []);
+
+  // Fetch Movies data
+  useEffect(() => {
+    setLoading(true);
+    ApiRequest.get('/Moviez')
+      .then(data => {
+        const MovieZa = data.data;
+        SetMoviez(MovieZa.reverse());
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error fetching movies:', err);
+        setError('خطا در بارگذاری فیلم‌ها. لطفا دوباره تلاش کنید.');
+        setLoading(false);
+      });
+  }, []);
+
+  // Back to top button visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Genre movies renderer with loading state
+  function GenreMoviez(genre, title) {
+    if (loading) {
+      return (
+        <div className='genre-section fade-in'>
+          <div className='slider-skeleton'>
+            {[1, 2, 3, 4, 5].map(i => (
+              <div key={i} className='slider-skeleton-item'></div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    if (!Moviez || Moviez.length === 0) return null;
+    
+    const movies = Object.entries(Moviez).map(i => i[1]);
+    const firstMovieWithGenre = movies.filter(movie => 
+      movie.genre && Array.isArray(movie.genre) && movie.genre.includes(genre)
+    );
+
+    return firstMovieWithGenre.length > 0 ? (
+      <div className='genre-section fade-in'>
+        <SliderMovie {...firstMovieWithGenre} Title={title} />
+      </div>
+    ) : null;
+  }
+
+  // Error state renderer
+  if (error) {
+    return (
+      <div className='body'>
+        <Header />
+        <div className='error-state'>
+          <MdError />
+          <h3>خطا در بارگذاری</h3>
+          <p>{error}</p>
+          <button onClick={() => window.location.reload()}>
+            تلاش مجدد
+          </button>
+        </div>
+        <Footer />
+        <MobileNav />
+      </div>
+    );
+  }
 
 
   return (
     <div className='body'>
       <Header />
-      <Header_MovieSeries></Header_MovieSeries>
-      <Latest_Trailers {...BoxOffice} />
-      {GenreMoviez('ماجراجویی', 'فیلم های ماجراجویی')}
-      {GenreMoviez('اکشن', 'فیلم های اکشن')}
-      {/* <Boxoffice {...BoxOffice}></Boxoffice> */}
-      {GenreMoviez('درام', 'فیلم های درام')}
-      <br /><br />
-      {GenreMoviez('جنایی', 'فیلم های جنایی')}
-      <br /><br />
+      <Header_MovieSeries />
+      
+      <div className='hero-section'>
+        <Latest_Trailers {...BoxOffice} />
+      </div>
 
+      <div className='content-wrapper'>
+        {GenreMoviez('ماجراجویی', 'فیلم های ماجراجویی')}
+        {GenreMoviez('اکشن', 'فیلم های اکشن')}
+        {GenreMoviez('درام', 'فیلم های درام')}
+        {GenreMoviez('جنایی', 'فیلم های جنایی')}
+        {GenreMoviez('کمدی', 'فیلم های کمدی')}
+        {GenreMoviez('علمی تخیلی', 'فیلم های علمی تخیلی')}
+      </div>
 
+      {/* Back to Top Button */}
+      <button 
+        className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
+        onClick={scrollToTop}
+        aria-label="بازگشت به بالا"
+      >
+        <BiArrowToTop />
+      </button>
 
       <Footer />
-      <div className='mobile-nav d-lg-none d-md-none'>
-        <div className='container'>
-          <Row>
-            <Col className='mobile-nav-item'>
-              <Link to='/'>
-                <AiOutlineHome style={{fontSize : '21px'}}></AiOutlineHome>
-                <span className='d-block ' >خانه</span>
-
-              </Link>
-            </Col>
-
-            <Col className='mobile-nav-item d-inline'>
-              <Link to='/Movies'>
-
-                <RiMovie2Line style={{fontSize : '21px'}}></RiMovie2Line>
-                <span className='d-block'>فیلم ها</span>
-              </Link>
-
-            </Col>
-            <Col className='mobile-nav-item'>
-              <Link to='/Series'>
-
-                <PiTelevisionLight style={{fontSize : '21px'}}></PiTelevisionLight>
-                <span className='d-block'>سریال ها</span>
-              </Link>
-            </Col>
-            <Col className='mobile-nav-item'>
-              <Link to='/Login'>
-
-                <BiLogInCircle style={{fontSize : '21px'}}></BiLogInCircle>
-                <span className='d-block'>ورود</span>
-              </Link>
-            </Col>
-
-          </Row>
-        </div>
-
-      </div>
-    </div >
+      <MobileNav />
+    </div>
   )
 }
